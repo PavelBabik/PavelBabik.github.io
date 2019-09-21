@@ -12,6 +12,7 @@ div,p,a,img,button,.header{
 }
 a{
     text-decoration: none;
+    color: red;
 }
 ul, li{
     display: block;
@@ -27,8 +28,7 @@ ul, li{
     display: flex;    
     margin-top: 42px;
 }
-.container,h3,nav, .dod, .os{
+.container,h3,nav,.portfolio, .dod, .os{
     width: 1140px;
-    margin: 0 auto;
-    
+    margin: 0 auto;    
 }
