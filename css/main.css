@@ -1,0 +1,34 @@
+body{
+    font-family: 'Montserrat',sans-serif;
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+}
+h1{
+    color: mediumspringgreen;
+}
+div,p,a,img,button,.header{
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+ul, li{
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    margin-top: 42px;
+}
+.header{
+    display: flex;    
+    margin-top: 42px;
+}
+.container,h3,nav, .dod, .os{
+    width: 1140px;
+    margin: 0 auto;
+    
+}
