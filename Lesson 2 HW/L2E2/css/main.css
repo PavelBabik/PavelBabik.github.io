@@ -1,0 +1,48 @@
+body{
+    width: 1140px;
+    height: 1140px;
+    margin: 0 auto;
+}
+a{
+    text-decoration: none;
+}
+.ba{
+    background-color: #000;
+    color:white;
+}
+#j1{
+    color: olive;
+}
+.jj1{
+    color: olive;
+}
+#j2{
+    color: red;
+}
+.jj2{
+    color: red;
+}
+#j3{
+    color: blue;
+}
+.jj3{
+    color: blue;
+}
+#j4{
+    color: green;
+}
+.jj4{
+    color: green;
+}
+#j5{
+    color: orangered;
+}
+.jj5{
+    color: orangered;
+}
+#j6{
+    color: blueviolet;
+}
+.jj6{
+    color: blueviolet;
+}

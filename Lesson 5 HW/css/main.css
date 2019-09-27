@@ -1,0 +1,82 @@
+body{
+    font-family: 'OpenSans',sans-serif;
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+}
+.allsite{
+    height: 420px;
+}
+.background{
+    height:420px;
+    background-color: #121212;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+}
+
+.lines{
+    background: url('../img/12ColGRID.png');
+    width: 1170px;
+    height: 420px;
+    margin: auto;
+    align-items: center;  
+}
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+}
+.name{
+    text-align: center;
+    padding-top: 48px;
+    color: white;
+    font-family: 'Open Sans',sans-serif;
+    font-weight: 400;
+    font-size: 20pt;
+}
+.separator{
+    text-align: center;
+    padding-top: 0;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contain{
+    display: flex;
+    align-items: center;
+    
+}
+ul, li {
+	display: block;
+	padding: 0;
+	margin: 0;
+}
+.facebook{
+    margin-right: 30px;
+}
+.twitter{
+    margin-right: 40px;
+}
+.google{
+    margin-right: 30px;
+}
+h3,p,i,a{
+    color: white;
+    font-size: 15pt;
+    font-family: 'Open Sans',sans-serif;
+    font-weight: 600;
+    text-decoration: none;    
+}
+.foo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+}
+#casper{
+    color:#19c8fa;
+}

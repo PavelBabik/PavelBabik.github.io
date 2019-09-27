@@ -1,0 +1,50 @@
+h1{    
+    background-color: #a52a2a;
+    text-align: center;
+    color: white;
+}
+.cont{
+    width: 759px;
+    margin: 0 auto;
+}
+.text{
+    font-size: 18px;
+}
+.foo{
+    font-size: 20px;
+    text-align: center;
+    color:white;
+    background-color: #000;
+}
+.cars{
+    display: flex;
+    align-items: center;
+    margin-left: 207px;
+}
+.car{
+    display: block;
+    box-sizing: border-box;
+    outline-style: dotted;
+}
+.images{
+    display: flex;
+}
+ul, li {
+	display: block;
+	padding: 0;
+	margin: 0;
+}
+.cars li{
+    margin-right: 11px;
+}
+.eius{
+    text-decoration: none;
+    font-style: italic;
+}
+.lorem{
+    text-decoration: none;
+}
+i{
+    width: 20px;
+    height: 20px;
+}
