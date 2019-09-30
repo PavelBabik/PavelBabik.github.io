@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+/*селектори через елемент (тег)*/
+body {
+    background: rgb(55, 63, 65);
+}
+
+main,
+footer {
+    width: 40%;
+    display: block;
+    margin: 0 auto;
+}
+
+footer {
+    text-align: center;
+}
+
+ul {
+    align-items: center; 
+}
+
+/*селектори через клас*/
+
+.header,
+.footer {
+    text-align: center;
+    background: rgb(71,78,80);
+    color: rgb(219,136,124);
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+.footer {
+    height: 50px;
+    text-align: center;
+    padding: 0 auto;
+}
+
+.menu {
+    background: rgb(133, 132,154);
+    color: white;
+    display: block;
+}
+
+.menuAll {
+    font-family: 'Arial', sans-serif;
+}
+
+.menu1 {
+    background: rgb(120, 119,143);
+    color: white;
+    display: block;
+}
+/*селектори через ID*/
+#BonAp {
+    text-decoration: none;
+    color: rgb(219,136,124);
+    text-align: center
+}
+
+/*селектори батьківські*/
+
+li > input {
+    display: none;    
+}
+
+/*селектори :hover*/
+
+.menuAll li:hover {
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    background: rgb(95,97,116);
+    transition: all .1s ease-in;
+}
+/*селектори :active*/
+.menuAll li:active {
+    background: red;    
+}
+/*селектори :checked і attribute і сусіди*/
+input[type="checkbox"]:checked+label {
+    opacity: .5;
+    text-decoration: line-through;
+  }
+
+/*селектори :after*/
+
+.pik::after {
+    content: "(for the next lessons about CSS)";
+    text-decoration: none;
+}
+
+.apple::after {
+    content: " (for more CSS manipulations)";
+    text-decoration: none;
+}
+.orange::after {
+    content: "(because they are awesome)";
+    text-decoration: none;
+}
+.plate::after {
+    content: "(hm... they always disapear)";
+    text-decoration: none;
+}
+.sake::after {
+    content: "(for my friends)";
+    text-decoration: none;
+}
+
+
+
