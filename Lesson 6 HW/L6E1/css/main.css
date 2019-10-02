@@ -19,7 +19,6 @@ table {
     margin: auto;
     align-items: center;
     display: flex;
-    background: #ccc040;
 }
 
 .circle {
@@ -54,3 +53,7 @@ table {
     padding-top: 25px;
 }
 
+div.circle:hover path {
+    fill: white;
+    background: white;
+}
