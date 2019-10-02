@@ -52,7 +52,7 @@ div.nav .st2:hover {
     fill-opacity: 1;
     stroke-opacity:1;
 }
-div.nav:hover.st3:hover {
+div.nav .st3:hover {
     fill: #FFCC03;
     stroke: red;
     stroke-width: 6;
