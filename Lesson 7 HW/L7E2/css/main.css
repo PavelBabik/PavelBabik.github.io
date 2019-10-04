@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: rgb(39,147,203);
+    border: 10px solid rgb(34,124,174);
+    align-items: center;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0 auto;
+    width: 100%;
+    height: 100%;
+    min-width: 500px;
+    max-width: 1920px;
+    min-height: 200px;
+    max-height: 800px;
+}
+.all {
+    padding-top:5%;
+    margin: 0 auto;
+    width:75%;
+    color: white;
+}
+
+.main {
+    padding-top: 2%;
+    height:75%;
+}
+
+.nav {
+    height: 100%;
+    font-size: 0;
+    border: 2px white solid;
+}
+
+.nav li{
+    display: inline-block;
+    font-family: 'Lucida Sans' sans-serif;
+    font-size: 21pt;
+}
+
+.Rivne {
+    width:50%;
+    height: 100px;
+    border: 2px white solid;
+    text-align: center;
+    padding: 0 auto;
+    box-sizing: border-box; 
+    background: red;   
+}
+.Kiev {
+    width:25%;
+    height: 100px;
+    border: 2px white solid;
+    text-align: center;
+    padding: 0 auto;    
+    box-sizing: border-box;
+    background: green;
+}
+
+.Lviv {
+    width:25%;
+    height: 100px;
+    border: 2px white solid;
+    text-align: center;
+    padding: 0 auto;    
+    box-sizing: border-box;
+    background: orchid;
+}
+
+.Kharkiv {
+    width:25%;
+    height: 100px;
+    border: 2px white solid;
+    text-align: center;
+    padding: 0 auto;
+    box-sizing: border-box; 
+    background: orange;   
+}
+
+.Odessa {
+    width:25%;
+    height: 100px;
+    border: 2px white solid;
+    text-align: center;
+    padding: 0 auto;    
+    box-sizing: border-box;
+    background: olivedrab;
+}
+
+.Mykolaiv {
+    width:25%;
+    height: 100px;
+    border: 2px white solid;
+    text-align: center;
+    padding: 0 auto;    
+    box-sizing: border-box;
+    background: blueviolet;
+}
+
+.Chernihiv {
+    width:25%;
+    height: 100px;
+    border: 2px white solid;
+    text-align: center;
+    padding: 0 auto;    
+    box-sizing: border-box;
+    background: blue;
+}
+.Lutsk {
+    width:25%;
+    height: 100px;
+    border: 2px white solid;
+    text-align: center;
+    padding: 0 auto;    
+    box-sizing: border-box;
+    background: darkred;
+}
+.Poltava {
+    width:50%;
+    height: 100px;
+    border: 2px white solid;
+    text-align: center;
+    padding: 0 auto;    
+    box-sizing: border-box;
+    background: crimson;
+}
+.Sumy {
+    width:25%;
+    height: 100px;
+    border: 2px white solid;
+    text-align: center;
+    padding: 0 auto;    
+    box-sizing: border-box;
+    background: forestgreen;
+}
+.Kovel {
+    width:100%;
+    height: 100px;
+    border: 2px white solid;
+    text-align: center;
+    padding: 0 auto;    
+    box-sizing: border-box;
+    background: indigo;
+}
+
+.temperature {
+    opacity: 0.7;
+    font-size:18pt;
+}
+
+.city {
+    width: 100%;
+    font-size:1em;
+}
+ul:hover li {
+    opacity: 0.2;
+}
+
+ul li:hover {
+    opacity: 1.0;
+    transition: all .2s ease-in;
+}
+
+footer {
+    padding-top: 5%;
+    padding-bottom: 5%;
+}

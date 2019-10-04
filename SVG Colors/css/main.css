@@ -35,6 +35,7 @@ div.nav .st0:hover {
     transition: .5s;
     fill-opacity: 1;
     stroke-opacity:1;
+    stroke-width:8.2068;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;
 }
 div.nav .st1:hover {
     fill: #867D00;
@@ -43,6 +44,7 @@ div.nav .st1:hover {
     transition: .5s;
     fill-opacity: 1;
     stroke-opacity:1;
+    stroke-width:8.2068;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;
 }
 div.nav .st2:hover {
     fill: #5B3100;
@@ -51,6 +53,7 @@ div.nav .st2:hover {
     transition: .5s;
     fill-opacity: 1;
     stroke-opacity:1;
+    stroke-width:8.2068;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;
 }
 div.nav .st3:hover {
     fill: #FFCC03;
@@ -59,6 +62,7 @@ div.nav .st3:hover {
     transition: .5s;
     fill-opacity: 1;
     stroke-opacity:1;
+    stroke-width:8.2068;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;
 }
 div.nav .st4:hover {
     fill: #FFED00;
@@ -67,6 +71,7 @@ div.nav .st4:hover {
     transition: .5s;
     fill-opacity: 1;
     stroke-opacity:1;
+    stroke-width:8.2068;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;
 }
 div.nav .st5:hover {
     fill: black;
@@ -75,6 +80,7 @@ div.nav .st5:hover {
     transition: .5s;
     fill-opacity: 1;
     stroke-opacity:1;
+    stroke-width:8.2068;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;
 }
 
 div.nav .st6:hover {
@@ -84,4 +90,5 @@ div.nav .st6:hover {
     transition: .5s;
     fill-opacity: 1;
     stroke-opacity:1;
+    stroke-width:8.2068;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;
 }

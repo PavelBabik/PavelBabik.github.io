@@ -1,0 +1,86 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+body {
+    font-family: 'PT Sans', sans-serif;
+}
+
+.workspace {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 145px;
+    font-weight: 700;
+    font-size: 12pt;
+}
+
+h1 {
+    padding-top: 35px;
+    font-weight: 400;
+    font-size: 48pt;
+    color: #0ec8cb;
+    letter-spacing: .2em;
+}
+
+.header p {
+    padding-top: 40px;
+    text-transform: uppercase;
+    color:  #898f99;
+}
+
+.about {
+    font-size: 18pt;
+    font-weight: 400;
+}
+
+.main {
+    width: 100%;
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    height: 420px;
+}
+
+ul li {
+    padding-top: 0;
+    height: 100%;
+    width: 24%;
+    display: inline-block;
+}
+
+li:hover {
+    color:white;
+    background: #0ec8cb;
+    transition: all .1s ease-in;
+}
+
+li:hover path {
+    fill:white;
+}
+
+.img {
+    height: 180px;
+}
+
+h3 {
+    text-transform: uppercase;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 700;
+    font-size: 21pt; 
+}
+
+.text {
+    padding: 0;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 14pt;
+    font-weight: 400;
+}
+
+.title {
+    padding:0;
+    height: 50px;
+}
