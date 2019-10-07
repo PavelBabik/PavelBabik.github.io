@@ -1,0 +1,77 @@
+
+@font-face {
+    font-family: 'Miso';
+    src: url('../font/miso.otf');
+    src: url('../font/miso-light.otf');
+    src: url('../font/miso-bold.otf');
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../font/Lato-Light.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #fdde7e;
+}
+
+.main {
+    padding-top: 3%;
+    width: 75%;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: space-around;
+    height: 500px;
+}
+
+.gold {  
+    display: flex; 
+    flex-direction: column; 
+    width: 35%;
+    background: #ffffff;
+    text-align: center;
+    align-items: center;    
+    justify-content: center;
+    align-self: stretch;
+}
+
+.bronze, .silver {
+    flex-direction: column;
+    display: flex;          
+    width: 30%;
+    background: #ffffff;
+    text-align: center;
+    align-items: center;
+    height: 440px;
+    justify-content: center;
+}
+
+.price {
+    font-family: 'Miso';
+    font-size: 70pt;
+    color: #02995b;
+    font-weight: bold;
+    
+}
+
+.gold .price {
+    padding-bottom: 50px;
+}
+
+.metal {
+    font-family: 'Miso';
+    font-size: 56pt;
+    color: #333333;
+}
+
+.about {
+    font-family: 'Lato';
+    font-size: 20pt;
+    color: #333333;
+}

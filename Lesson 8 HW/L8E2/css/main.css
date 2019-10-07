@@ -1,0 +1,130 @@
+@font-face {
+    font-family: 'Hans';
+    src: url(../font/HansKendrick-Regular.otf);
+}
+
+@font-face {
+    font-family: 'Simonetta';
+    src: url(../font/Simonetta-Black.ttf);
+    src: url(../font/Simonetta-BlackItalic.ttf);
+    src: url(../font/Simonetta-Italic.ttf);
+    src: url(../font/Simonetta-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #e2e7ec;    
+}
+
+.main {
+    padding-top: 70px;
+    width: 83%;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.car {
+    padding-top: 20px;
+    width: 740px;
+    position: relative;
+    height: 540px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+
+.text {
+    display: flex;
+    flex-direction: column-reverse;
+    position: absolute;	
+    width: 100%;
+    height: 100%;
+    color:white;
+    font-family: 'Simonetta';
+}
+
+
+.month {
+    font-size: 14pt;
+    text-transform: uppercase;
+    opacity: 0.6;
+    font-weight: 400;
+}
+
+.about {
+    font-size: 30pt;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+.car:hover .text {
+    display: flex;
+    flex-direction: column-reverse;
+    background: rgba(0, 0, 0, .3);
+    height: 540px;
+    width: 100%;
+    color: royalblue;
+    transition: all .1s ease-in;
+}
+
+.small {
+    padding-top: 20px;
+    position: relative;
+    height: 540px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.text2 {
+    display: flex;
+    flex-direction: column-reverse;
+    position: absolute;	
+    width: 100%;
+    height: 100%;
+    color:black;
+    font-family: 'Simonetta';
+}
+
+.about2 {
+    font-size: 18pt;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.month2 {
+    font-size: 14pt;
+    text-transform: uppercase;
+    opacity: 0.6;
+    font-weight: 400;
+}
+
+.small:hover .text2 {
+    display: flex;
+    flex-direction: column-reverse;
+    background: rgba(0, 0, 0, .3);
+    height: 540px;
+    width: 100%;
+    color: royalblue;
+    transition: all .1s ease-in;
+}
+
+.small:hover .face  {
+    opacity: 0.4;
+    transition: all .1s ease-in;
+}
+
+.footer {
+    text-align: center;
+    padding-top: 50px;
+    font-family: 'Simonetta';
+    text-transform: uppercase;
+    font-size: 13pt;
+    font-weight: 400;
+    color: #99a5b0;
+}
