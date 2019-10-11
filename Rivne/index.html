@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Rivne, Ukraine</title>
+</head>
+<body>
+    <div class="container">
+        <div class="column active">
+            <div class="content">
+                <h1>1</h1>
+                <div class="box">
+                    <h2>Rivne theatre square</h2>
+                    <p>
+                        Theatre Square in Rivne is one of two main squares in the city (including Independence Square ). During World War II street of the Cathedral, which is now located Theatre Square, was destroyed.
+                    </p>
+                </div>
+            </div>
+            <div class="bg bg1"></div>
+        </div>
+        <div class="column">
+            <div class="content">
+                <h1>2</h1>
+                <div class="box">
+                    <h2>Rivne biggest university</h2>
+                    <p>
+                        The only Ukrainian higher educational institution the water profile. Institution is an educational and scientific complex, which prepares highly qualified scientific and pedagogical staff, provides training specialists and conducting research work. University - university IV level of accreditation, provides services to higher education on the level of qualification requirements.
+                    </p>
+                </div>
+            </div>
+            <div class="bg bg2"></div>
+        </div>
+        <div class="column">
+            <div class="content">
+                <h1>3</h1>
+                <div class="box">
+                    <h2>Rivne biggest museum</h2>
+                    <p>
+                        Rivne Regional Museum will help you to be aware of the native land`s history, tell about it to the others, involve the young generations in learning the Rivne region. Besides interesting expositions, the museum attracts by its monumental columns and the picturesque area around it as well as it is situated just near the Alley of Blacksmith Sculptures and The Swan Lake.
+                    </p>
+                </div>
+            </div>
+            <div class="bg bg3"></div>
+        </div>
+        <div class="column">
+            <div class="content">
+                <h1>4</h1>
+                <div class="box">
+                    <h2>Rivne second war museum</h2>
+                    <p>
+                        Rivne Regional Museum will help you to be aware of the native land`s history, tell about it to the others, involve the young generations in learning the Rivne region. Besides interesting expositions, the museum attracts by its monumental columns and the picturesque area around it as well as it is situated just near the Alley of Blacksmith Sculptures and The Swan Lake.
+                    </p>
+                </div>
+            </div>
+            <div class="bg bg4"></div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        $(document).on('mouseover','.container .column', function(){
+            $(this).addClass('active').siblings().removeClass('active')
+        })
+    </script>
+</body>
+</html>
