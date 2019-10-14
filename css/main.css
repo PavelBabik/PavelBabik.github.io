@@ -1,18 +1,100 @@
 body{
     font-family: 'Montserrat',sans-serif;
+    background: #440bd4;
     padding: 0;
     margin: 0;
     font-weight: 400;
+    color: darkkhaki;
+}
+.logo,
+.education,
+.job,
+.dod,
+.os,
+.contact,
+.menu,
+.logos {
+    background: #441bd8;
+    width: 100%;
+}
+
+.education,
+.job,
+.dod,
+.os,
+.logos {
+    border-left: 2px solid mediumseagreen;
+}
+
+.logos, .draftings {
+    width:1140px;
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 h1{
+    font-size: 50px;
     color: mediumspringgreen;
 }
+.picture{
+    width: 300px;
+}
+.st2 .st3 .st4 {
+    font-family: 'Montserrat',sans-serif;;
+}
+
+
 div,p,a,img,button,.header{
     box-sizing: border-box;
 }
+
+i {
+    width: 100%;
+}
+.contact {
+    width: 1140px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
+.menu {
+    width: 1140px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
+.number {
+    font-size:15px;
+}
+.ahead {
+    color: crimson;
+    letter-spacing: .1em;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+.draftA1 {
+    width: 1140px;
+}
+.draftings {
+    display: flex;
+    flex-wrap: wrap;
+}
+.contact a:hover,
+.menu a:hover {
+    color: crimson;
+}
+.menuitem {
+    height: 100px;
+    font-size:45px;
+    width: 20%;
+}
 a{
     text-decoration: none;
-    color: red;
+    color: mediumspringgreen;
 }
 ul, li{
     display: block;
@@ -28,7 +110,16 @@ ul, li{
     display: flex;    
     margin-top: 42px;
 }
-.container,h3,nav,.portfolio, .dod, .os{
+.container,
+h3,
+nav,
+.job,
+.education,
+.logos,
+.portfolio,
+.draftings,
+.dod,
+.os{
     width: 1140px;
     margin: 0 auto;    
 }
