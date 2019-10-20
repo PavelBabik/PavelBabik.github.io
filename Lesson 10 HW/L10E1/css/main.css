@@ -1,0 +1,172 @@
+@font-face {
+    font-family: 'Railway Bold';
+    src: url('../font/Raleway-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Railway Light';
+    src: url('../font/raleway-light.ttf');
+}
+
+@font-face {
+    font-family: 'Railway Heavy';
+    src: url('../font/Raleway-Heavy.ttf');
+}
+
+.bold {    
+    font-family: 'Railway Bold';
+}
+
+.light {
+    font-family: 'Railway Light';
+}
+
+.heavy {
+    font-family: 'Railway Heavy';
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #b07cf7;  
+    margin-left: 150px;
+    margin-right: 150px;  
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.name {
+    color: #fff;
+    font-size: 90pt;
+}
+
+.description {
+    margin-top: 20px;
+    color: #fff;
+    font-size: 17pt;
+}
+
+.new1block {
+    display: flex;
+    align-items: flex-end;
+    font-size: 0;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.content {
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.dateFealds {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    margin-left: 20px;
+    color: #fff;
+}
+
+.textFealds {
+    margin-left: 20px;
+    text-align: left;
+    color: #fff;
+}
+
+.date {
+    font-size: 15pt;
+    margin-top: 20px;
+    background: rgba(0,0,0,.3);
+    width: 83px;
+    text-transform: uppercase;
+    border-radius: 10px;
+}
+
+.day {
+    font-size: 32pt;
+}
+
+.month {
+    font-size: 21pt;
+}
+
+.title {
+    font-size: 15pt;
+}
+
+.author {
+    font-size: 13pt;
+    margin-bottom: 20px;
+}
+
+.news {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    justify-content: center;
+    margin: 0 auto;
+    list-style: none;
+    margin-top: 50px;
+}
+.new {
+    margin: 15px;
+}
+
+.dateText {
+    font-size: 18pt;
+    text-align: left;
+}
+
+.titleText {
+    margin-bottom: 20px;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.view {
+    width: 200px;
+    height: 55px;
+    margin-top: 50px;
+    text-transform: uppercase;
+    font-size: 20pt;
+    color: #fff;
+    background: #f72b3b;
+    border: none;
+    box-shadow: 0 0 10px rgba(0,0,0,1);
+}
+
+.new:hover {
+    box-shadow: 0 0 20px rgba(0,0,0,1);
+    transition: 0.5s;
+}
+
+.view:hover {
+    box-shadow: 0 0 50px rgba(0,0,0,1);
+    transition: 0.5s;
+}

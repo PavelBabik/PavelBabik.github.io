@@ -78,6 +78,7 @@ li > input {
 .menuAll li:active {
     background: red;    
 }
+
 /*селектори :checked і attribute і сусіди*/
 input[type="checkbox"]:checked+label {
     opacity: .5;

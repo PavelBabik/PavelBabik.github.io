@@ -1,0 +1,135 @@
+@font-face {
+    font-family: 'Railway Bold';
+    src: url('../font/Raleway-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Railway Light';
+    src: url('../font/raleway-light.ttf');
+}
+
+@font-face {
+    font-family: 'Railway Heavy';
+    src: url('../font/Raleway-Heavy.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.bold {    
+    font-family: 'Railway Bold';
+}
+
+.light {
+    font-family: 'Railway Light';
+}
+
+.heavy {
+    font-family: 'Railway Heavy';
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.flex {
+    display: flex;
+}
+
+.container {
+    background: #f6f6f6;
+}
+
+.header {
+    display: flex;  
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    margin-top: 20px;
+    text-transform: uppercase;
+    color: #3c3c3c;
+    font-size: 34pt;
+}
+
+.text {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 16pt;
+}
+
+.employe {
+    margin-top: 55px;
+}
+
+.list {
+    list-style: none;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1200px;
+    flex-wrap: wrap;
+}
+
+.links {
+    background: rgba(0,182,222,0.5);
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+.social:hover .links {
+    opacity: 1;
+    transition: 0.8s;
+    transform: rotateY(360deg);
+}
+
+.social:hover .about {
+    opacity: 1;
+    transition: 0.8s;
+    transform: rotateX(360deg);
+    color: rgb(0,204,233);
+}
+
+.socials {
+    background: rgba(0,204,233,0);
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    margin: 4px;
+    border-radius: 2px;
+}
+
+.social {
+    margin: 15px;
+}
+
+.socials:hover {
+    background: rgba(0,204,233,1);
+    transition: 0.3s;
+}
+.img {
+    height: 23px;
+}
+
+.name {
+    font-size: 18pt;
+}
+
+.specialist {
+    font-size: 14pt;
+}
+
+.photo {
+    box-shadow: 0 0 10px black;
+}
