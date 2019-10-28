@@ -1,0 +1,151 @@
+@font-face {
+    font-family: 'MuseoSans';
+    src: url('../font/museosansrounded-100-webfont.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: url('../img/Background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.product {
+    margin: 50px;
+    padding: 20px;
+    background: #111a28;
+    border-radius: 20px;
+    box-shadow: 0 0 20px black;
+}
+
+.product__vision {
+    display: flex;
+}
+
+.product__photo {
+    margin: 40px;
+}
+
+.product__colors {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.product__color {
+    margin: 5px;
+}
+
+.color:hover {
+    width: 11px;
+    height: 11px;
+    border: 2px solid #fff;
+}
+
+.product__color--darkblue {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #0b2a8a;
+}
+
+.product__color--white {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.product__color--red {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #ed3333;
+}
+
+.product__color--menthol {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #29e3ea;
+}
+
+.product__details {
+    font-family: 'MuseoSans';
+    width: 185px;
+}
+
+.product__name {
+    font-size: 20pt;
+    color: #fff;
+}
+
+.product__description {
+    font-size: 10pt;
+    color: #fff;
+}
+
+
+.product__stars {
+    display: flex;
+    list-style: none;
+    margin-top: 26px;
+    margin-bottom: 26px;
+}
+
+.product__star {   
+    background: url('../img/Whitestar.png');
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    font-size: 0;
+}
+.product__star:hover~.product__star {
+    background: url('../img/Whitestar.png');
+    background-repeat: no-repeat;
+}
+
+.product__star:hover {
+    background: url('../img/YellowStar.png');
+    background-repeat: no-repeat;
+}
+ 
+.product__stars:hover li {
+    background: url('../img/YellowStar.png');
+    background-repeat: no-repeat;
+}
+
+.product__size {
+    width: 69px;
+    height: 32px;
+    background: #111a28;
+    border: 1px solid #4f5560;
+    color: #4f5560;
+    font-family: 'MuseoSans';
+    font-size: 14pt;
+}
+
+
+.product__add {
+    width: 100%;
+    height: 40px;
+    margin-top: 26px;
+    background: #202835;
+    border: 1px solid #4f5560;
+    color: #4f5560;
+    font-family: 'MuseoSans';
+    font-size: 14pt;
+}

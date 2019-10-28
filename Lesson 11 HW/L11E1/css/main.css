@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.background {
+    display: flex;
+    background-image: url('../img/img1.jpg');
+    background-size: 100%;
+}
+
+.header {
+    width: 100%;
+}
+
+.header__header {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.header__logo {
+    margin-left: 165px;
+}
+
+.header__list {    
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-right: 165px;
+}
+
+.header__item {
+    margin-left: 30px;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.header__item:hover {
+    border-top: 3px solid #ff6033;
+}
+
+.header__link {
+    text-decoration: none;
+    color: #262626;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16pt;
+    font-weight: 700;
+}
+
+.header__title {
+    font-family: 'Raleway', sans-serif;
+    margin-left: 165px;
+    margin-top: 205px;
+    font-size: 35pt;
+    font-weight: 900;
+    color: #262626;
+}
+
+.header__text {
+    margin-left: 165px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 370px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 12pt;
+    font-weight: 300;
+    color: #262626;
+}
+
+.header__button {
+    margin-left: 165px;
+    width: 200px;
+    height: 52px;
+    background: #ff6033;
+    font-family: 'Raleway', sans-serif;
+    font-size: 15pt;
+    font-weight: 300;
+    color: #fff;
+    text-transform: uppercase;
+    border: none;
+}
+
+.header__scroll {
+    text-align: center;    
+}
+
+.header__scrollimg {
+    margin-top: 300px;
+    margin-bottom: 70px;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    background: #00b2b2;
+    height: 700px;
+}
+
+.main__all {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    margin-left: 165px;
+    margin-right: 165px;
+}
+
+.main__image {
+    height: 100%;
+}
+
+.main__title {
+    margin-bottom: 30px;
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+    font-size: 60pt;
+    font-weight: 900;
+}
+
+.main__text {
+    width: 400px;
+    margin-bottom: 15px;
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+    font-size: 12pt;
+    font-weight: 300;
+}
+
+.fonts {
+    font-family: 'Raleway', sans-serif;
+}
