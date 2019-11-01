@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    background-image: url(../img/hero-bg.jpg);
+    background-size: cover;
+    background-position: top right;
+    background-repeat: no-repeat;
+}
+
+.wrapper {
+    height: 100%;
+    width: 50%;
+    padding-bottom: 100px;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    font-family: 'Lato', sans-serif;
+}
+
+.about {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.about__title {
+    margin-top: 90px;
+    margin-bottom: 45px;
+    font-weight: 700;
+    font-size: 50pt;
+}
+
+.about__description {
+    font-weight: 400;
+    font-size: 13pt;
+    line-height: 29pt;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+
+.section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.legend {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+.legend__text {
+    border: 1px solid rgb(102, 95, 95);
+    color: black;
+    text-align: center;
+    width: 100%;
+}
+
+.legend__title {
+    padding: 0 10px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 34pt;
+}
+
+.legend__text1 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 16pt;
+    margin: 60px;
+}
+
+.section--background {
+    background-image: url(../img/services.jpg);
+    background-size: cover;
+    background-position: top right;
+    background-repeat: no-repeat;
+}
+
+.legend__text--white {
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.legend__icon {
+    margin-top: 115px;
+}
+
+.work {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.work__small {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 25%;
+    height: 180px;
+    padding: 25px;
+    box-sizing: border-box;
+    border: 10px solid #fff;
+    text-transform: uppercase;
+    background-image: url(../img/Topworkz.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 34pt;
+    color: #fff;
+}
+
+.work__big {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 50%;
+    height: 180px;
+    padding: 25px;
+    box-sizing: border-box;
+    border: 10px solid #fff;
+    text-transform: uppercase;
+    background-image: url(../img/Joint.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 34pt;
+    color: #fff;
+}
+
+.work__small--market {
+    background-image: url(../img/Market.jpg);
+}
+
+.work__small--worktop {
+    background-image: url(../img/Worktop.jpg);
+}
+
+.work__big--lable {
+    background-image: url(../img/Label.jpg);
+}
+
+.work__small--kyiv {
+    background-image: url(../img/Kyiv.jpg);
+}
+
+.legend__button {
+    width: 50%;
+    height: 60px;
+    margin-bottom: 50px;
+    background: #3c3c3c;
+    border: none;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 17pt;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-content: center;
+}
+
+.footer__description {
+    margin-left: 35px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 14pt;
+}
