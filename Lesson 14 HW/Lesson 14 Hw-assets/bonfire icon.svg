@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="19" viewBox="0 0 16 19">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 20px;
+        fill: #fc0;
+        text-anchor: middle;
+        font-family: Ionicons;
+      }
+    </style>
+  </defs>
+  <text id="bonfire_icon.svg" data-name="bonfire icon.svg" class="cls-1" x="8.001" y="17"><tspan x="8.001"></tspan></text>
+</svg>

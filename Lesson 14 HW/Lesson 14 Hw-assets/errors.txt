@@ -1,0 +1,7 @@
+[2019-11-03 20:22:47] layer "angle right icon.svg": Fonts may render inconsistently and text wrapping is unsupported which can result in clipped text. Convert text to a shape to maintain fidelity.
+[2019-11-03 20:22:47] layer "angle left icon.svg": Fonts may render inconsistently and text wrapping is unsupported which can result in clipped text. Convert text to a shape to maintain fidelity.
+[2019-11-03 20:22:48] layer "facebook.svg": Fonts may render inconsistently and text wrapping is unsupported which can result in clipped text. Convert text to a shape to maintain fidelity.
+[2019-11-03 20:22:48] layer "twitter.svg": Fonts may render inconsistently and text wrapping is unsupported which can result in clipped text. Convert text to a shape to maintain fidelity.
+[2019-11-03 20:22:48] layer "google plus.svg": Fonts may render inconsistently and text wrapping is unsupported which can result in clipped text. Convert text to a shape to maintain fidelity.
+[2019-11-03 20:22:49] layer "linked in.svg": Fonts may render inconsistently and text wrapping is unsupported which can result in clipped text. Convert text to a shape to maintain fidelity.
+[2019-11-03 20:22:49] layer "bonfire icon.svg": Fonts may render inconsistently and text wrapping is unsupported which can result in clipped text. Convert text to a shape to maintain fidelity.

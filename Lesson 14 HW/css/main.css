@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap; }
+  .body .wrapper {
+    margin-top: 20px;
+    margin-bottom: 40px; }
+
+.header {
+  text-align: center; }
+  .header__description {
+    font-family: "Raleway", sans-serif;
+    font-size: 18pt;
+    font-weight: 500;
+    color: #898f8f; }
+  .header__title {
+    font-family: "Roboto", sans-serif;
+    color: #ffcc00;
+    font-size: 60pt;
+    font-weight: 900; }
+
+.line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center; }
+  .line__line {
+    width: 210px;
+    height: 2px;
+    background: #ffcc00;
+    border: none; }
+  .line__img {
+    color: #ffcc00;
+    font-size: 24px;
+    margin-left: 10px;
+    margin-right: 10px; }
+
+.wrappercontent {
+  max-width: 1140px;
+  height: 600px;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap; }
+
+.arrow {
+  height: 100%;
+  font-size: 30px;
+  color: #ffcc00;
+  opacity: 0.5;
+  display: flex;
+  align-items: center;
+  align-content: center; }
+  .arrow:hover {
+    opacity: 1; }
+
+.card {
+  max-width: 1140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; }
+  .card__photo {
+    width: 500px;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    border-right: .5px solid #ffcc00; }
+  .card__img {
+    position: relative;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center; }
+  .card__mask {
+    position: absolute;
+    width: 105%;
+    height: 105%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+  .card .mask {
+    width: 33%;
+    height: 33%;
+    font-size: 0; }
+    .card .mask--topleft {
+      border-left: 1px solid #ffcc00;
+      border-top: 1px solid #ffcc00; }
+    .card .mask--topright {
+      border-right: 1px solid #ffcc00;
+      border-top: 1px solid #ffcc00; }
+    .card .mask--bottomleft {
+      border-left: 1px solid #ffcc00;
+      border-bottom: 1px solid #ffcc00; }
+    .card .mask--bottomright {
+      border-right: 1px solid #ffcc00;
+      border-bottom: 1px solid #ffcc00; }
+  .card__info {
+    width: 500px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    border-left: .5px solid #ffcc00; }
+  .card__name {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-size: 36pt;
+    color: #666666; }
+  .card__skill {
+    font-family: "Raleway", sans-serif;
+    font-size: 24pt;
+    font-weight: 400;
+    color: #666666; }
+  .card__separator {
+    width: 100px;
+    height: 2px;
+    margin: 30px;
+    border: none;
+    background: #ffcc00; }
+  .card__social {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 30px; }
+  .card a {
+    text-decoration: none;
+    color: #666666; }
+  .card .fab {
+    font-size: 20px; }
+  .card__socialmedia {
+    border: 2px solid #666666;
+    border-radius: 50%;
+    margin-right: 5px;
+    margin-left: 5px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    opacity: 0.5; }
+    .card__socialmedia:hover {
+      opacity: 1; }
+  .card__description {
+    margin-right: 83px;
+    margin-left: 83px;
+    font-family: "Raleway", sans-serif;
+    font-size: 14pt;
+    font-weight: 500;
+    color: #333333; }
+  .card__separator--height {
+    height: 4px; }
+  .card__profile {
+    width: 120px;
+    height: 25px;
+    background: none;
+    border: 2px solid #ffcc00;
+    opacity: .5;
+    font-family: 'Open Sans';
+    color: #666666; }
+    .card__profile:hover {
+      opacity: 1; }
+
+.bubbles {
+  flex-grow: 1;
+  margin-top: 40px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center; }
+  .bubbles__item {
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: 3px solid #ffcc00;
+    border-radius: 50%;
+    background: #ffcc00;
+    font-size: 0; }
+    .bubbles__item:hover {
+      background: none; }
