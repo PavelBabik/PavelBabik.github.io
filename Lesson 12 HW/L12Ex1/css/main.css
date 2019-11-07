@@ -76,6 +76,15 @@
     color: #fff;
 }
 
+.form__submit {
+    height: 50px;
+    background: #355b82;
+    border: none;
+    font-family: 'RalewayLight';
+    font-size: 15pt;
+    color: #fff;
+}
+
 .form__textarea::placeholder,
 .form__item::placeholder {
     color: #fff;
@@ -107,4 +116,33 @@
 .contacts__description {
     font-family: 'RalewayLight';
     font-size: 20pt;
+}
+
+.footer {
+    background-color: #000;
+    color: white;
+}
+
+.footerwrapper {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+.blockFooter {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+.blockFooter__item {
+    color: #8a8a8a;
+    font-family: 'RalewayLight';
+}
+
+.blockFooter__item--red {
+    color: #f00;
 }
