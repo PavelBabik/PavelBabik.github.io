@@ -207,16 +207,30 @@
     &__img1 {
         align-self: flex-end;
     }
+
+    &__button {
+        margin-top: 50px;
+        width: 225px;
+        height: 60px;
+        border: none;
+        background-image: url(../img/Buttonbackground.png);
+        background-size: cover;
+        font-family: 'Aleo', serif;
+        font-size: 16pt;
+        font-style: 400;
+        color: #fff;
+        text-transform: uppercase;
+    }
 }
 
 .left {
     width: 50%;
-    margin-right: 15px;
+    margin: 15px;
 }
 
 .right {
     width: 50%;
-    margin-left: 15px;
+    margin: 15px;
     display: flex;
     flex-direction: column;
 }
