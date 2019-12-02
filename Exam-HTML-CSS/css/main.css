@@ -234,7 +234,6 @@
   justify-content: center;
   align-content: center;
   align-items: center;
-  flex-wrap: wrap;
 }
 .content__title {
   font-family: "Aleo", serif;
@@ -253,6 +252,9 @@
   align-self: flex-end;
 }
 @media (max-width: 360px) {
+  .content {
+    flex-wrap: wrap;
+  }
   .content__img {
     align-self: center;
   }
