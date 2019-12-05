@@ -1,3 +1,18 @@
+@font-face {
+    font-family: 'RalewayLight';
+    src: url('../font/raleway-light.ttf');
+}
+
+@font-face {
+    font-family: 'RalewayHeavy';
+    src: url('../font/Raleway-Heavy.ttf');
+}
+
+@font-face {
+    font-family: 'RalewayBold';
+    src: url('../font/Raleway-Bold.ttf');
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -59,7 +74,6 @@ $blackColor: #000;
         justify-content: space-between;
         margin-top: 50px;
     }
-
 
     &__toggler {
         display: none;
@@ -179,9 +193,153 @@ $blackColor: #000;
     }
 }
 
+.back {
+    background: url(../img/img.jpeg);
+    background-size: cover;
+    min-height: 866px;
+    max-width: 1500px;
+    text-align: center;
+    padding-top: 100px;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+.footheader {
+    &__title {
+        font-family: 'RalewayBold';
+        font-size: 90pt;
+    }
+
+    &__description {
+        font-family: 'RalewayLight';
+        font-size: 17pt;
+    }
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left {
+    width: 50%;
+}
+
+.right {
+    width: 50%;
+    text-align: left;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+
+    &__item {
+        height: 50px;
+        background: #00c4c4;
+        opacity: 0.5;
+        border: none;
+        font-family: 'RalewayLight';
+        font-size: 15pt;
+        color: #fff;
+
+        &::placeholder {
+            color: #fff;
+        }
+
+        &:hover {
+            opacity: 1;
+            border-left: 5px solid #355b82;
+        }
+
+        &:active {
+            opacity: 1;
+            border-left: 5px solid #355b82;
+        }
+    }
+
+    &__textarea {
+        background: #00c4c4;
+        opacity: 0.5;
+        border: none;
+        font-family: 'RalewayLight';
+        font-size: 15pt;
+        color: #fff;
+
+        &::placeholder {
+            color: #fff;
+        }
+
+        &:hover {
+            opacity: 1;
+            border-left: 5px solid #355b82;
+        }
+
+        &:active {
+            opacity: 1;
+            border-left: 5px solid #355b82;
+        }
+    }
+    
+    &__submit {
+        height: 50px;
+        background: #355b82;
+        border: none;
+        font-family: 'RalewayLight';
+        font-size: 15pt;
+        color: #fff;
+    }
+}
+
+.contacts {
+    &__address {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__title {
+        font-family: 'RalewayBold';
+        font-size: 17pt;
+    }
+
+    &__description {
+        font-family: 'RalewayLight';
+        font-size: 20pt;
+    }
+}
+
+.footer {
+    background-color: #000;
+    color: white;
+}
+
+.footerwrapper {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+.blockFooter {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+
+    &__item {
+        color: #8a8a8a;
+        font-family: 'RalewayLight';
+
+        &--red {
+            color: #f00;
+        }
+    }
+}
 
 @include mobile {
-
     .header__toggler{
         display: block;
     }
@@ -217,6 +375,36 @@ $blackColor: #000;
     .main__all {
         width: 100%;
         max-width: 400px;
+        flex-direction: column;
+    }
+
+    .back {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .left {
+        width: 100%;
+    }
+
+    .form {
+        width: 100%;
+    }
+
+    .right {
+        width: 100%;
+    }
+
+    .footerwrapper {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .blockFooter {
         flex-direction: column;
     }
 }
@@ -257,6 +445,36 @@ $blackColor: #000;
     .main__all {
         width: 100%;
         max-width: 350px;
+        flex-direction: column;
+    }
+
+    .back {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .left {
+        width: 100%;
+    }
+
+    .form {
+        width: 100%;
+    }
+
+    .right {
+        width: 100%;
+    }
+
+    .footerwrapper {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .blockFooter {
         flex-direction: column;
     }
 }
