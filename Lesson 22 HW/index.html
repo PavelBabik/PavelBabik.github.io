@@ -4,15 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="./js/main.js" defer></script>
+    <script src="./js/main.js"></script>
+    <link rel="stylesheet" href="./css/main.css">
     <title>JAVA SCRIP First Lesson</title>
 </head>
 <body>
-    <button onclick="firstTask()">First Task</button>
-    <button onclick="secondTask()">Second Task</button>
-    <button onclick="thirdTask()">Third Task</button>
-    <button onclick="fourthTask()">Fourth Task</button>
-    <button onclick="fifthTask()">Fifth Task</button>
-    <button onclick="sixthTask()">Sixth Task</button>
+    <div class="tasks">
+        <p class="functionopenclose">function firstTask(){</p>
+        <p class="functionstring">var name=prompt("What is your name?");</p>
+        <p class="functionstring">alert ("Hello"+" "+name+"!");</p>    
+        <p class="functionopenclose">}</p>
+        
+        <button onclick="firstTask()">First Task</button>
+    </div>
+    <div class="tasks">
+            <p class="functionopenclose">function secondTask(){</p>
+            <p class="functionstring">var dateOfBirth=prompt("In what year did you birth?");</p>
+            <p class="functionstring">const NowYear=2019;</p>    
+            <p class="functionstring">alert("You are "+ Number(NowYear-dateOfBirth)+" old!");</p> 
+            <p class="functionopenclose">}</p>
+        <button onclick="secondTask()">Second Task</button>
+    </div>
+    <div class="tasks">
+            <p class="functionopenclose">function thirdTask(){</p>
+            <p class="functionstring"> var a=Number(prompt("What a lenth?"));</p>
+            <p class="functionstring">alert ("Perimetr kvadrata: "+a*4 +"cm kv!");</p>                
+            <p class="functionopenclose">}</p>
+        <button onclick="thirdTask()">Third Task</button>
+    </div>
+    <div class="tasks">
+            <p class="functionopenclose">function fourthTask(){</p>
+            <p class="functionstring">var rad=Number(prompt("Enter radius"));</p>
+            <p class="functionstring">const pi=3.14;</p>    
+            <p class="functionstring">var square=pi*rad*rad;</p> 
+            <p class="functionstring">alert(square);</p> 
+            <p class="functionopenclose">}</p>
+        <button onclick="fourthTask()">Fourth Task</button>
+    </div>
+    <div class="tasks">
+            <p class="functionopenclose">function fifthTask(){</p>
+                <p class="functionstring">var dist=Number(prompt("What distance do you need?"));</p>
+                <p class="functionstring">var time=Number(prompt("How long do you want to be in road?"));</p>    
+                <p class="functionstring">var temp=dist/time;</p> 
+                <p class="functionstring">alert(temp);</p> 
+                <p class="functionopenclose">}</p>
+        <button onclick="fifthTask()">Fifth Task</button>
+    </div>
+    <div class="tasks">
+            <p class="functionopenclose">function sixthTask(){</p>
+                <p class="functionstring">var count=Number(prompt("What count do you want?"));</p>
+                <p class="functionstring">var money=prompt("What valute do you want?");</p>
+                <p class="functionstring">var result=0;</p>
+                <p class="functionstring">const uah=24;</p>
+                <p class="functionstring">const eur=1.2;</p>
+                <p class="functionstring">const usd=1;</p>
+                <p class="functionstring">if (money==="UAH") {</p>
+                <p class="functionstring">    result=count*uah;</p>
+                <p class="functionstring">}</p>
+                <p class="functionstring">if(money==="EUR") {</p>
+                <p class="functionstring">    result=count*eur;</p>
+                <p class="functionstring">}</p>
+                <p class="functionstring">if(money==="USD") {</p>
+                <p class="functionstring">    result=count*usd;</p>
+                <p class="functionstring">}</p>
+                <p class="functionstring">alert(result);</p>
+                <p class="functionopenclose">}</p>
+        <button onclick="sixthTask()">Sixth Task</button>
+    </div>
 </body>
 </html>

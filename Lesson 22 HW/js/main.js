@@ -29,5 +29,20 @@ function fifthTask(){
 }
 
 function sixthTask(){
-    
+    var count=Number(prompt("What count do you want?"));
+    var money=prompt("What valute do you want?");
+    var result=0;
+    const uah=24;
+    const eur=1.2;
+    const usd=1;
+    if (money==="UAH") {
+        result=count*uah;
+    }
+    if(money==="EUR") {
+        result=count*eur;
+    }
+    if(money==="USD") {
+        result=count*usd;
+    }
+    alert(result);
 }
