@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <link rel="stylesheet" href="./css/main.css">
+    <title>JAVA SCRIPT Second Lesson</title>
+</head>
+<body>
+    <div class="tasks">
+        <button onclick="firstTask()"><b>First Task</b><br><br>Запросить у пользователя его возраст и определить, кем он является: ребенком (0–2), подростком (12–18), взрослым (18_60) или пенсионером (60– ...).</button>
+        <button onclick="secondTask()"><b>Second Task</b><br><br>Запросить у пользователя число от 0 до 9 и вывести ему спецсимвол, который расположен на этой клавише (1–!, 2–@, 3–# и т. д).</button>
+        <button onclick="thirdTask()"><b>Third Task</b><br><br>Запросить у пользователя трехзначное число и проверить, есть ли в нем одинаковые цифры.</button>
+        <button onclick="fourthTask()"><b>Fourth Task</b><br><br>Запросить у пользователя год и проверить, високосный он или нет. Високосный год либо кратен 400, либо кратен 4 и при этом не кратен 100.</button>
+        <button onclick="fifthTask()"><b>Fifth Task</b><br><br>Запросить у пользователя пятиразрядное число и определить, является ли оно палиндромом.</button>
+        <button onclick="sixthTask()"><b>Sixth Task</b><br><br>Написать конвертор валют. Пользователь вводит количество USD, выбирает, в какую валюту хочет перевести EUR, UAN или AZN, и получает в ответ соответствующую сумму.</button>
+        <button onclick="seventhTask()"><b>Seventh Task</b><br><br>Запросить у пользователя сумму покупки и вывести сумму к оплате со скидкой: от 200 до 300 – скидка будет 3%, от 300 до 500 – 5%, от 500 и выше – 7%.</button>
+        <button onclick="eightTask()"><b>Eight Task</b><br><br>Запросить у пользователя длину окружности и периметр квадрата. Определить, может ли такая окружность поместиться в указанный квадрат.</button>
+        <button onclick="nineTask()"><b>Nine Task</b><br><br>Задать пользователю 3 вопроса, в каждом вопросе по 3 варианта ответа. За каждый правильный ответ начисляется 2 балла. После вопросов выведите пользователю количество набранных баллов.</button>
+        <button onclick="tenthTask()"><b>Tenth Task</b><br><br>Запросить дату (день, месяц, год) и вывести следующую за ней дату. Учтите возможность перехода на следующий месяц, год, а также високосный год.</button>
+    </div>
+
+    <script>
+        ///////////////First Task//////////////////////
+        function firstTask() {
+            var age=Number(prompt("Enter your age:"));
+            if(age<12){
+                alert("You are a child!");
+            }else if(age >= 12 && age <= 18){
+                alert("You are teenager!");
+            }else if(age>18 && age<60){
+                alert("You are a BIG!!!");
+            }else if(age > 60){
+                alert("You are mature!");
+            }
+        }
+
+        ///////////////Second Task//////////////////////
+        function secondTask() {
+            var num=Number(prompt('Enter num from 0-9:'));
+            switch (num) {
+                case 1:
+                    alert('!');
+                    break;
+                case 2:
+                    alert('@');
+                    break;
+                case 3:
+                    alert("#");
+                    break;
+                case 4:
+                    alert('$');
+                    break;
+                case 5:
+                    alert('%');
+                    break;
+                case 6:
+                    alert('^');
+                    break;
+                case 7:
+                    alert('&');
+                    break;
+                case 8:
+                    alert('*');
+                    break;
+                case 9:
+                    alert('(');
+                    break;
+                case 0:
+                    alert(')');
+                    break;
+                default:
+                    alert('You entered NaN (not a number)!');
+                    break;
+            }
+        }
+
+        ///////////////Third Task//////////////////////
+        function thirdTask() {
+            var numb=prompt("Enter 3-digit number");
+            if( numb[0]===numb[1]||numb[0]===numb[2]
+                ||numb[1]===numb[0]||numb[1]===numb[2]
+                ||numb[2]===numb[0]||numb[2]===numb[1]){
+                alert('You have simple digits')
+            }else{
+                alert('There are not simple numbers!');
+            }                
+        }
+
+        ///////////////Fourth Task//////////////////////
+        function fourthTask() {
+            let year=Number(prompt("Enter year:"));
+            const vis=2020;
+            let diff=0;
+
+            if(year<vis) {
+                diff=vis-year;
+            }else if(year>vis){
+                diff=year-vis;
+            }
+
+            if(diff%4===0){
+                alert(`We have 366 days in ${year} year`);
+            }else{
+                alert(`We have 365 days in ${year} year`);
+            }
+        }
+
+        ///////////////Fifth Task//////////////////////
+        function fifthTask() {
+            let number=prompt("Enter 5-digit number:");
+            if(number[0]===number[4] && number[1]===number[3]){
+                alert(`Number ${number} is palindrom.`);
+            }else{
+                alert(`Number ${number} is not palindrom.`);
+            }
+        }
+
+         ///////////////Sixth Task//////////////////////
+         function sixthTask() {
+            var equal=Number(prompt('Enter your equal in USD:'));
+            var money=prompt('In what money do you want?');
+            const eur=1.2;
+            const uan=0.5;
+            const azn=1.8;
+            let rez=0;
+
+            switch (money) {
+                case 'EUR':
+                    rez=equal*eur;
+                    alert(`You will have ${rez} EUR`);
+                    break;
+                case 'UAN':
+                    rez=equal*uan;
+                    alert(`You will have ${rez} UAN`);
+                    break;
+                case 'AZN':
+                    rez=equal*azn;
+                    alert(`You will have ${rez} AZN`);
+                    break;
+                case 'USD':
+                    rez=equal*1;
+                    alert(`You will have ${rez} USD`);
+                    break;                
+                default:
+                    alert('There is no some money!!!');
+                    break;
+            }
+        }
+        
+        ///////////////Seventh Task//////////////////////
+        function seventhTask() {
+            let equal=Number(prompt("Enter your equal:"));
+            let discount=0;
+            let smallDiscount=3;
+            let middleDiscount=5;
+            let goldDiscount=7;
+
+            if(equal<200){
+                alert(`Your equal is ${equal}.\nSorry, but you have no discount.`)
+            }else if(equal>=200 && equal<300){
+                discount=equal*0.03;
+                alert(`Your equal is ${equal}.\nYour discount is ${smallDiscount}% or in money ${discount}.\nYou must pay ${equal-discount}. Have a nice day!!!`)
+            }else if(equal>=300 && equal<500){
+                discount=equal*0.05;
+                alert(`Your equal is ${equal}.\nYour discount is ${middleDiscount}% or in money ${discount}.\nYou must pay ${equal-discount}. Have a nice day!!!`)
+            }else if(equal>=500){
+                discount=equal*0.07;
+                alert(`Your equal is ${equal}.\nYour discount is ${goldDiscount}% or in money ${discount}.\nYou must pay ${equal-discount}. Have a nice day!!!`)
+            }
+        }
+        
+        ///////////////eight Task//////////////////////
+        function eightTask() {
+            let perimetr=prompt("Enter square perimeter:");
+            let length=prompt('Enter length of ring:');
+            
+            let forCircle=2*3.14;
+            let a=perimetr/4;
+            let r=length/forCircle;
+            let halfOfa=a/2;         
+
+            if(r===halfOfa){
+                alert('Circle can be in square!');
+            }else{
+                alert('CIRCLE CAN NOT BE IN SQUARE!!!!');
+            }            
+        }
+
+        ///////////////nine Task//////////////////////
+        function nineTask() {
+            var num1, num2, num3, result=0;
+            num1=parseInt(prompt("3+3="));            
+            num2=parseInt(prompt("4+4="));
+            num3=parseInt(prompt("5+5="));
+            result=parseInt(result);
+
+            if(num1===6){
+                result=result+2;
+            }else{
+                result=result+0;
+            }
+
+            if(num2===8){
+                result=result+2;
+            }else{
+                result=result+0;
+            }
+
+            if(num3===10){
+                result=result+2;
+            }else{
+                result=result+0;
+            }   
+
+            alert("Your result: "+result);       
+        }
+
+         ///////////////Tenth Task//////////////////////
+        function tenthTask() {
+            let day=Number(prompt('Enter a day:'));
+            let month=Number(prompt('Entert a month:'));
+            let year=Number(prompt('Enter a year:'));
+            
+            const vis=2020;
+            const big=31;
+            const small=30;
+            const bigFeb=29;
+            const smallFeb=28;
+            let daysInMonth=0;
+            let diff=0;
+            let newYear=0;
+            let viso='';
+ 
+            if(year<vis){
+                diff=vis-year;
+            }else if(year>vis){
+                diff=year-vis;
+            }
+ 
+            if(month===12||month===10||month===8||month===7||month===5||month===3||month===1){
+                daysInMonth=big;               
+            }else if(month===11||month===9||month===6||month===4){
+                daysInMonth=small;
+            }else if(month===2 && diff%4===0){
+                daysInMonth=bigFeb;                
+            }else if(month===2 && diff!=0) {
+                daysInMonth=smallFeb;
+            }else{
+                alert('You live in another planet!!! There is no such month!!!')
+            }
+            
+            if(day===daysInMonth && month!=12){
+                day=1;
+                month+=1;
+                newYear=year;
+            }else if(day<daysInMonth){
+                day+=1;
+                newYear=year;
+            }else if(day===daysInMonth && month===12){
+                newYear=year+1;
+                month=1;
+                day=1;
+                if(newYear<vis){
+                    diff=vis-newYear;
+                }else if(newYear>vis){
+                    diff=newYear-vis;
+                }
+            }
+
+            if(diff%4===0) {
+                viso='leap year';
+            }else if(diff%4!=0){                
+                viso='low year';
+            }
+
+            alert(`The next day will be ${day}.${month}.${newYear}.\nThis year is ${viso}`)
+        }
+    </script>
+</body>
+</html>
