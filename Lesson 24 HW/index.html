@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="tasks">
+        <button onclick="firstTask()"><b>First Task</b><br><br>Подсчитать сумму всех чисел в заданном пользователем диапазоне.</button>
+        <button onclick="secondTask()"><b>Second Task</b><br><br>Запросить 2 числа и найти только наибольший общий делитель.</button>
+        <button onclick="thirdTask()"><b>Third Task</b><br><br>Запросить у пользователя число и вывести все делители этого числа.</button>
+        <button onclick="fourthTask()"><b>Fourth Task</b><br><br>Определить количество цифр в введенном числе.</button>
+        <button onclick="fifthTask()"><b>Fifth Task</b><br><br>Запросить у пользователя 10 чисел и подсчитать, сколько он ввел положительных, отрицательных и нулей. При этом также посчитать, сколько четных и нечетных. Вывести статистику на экран. Учтите, что достаточно одной переменной (не 10) для ввода чисел пользователем.</button>
+        <button onclick="sixthTask()"><b>Sixth Task</b><br><br>Зациклить калькулятор. Запросить у пользователя 2 числа и знак, решить пример, вывести результат и спросить, хочет ли он решить еще один пример. И так до тех пор, пока пользователь не откажется.</button>
+        <button onclick="seventhTask()"><b>Seventh Task</b><br><br>Запросить у пользователя число и на сколько цифр его сдвинуть. Сдвинуть цифры числа и вывести результат (если число 123456 сдвинуть на 2 цифры, то получится 345612).</button>
+        <div>
+            <button onclick="ninethTask()"><b>Nineth Task</b><br><br>Вывести таблицу умножения для всех чисел от 2 до 9. Каждое число необходимо умножить на числа от 1 до 10.</button>
+            <div id="rez"></div>
+        </div>
+    </div>
+    <script>
+        
+        ////////////First Task////////////
+        function firstTask(){
+            let num1=Number(prompt('Enter first number'));
+            let num2=Number(prompt('Enter second number, bigger from number 1'));
+            let sum=0;
+            for(let i=num1; i<=num2; i++){
+                sum+=i;
+            }
+            alert(`Sum of numbers from ${num1} to ${num2}: ${sum}`);
+        }
+
+        ////////////Second Task////////////
+        function secondTask(){
+            var a=Number(prompt("Enter first number:"));
+            var b=Number(prompt("Enter second number:"))
+            var k;
+            var znam;
+            
+            znam = a>b ? b:a;
+                while(znam>0) {
+                if(a%znam===0 && b%znam===0){
+                    break;
+                }
+                znam=znam-1;
+            }
+                while (k<znam) {
+                    if(a%znam===0 && b%znam===0){
+                        znam=k;
+                    break;
+                }
+                k=k+1;
+            }
+            alert(znam);
+        }
+
+        ////////////Third Task////////////
+        function thirdTask(){
+            var a=Number(prompt("Enter a number:"));
+            for(let i=0;i<a;i++) {
+                if(a%i===0) {
+                    alert(`Divider: ${i}`);
+                }
+            }
+        }
+
+        ////////////Fourth Task////////////
+        function fourthTask(){
+            var a=prompt("Enter a number:");
+            let equal=0;
+            for(let i=0;i<a.length;i++) {
+                equal+=1;
+            }
+            alert(`Length of your number is ${equal}`);
+        }
+
+        ////////////Fifth Task////////////
+        function fifthTask(){
+            var a=0;
+            var double=0;
+            var notdouble=0;
+            var zero=0;
+
+            for(var i=0;i<10;i++) {
+                a=Number(prompt("Enter 10 digits"));
+
+                if (a%2===0){
+                    double++;
+                }else{
+                    notdouble++;
+                }
+                if(a===0){
+                    zero++;
+                }
+            }
+            alert(`You enter ${double} double numbers \n${notdouble} not double numbers\n zero ${zero}!`);
+        }
+
+        ////////////Sixth Task////////////
+        function sixthTask(){
+            var answer='';
+            var rez=0;
+            while(answer!='N'){
+                var num1=Number(prompt('Enter first number'));
+                var num2=Number(prompt('Enter second number'));
+                var action=prompt('What want you do? (+, -, *, /)');
+
+                if(action==='+'){
+                    rez=num1+num2;
+                }
+                if(action==='-'){
+                    rez=num1-num2;
+                }
+                if(action==='*'){
+                    rez=num1*num2;
+                }
+                if(action==='/'){
+                    rez=num1/num2;
+                }
+
+                alert(`Result of your action is ${rez}`);
+                answer=prompt('Would you like to do somthing else?');                
+            }
+        }
+
+        ////////////Seventh Task////////////
+        function seventhTask(){
+            var number=prompt('Enter a number');
+            var equal=Number(prompt('How much symbols do you want remove?'));
+            var end='';
+            for(let i=0; i<equal; i++){
+                end+=number[i];
+                number=number.replace(number[i],' ');
+            }
+            number=number+end;
+            alert(`${end}\n${number}`);
+        }
+
+        ////////////Nineth Task////////////
+        function ninethTask(){
+            let rez=0;
+            let num=``;
+            for(let i=2; i<=9;i++){
+                for(let j=1; j<=10;j++){
+                    rez=i*j;
+                    num+=`${i}*${j}=${rez}\n`;
+                }
+            }
+            document.getElementById('rez').innerHTML=num;
+        }
+    </script>
+</body>
+</html>

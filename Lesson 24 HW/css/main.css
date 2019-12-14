@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  width: 75%;
+  border: 2px dotted blue;
+  margin: 5px;
+}
+
+#rez {
+  width: 75%;
+  margin: 5px;
+}
+
+/*# sourceMappingURL=main.css.map */
