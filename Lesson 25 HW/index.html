@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="tasks">
+        <button onclick="firstTask()"><b>First Task</b><br><br>Написать функцию, которая принимает 2 числа и возвращает -1, если первое меньше, чем второе; 1 – если первое больше, чем второе; и 0 – если числа равны.</button>
+        <button onclick="secondTask()"><b>Second Task</b><br><br>Написать функцию, которая вычисляет факториал переданного ей числа.</button>
+        <button onclick="thirdTask()"><b>Third Task</b><br><br>Написать функцию, которая принимает три отдельные цифры и превращает их в одно число. Например: цифры 1, 4, 9 превратятся в число 149.</button>
+        <button onclick="fourthTask()"><b>Fourth Task</b><br><br>Написать функцию, которая принимает длину и ширину прямоугольника и вычисляет его площадь. Если в функцию передали 1 параметр, то она вычисляет площадь квадрата.</button>
+    </div>
+    <script>
+    
+        ///////////First task///////////
+        function withNum(a,b){
+            if(a<b){alert(-1);}//return -1;
+            if(a===b){alert(0);}//return 0;
+            if(a>b){alert(1);}//return 1;
+        }
+        function firstTask(){
+            let n=Number(prompt('Enter first number'));
+            let n2=Number(prompt('Enter second number'));
+
+            withNum(n,n2);
+        }
+
+        ///////////Second task///////////
+        function getFactorial(n) {
+            if(n===1){return 1;}
+            return n*getFactorial(n-1);
+        }        
+        function secondTask(){
+            let n=Number(prompt('Enter a number'));
+
+            alert(getFactorial(n));
+        }
+
+        ///////////Third task///////////
+        function getBigNum(a,b,c) {
+            let string='';
+            string=a+b+c;
+            let bigNum=parseInt(string);
+
+            alert(bigNum);
+        }        
+        function thirdTask(){
+            let n1=prompt('Enter first digit');
+            let n2=prompt('Enter second digit');
+            let n3=prompt('Enter third digit');
+
+            getBigNum(n1, n2, n3);
+        }
+
+        ///////////Fourth task///////////
+        function getSquare(a,b=0) {
+            let square=0;
+            if(b===0){
+                square=a*a;
+            }else{
+                square=a*b;
+            }
+            alert(`Square = ${square}`);
+        }        
+        function fourthTask(){
+            let n1=Number(prompt('Enter a length of quadrangle'));
+            let n2=Number(prompt('Enter a width of quadrangle\nIf this is square, enter 0.'));
+
+            getSquare(n1, n2);
+        }
+    </script>
+</body>
+</html>
