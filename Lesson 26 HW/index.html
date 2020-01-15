@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="firstTask()"><b>First Task</b><br><br>Создать объект, описывающий автомобиль (производитель, модель, год выпуска, средняя скорость), и следующие функции для работы с этим объектом:<br><br>Функция для вывода на экран информации об автомобиле;<br><br>Функция для подсчета необходимого времени для преодоления переданного расстояния со средней скоростью. Учтите, что через каждые 4 часа дороги водителю необходимо делать перерыв на 1 час.</button>
+    <button onclick="secondTask()"><b>Second Task</b><br><br>Создать объект, хранящий в себе отдельно числитель и знаменатель дроби, и следующие функции для работы с этим объектом:<br><br>Функция сложения 2-х объектов-дробей;<br><br>Функция вычитания 2-х объектов-дробей;<br><br>Функция умножения 2-х объектов-дробей;<br><br>Функция деления 2-х объектов-дробей;<br><br>Функция сокращения объекта-дроби.</button>
+
+    <script>
+        ///////////Task First///////////
+        let car={
+            name: "Ford",
+            model: "Mustang",
+            year: 1969,
+            speed: 160,
+        }
+        let counter=0;
+        function showObj(obj){
+            let str=``;
+            for(let key in obj){
+                str+=`${key}: ${obj[key]}\n`;
+            }
+            alert(str);
+        }
+        function setTime(obj, key){
+            let distance=Number(prompt('What distance do you need?'));
+            let time=distance/obj[key];
+            let timeWithrest=time;
+            if(timeWithrest<=4){
+                alert(`${time} ${timeWithrest}`);                
+            }else if(timeWithrest>4 && timeWithrest%4===0){
+                
+                    while(timeWithrest/4 !== 1){
+                        counter++;
+                        timeWithrest=timeWithrest-4;
+                        time+=counter;
+                        alert(time);
+                    
+                }
+            }
+        }
+        function firstTask(){
+            showObj(car);
+            setTime(car,'speed');
+        }
+
+        ///////////Task Second///////////
+        let fraction = {
+            numerator: 1,
+            denominator: 2,
+        }
+
+        let fraction1 = {
+            numerator: 1,
+            denominator: 2,
+        }
+
+        let rezNum = 0;
+        let rezDenum = 0;
+        
+        function fractionPlus () {
+            if(fraction.denominator === fraction1.denominator) {
+                rezNum = fraction.numerator + fraction1.numerator;
+                rezDenum = fraction.denominator;
+            }
+            alert(`Result: ${rezNum}/${rezDenum}`);
+        }
+
+        function secondTask() {
+            fractionPlus();
+        }
+    </script>
+</body>
+</html>
