@@ -1,16 +1,22 @@
 @font-face {
   font-family: 'gotham_med_reg';
   src: url(../fonts/Gotham_Medium_Regular.ttf);
+  src: url(../fonts/gotham-medium-webfont.woff);
+  src: url(../fonts/gotham-medium-webfont.woff2);
 }
 
 @font-face {
   font-family: 'Gotham_Book';
   src: url(../fonts/GothamBook.ttf);
+  src: url(../fonts/GothamBook.eot);
+  src: url(../fonts/GothamBook.woff);
 }
 
 @font-face {
   font-family: 'Gotham_Bold';
   src: url(../fonts/gothambold1.ttf);
+  src: url(../fonts/gothambold1.eot);
+  src: url(../fonts/gothambold1.woff);
 }
 
 @-webkit-keyframes backgroundImg {
