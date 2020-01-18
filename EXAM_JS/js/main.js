@@ -58,6 +58,42 @@ $('.news').slick({
     ]            
 }); 
 
+//////// HOVER//////////
+$('.button').on('mousemove', function(event) {
+  $(event.target).addClass('button_hover');
+})
+
+$('.button').on('mouseout', function(event) {
+  $(event.target).removeClass('button_hover');
+})
+ 
+$('.news__link .news__item').hover (function() {
+  let index = $('.news__link .news__item').index(this);
+  $('.news__hover').eq(index).addClass('news_hover');
+},function() {  
+  $('.news__hover').removeClass('news_hover');
+})
+
+$('.navigation__link .navigation__item').hover (function() {
+  let index = $('.navigation__link .navigation__item').index(this);
+  $('.circle').eq(index).addClass('circle_hover');
+},function() {  
+  $('.circle').removeClass('circle_hover');
+})
+
+$('.footer__name').hover (function() {
+  $(this).addClass('input_hover');
+},function() {  
+  $(this).removeClass('input_hover');
+})
+
+$('.footer__mail').hover (function() {
+  $(this).addClass('input_hover');
+},function() {  
+  $(this).removeClass('input_hover');
+})
+
+
 $(document).ready(function() {
     var scrollLink = $('.scroll');
     scrollLink.click(function(e) {

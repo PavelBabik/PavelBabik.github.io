@@ -284,10 +284,10 @@ $bg4: url(../img/Fourth.png);
         text-transform: uppercase;
         font-size: 14pt;
 
-        &:hover .circle {
-            background: #fff;
-            font-family: 'Gotham_Bold';
-        }
+        //&:hover .circle {
+        //    background: #fff;
+        //    font-family: 'Gotham_Bold';
+        //}
     }
 
     &__item {
@@ -298,6 +298,11 @@ $bg4: url(../img/Fourth.png);
             height: 24px;
         }
     }
+}
+
+.circle_hover {
+    background: #fff;
+    font-family: 'Gotham_Bold';
 }
 
 .circle {
@@ -493,10 +498,10 @@ $bg4: url(../img/Fourth.png);
     border: 1px solid #2c4058;
     background: none;
 
-    &:hover {
-        border: 1px solid #55b7ff;
-        color: #55b7ff;
-    }
+    //&:hover {
+    //    border: 1px solid #55b7ff;
+    //    color: #55b7ff;
+    //}
     &_gallery {
         margin-top: 60px;
         margin-bottom: none;
@@ -506,6 +511,11 @@ $bg4: url(../img/Fourth.png);
         width: 135px;
     }
 
+}
+
+.button_hover {
+    border: 1px solid #55b7ff;
+    color: #55b7ff;
 }
 
 .inner_img {
@@ -554,19 +564,19 @@ $bg4: url(../img/Fourth.png);
     &__link {
         text-decoration: none;
         height: 100%;  
-        transition: 0.8s;  
+         
 
-        &:hover .news__hover {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            align-content: center;            
-            transform: rotateY(360deg);
-            
-            @include middle {
-                display: none;
-            }
-        }
+        //&:hover .news__hover {
+        //    display: flex;
+        //    justify-content: center;
+        //    align-items: center;
+        //    align-content: center;            
+        //    transform: rotateY(360deg);
+        //    
+        //    @include middle {
+        //        display: none;
+        //    }
+        //}
         
         @include middle {
             width: 100%;
@@ -587,8 +597,6 @@ $bg4: url(../img/Fourth.png);
         height: 240px;
         position: absolute;
         background: rgba(44, 64, 88, .5);
-        
-
     }
     
     &__item {
@@ -597,6 +605,7 @@ $bg4: url(../img/Fourth.png);
         display: flex;
         flex-direction: column;
         background: #fff;
+        transition: 0.8s; 
     }
 
     &__text {
@@ -653,6 +662,14 @@ $bg4: url(../img/Fourth.png);
         font-size: 14pt;
         color: #646464;
     }
+}
+
+.news_hover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;            
+    transform: rotateY(360deg);
 }
 
 .cont {
@@ -746,16 +763,29 @@ $bg4: url(../img/Fourth.png);
         justify-content: center;
         align-items: center;
         align-content: center;
+
+        @include ipad {
+            align-items: flex-end;
+        }
     }
 
     &__nav {
         display: flex;
         justify-content: space-between;
+
+        @include ipad {
+            flex-wrap: wrap;
+        }
     }
 
     &__about {
         display: flex;
         padding-top: 45px;
+
+        @include ipad {
+            padding: 0;
+            flex-direction: column;
+        }
     }
 
     &__line {
@@ -764,12 +794,20 @@ $bg4: url(../img/Fourth.png);
         border: none;
         background: #fff;
         margin: 0 20px 0 20px;
+        
+        @include ipad {
+            display: none;
+        }
     }
 
     &__text {
         color: #fff;
         font-family: 'Gotham_Book';
         font-size: 14pt;
+
+        @include ipad {
+            width: 100%;
+        }
     }
 
     &__form {
@@ -785,6 +823,10 @@ $bg4: url(../img/Fourth.png);
         padding: 30px;
         display: flex;
         box-sizing: border-box;
+
+        @include ipad {
+            flex-direction: column;
+        }
     }
 
     &__person {
@@ -803,6 +845,10 @@ $bg4: url(../img/Fourth.png);
         width: 100%;
         padding-left: 50px;
         box-sizing: border-box;
+
+        @include ipad {
+            padding: 0;
+        }
     }
 
     &__name {
@@ -815,13 +861,13 @@ $bg4: url(../img/Fourth.png);
         color: #2c4058;
         transition: .3s;
 
-        &:active {
-            border-bottom: 2px solid #2c4058;
-        }
-
-        &:hover {
-            border-bottom: 2px solid #2c4058;
-        }
+        //&:active {
+        //    border-bottom: 2px solid #2c4058;
+        //}
+//
+        //&:hover {
+        //    border-bottom: 2px solid #2c4058;
+        //}
 
         &::placeholder {
             font-family: 'Gotham_Book';
@@ -839,13 +885,13 @@ $bg4: url(../img/Fourth.png);
         color: #2c4058;
         transition: .3s;
 
-        &:active {
-            border-bottom: 2px solid #2c4058;
-        }
-
-        &:hover {
-            border-bottom: 2px solid #2c4058;
-        }
+        //&:active {
+        //    border-bottom: 2px solid #2c4058;
+        //}
+//
+        //&:hover {
+        //    border-bottom: 2px solid #2c4058;
+        //}
 
         &::placeholder {
             font-family: 'Gotham_Book';
@@ -860,9 +906,17 @@ $bg4: url(../img/Fourth.png);
     }
 }
 
+.input_hover {
+    border-bottom: 2px solid #2c4058;
+}
+
 .left {
     width: 50%;
     flex-grow: 1;
+
+    @include ipad {
+        width: 100%;
+    }
 }
 
 .right {
@@ -873,4 +927,8 @@ $bg4: url(../img/Fourth.png);
     align-content: right;
     align-items: right;
     justify-content: flex-end;
+
+    @include ipad {
+        width: 100%;
+    }
 }
