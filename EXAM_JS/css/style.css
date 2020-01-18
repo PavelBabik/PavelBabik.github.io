@@ -290,6 +290,7 @@
           justify-content: space-between;
   list-style: none;
   color: #fff;
+  font-family: 'Gotham_Book';
   text-transform: uppercase;
   font-size: 14pt;
 }
@@ -315,6 +316,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  font-family: 'Gotham_Book';
   text-transform: uppercase;
   font-size: 14pt;
 }
@@ -595,6 +597,7 @@
   height: 50px;
   margin-top: 35px;
   margin-bottom: 55px;
+  font-family: 'Gotham_Book';
   font-size: 14pt;
   text-transform: uppercase;
   color: #2c4058;
