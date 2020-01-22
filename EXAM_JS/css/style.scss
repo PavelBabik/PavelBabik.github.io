@@ -265,7 +265,7 @@ $bg4: url(../img/Fourth.png);
         justify-content: space-between;
         list-style: none;  
         color: #fff;
-        font-family: 'Gotham_B';
+        font-family: 'gotham_med_reg';
         text-transform: uppercase;
         font-size: 14pt;
         
@@ -285,7 +285,7 @@ $bg4: url(../img/Fourth.png);
         padding: 15px;
         display: flex;
         justify-content: center;
-        font-family: 'Gotham_B';
+        font-family: 'gotham_med_reg';
         text-transform: uppercase;
         font-size: 14pt;
 
@@ -497,7 +497,7 @@ $bg4: url(../img/Fourth.png);
     height: 50px;
     margin-top: 35px;
     margin-bottom: 55px;
-    font-family: 'Gotham_B';
+    font-family: 'gotham_med_reg';
     font-size: 14pt;
     text-transform: uppercase;
     color: #2c4058;
@@ -657,14 +657,14 @@ $bg4: url(../img/Fourth.png);
     }
 
     &__name {
-        font-family: 'Gotham_B';
+        font-family: 'gotham_med_reg';
         font-size: 18pt;
         color: #2c4058;
         text-transform: uppercase;
     }
 
     &__date {
-        font-family: 'Gotham_B';
+        font-family: 'gotham_med_reg';
         font-size: 14pt;
         color: #646464;
     }
@@ -876,7 +876,7 @@ $bg4: url(../img/Fourth.png);
         //}
 
         &::placeholder {
-            font-family: 'Gotham_B';
+            font-family: 'gotham_med_reg';
             font-size: 18pt;
         }
     }
@@ -900,7 +900,7 @@ $bg4: url(../img/Fourth.png);
         //}
 
         &::placeholder {
-            font-family: 'Gotham_B';
+            font-family: 'gotham_med_reg';
             font-size: 18pt;
         }
     }
