@@ -295,7 +295,7 @@
           justify-content: space-between;
   list-style: none;
   color: #fff;
-  font-family: 'gotham_med_reg';
+  font-family: 'Cuprum', sans-serif;
   text-transform: uppercase;
   font-size: 14pt;
 }
@@ -602,7 +602,7 @@
   height: 50px;
   margin-top: 35px;
   margin-bottom: 55px;
-  font-family: 'gotham_med_reg';
+  font-family: 'Cuprum', sans-serif;
   font-size: 14pt;
   text-transform: uppercase;
   color: #2c4058;
@@ -791,14 +791,14 @@
 }
 
 .news__name {
-  font-family: 'gotham_med_reg';
+  font-family: 'Cuprum', sans-serif;
   font-size: 18pt;
   color: #2c4058;
   text-transform: uppercase;
 }
 
 .news__date {
-  font-family: 'gotham_med_reg';
+  font-family: 'Cuprum', sans-serif;
   font-size: 14pt;
   color: #646464;
 }
@@ -1105,22 +1105,22 @@
 }
 
 .footer__name::-webkit-input-placeholder {
-  font-family: 'gotham_med_reg';
+  font-family: 'Cuprum', sans-serif;
   font-size: 18pt;
 }
 
 .footer__name:-ms-input-placeholder {
-  font-family: 'gotham_med_reg';
+  font-family: 'Cuprum', sans-serif;
   font-size: 18pt;
 }
 
 .footer__name::-ms-input-placeholder {
-  font-family: 'gotham_med_reg';
+  font-family: 'Cuprum', sans-serif;
   font-size: 18pt;
 }
 
 .footer__name::placeholder {
-  font-family: 'gotham_med_reg';
+  font-family: 'Cuprum', sans-serif;
   font-size: 18pt;
 }
 
@@ -1137,22 +1137,22 @@
 }
 
 .footer__mail::-webkit-input-placeholder {
-  font-family: 'gotham_med_reg';
+  font-family: 'Cuprum', sans-serif;
   font-size: 18pt;
 }
 
 .footer__mail:-ms-input-placeholder {
-  font-family: 'gotham_med_reg';
+  font-family: 'Cuprum', sans-serif;
   font-size: 18pt;
 }
 
 .footer__mail::-ms-input-placeholder {
-  font-family: 'gotham_med_reg';
+  font-family: 'Cuprum', sans-serif;
   font-size: 18pt;
 }
 
 .footer__mail::placeholder {
-  font-family: 'gotham_med_reg';
+  font-family: 'Cuprum', sans-serif;
   font-size: 18pt;
 }
 
