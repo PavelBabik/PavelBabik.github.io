@@ -13,6 +13,11 @@
 }
 
 @font-face {
+  font-family: 'Gotham_B';
+  src: url(../fonts/GothamBook.woff);
+}
+
+@font-face {
   font-family: 'Gotham_Bold';
   src: url(../fonts/gothambold1.ttf);
   src: url(../fonts/gothambold1.eot);
@@ -290,7 +295,7 @@
           justify-content: space-between;
   list-style: none;
   color: #fff;
-  font-family: 'Gotham_Book';
+  font-family: 'Gotham_B';
   text-transform: uppercase;
   font-size: 14pt;
 }
@@ -316,7 +321,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-family: 'Gotham_Book';
+  font-family: 'Gotham_B';
   text-transform: uppercase;
   font-size: 14pt;
 }
@@ -597,7 +602,7 @@
   height: 50px;
   margin-top: 35px;
   margin-bottom: 55px;
-  font-family: 'Gotham_Book';
+  font-family: 'Gotham_B';
   font-size: 14pt;
   text-transform: uppercase;
   color: #2c4058;
@@ -786,14 +791,14 @@
 }
 
 .news__name {
-  font-family: 'Gotham_Book';
+  font-family: 'Gotham_B';
   font-size: 18pt;
   color: #2c4058;
   text-transform: uppercase;
 }
 
 .news__date {
-  font-family: 'Gotham_Book';
+  font-family: 'Gotham_B';
   font-size: 14pt;
   color: #646464;
 }
@@ -1100,22 +1105,22 @@
 }
 
 .footer__name::-webkit-input-placeholder {
-  font-family: 'Gotham_Book';
+  font-family: 'Gotham_B';
   font-size: 18pt;
 }
 
 .footer__name:-ms-input-placeholder {
-  font-family: 'Gotham_Book';
+  font-family: 'Gotham_B';
   font-size: 18pt;
 }
 
 .footer__name::-ms-input-placeholder {
-  font-family: 'Gotham_Book';
+  font-family: 'Gotham_B';
   font-size: 18pt;
 }
 
 .footer__name::placeholder {
-  font-family: 'Gotham_Book';
+  font-family: 'Gotham_B';
   font-size: 18pt;
 }
 
@@ -1132,22 +1137,22 @@
 }
 
 .footer__mail::-webkit-input-placeholder {
-  font-family: 'Gotham_Book';
+  font-family: 'Gotham_B';
   font-size: 18pt;
 }
 
 .footer__mail:-ms-input-placeholder {
-  font-family: 'Gotham_Book';
+  font-family: 'Gotham_B';
   font-size: 18pt;
 }
 
 .footer__mail::-ms-input-placeholder {
-  font-family: 'Gotham_Book';
+  font-family: 'Gotham_B';
   font-size: 18pt;
 }
 
 .footer__mail::placeholder {
-  font-family: 'Gotham_Book';
+  font-family: 'Gotham_B';
   font-size: 18pt;
 }
 
