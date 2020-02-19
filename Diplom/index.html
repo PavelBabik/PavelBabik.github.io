@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Ink Tatoo</title>
+</head>
+<body>
+    <div id="app">
+        <header class="header">
+            <div class="wrapper">
+                <div class="container">
+                    <div class="header__header">
+                        <svg class="header__logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="260" height="137" viewBox="0 0 260 137">
+                            <image id="Logo.svg" width="260" height="137" xlink:href="data:img/png;base64,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"/>
+                        </svg> 
+                    </div>
+                    <div class="header__content">
+                        <div @click="openMenu" class="header__open">
+                            <div class="animate" v-if="!show">
+                                <svg class="header__toogle" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 40.15 36.26">
+                                    <g>
+                                      <g>
+                                        <path class="a" d="M40.05,36.15C23.77,29.05,19.94,28.35,6.14,34a25.17,25.17,0,0,0,.68-5.26c12.51-5.09,16.74-4.66,30.64,1.28Q38.55,33,40.05,36.15Z"/>
+                                        <path d="M40.15,36.26c-.62-.21-1.35-.35-2.17-.57-.4-.11-.84-.25-1.2-.37L35.72,35,31.5,33.68a43.28,43.28,0,0,0-8.38-1.83,24.19,24.19,0,0,0-8.23.74,73.16,73.16,0,0,0-8.25,2.66l-.07,0a1.28,1.28,0,0,1-1.66-.75,1.29,1.29,0,0,1,0-.8,23.4,23.4,0,0,0,.77-5v-.06a1.11,1.11,0,0,1,.73-1,65.8,65.8,0,0,1,7.73-2.5,23.65,23.65,0,0,1,8.22-.66,30.83,30.83,0,0,1,7.89,2c2.52,1,5,2.05,7.38,3.16h0a.37.37,0,0,1,.19.2c.34,1,.72,2.08,1.11,3.1l.61,1.54.32.76.17.38A2.07,2.07,0,0,1,40.15,36.26Zm-.21-.21c-.1-.1-.19-.13-.22-.21l-.19-.36-.37-.74-.72-1.5c-.47-1-.91-2-1.32-3.06l.2.21c-2.48-1-5-1.91-7.48-2.7a32,32,0,0,0-7.64-1.54,21.81,21.81,0,0,0-7.59,1,66,66,0,0,0-7.35,2.75L8,28.81a26.74,26.74,0,0,1-.58,5.54L5.64,32.83a60.71,60.71,0,0,1,8.49-3.22,21.05,21.05,0,0,1,9.35-.6,33.54,33.54,0,0,1,8.71,2.82q2,.95,4,2l1,.53c.32.17.55.32.84.51A18.73,18.73,0,0,0,39.94,36.05Z"/>
+                                      </g>
+                                      <g>
+                                        <path class="a" d="M35.16,22c-12.28-5.07-16.67-5.11-28.84-.11-.24-1.48-.56-3-1-4.58C18,12,22.39,11.79,34.46,16.69A43.35,43.35,0,0,0,35.16,22Z"/>
+                                        <path d="M35.16,22c-1-.33-2.47-.7-3.61-1-.6-.18-1.21-.32-1.81-.48s-1.2-.32-1.8-.44a27.76,27.76,0,0,0-7.2-.8,26.63,26.63,0,0,0-7,1.37c-2.3.74-4.58,1.7-6.87,2.63a1.45,1.45,0,0,1-1.9-.8,1.87,1.87,0,0,1-.07-.22l0-.1-1-4.42V17.6a1.47,1.47,0,0,1,.88-1.69c2.35-1,4.75-1.9,7.23-2.67a28.22,28.22,0,0,1,7.8-1.34,23.83,23.83,0,0,1,7.79,1.34,56.81,56.81,0,0,1,7.07,3l.06,0a.41.41,0,0,1,.24.39C34.93,18.42,35,20.19,35.16,22Zm0,0A34.43,34.43,0,0,1,34,16.72l.31.43c-2.41-.76-4.81-1.51-7.22-2a23.67,23.67,0,0,0-7.17-.65,27.76,27.76,0,0,0-7,1.53c-2.33.76-4.63,1.71-6.95,2.67l.87-1.76,1,4.73-2-1.12A64.06,64.06,0,0,1,13,18a25.51,25.51,0,0,1,7.76-1,25.39,25.39,0,0,1,7.54,1.7,36,36,0,0,1,3.5,1.48c.55.28,1.17.54,1.65.82S34.54,21.69,35.16,22Z"/>
+                                      </g>
+                                      <g>
+                                        <path class="a" d="M36.07,5.26a19.1,19.1,0,0,0-1.29,4.45C21.83,4.41,17.7,4.85,3.29,11Q2.48,9,1.49,6.83C17.87-.31,21.54-.83,36.07,5.26Z"/>
+                                        <path d="M36.07,5.26a21.42,21.42,0,0,0-.9,4.52.38.38,0,0,1-.41.33l-.08,0,0,0C32,9.23,29.41,8.41,26.8,7.84a22.67,22.67,0,0,0-7.8-.5,32,32,0,0,0-7.61,2c-2.51.93-5,2-7.52,3.07a1.48,1.48,0,0,1-1.94-.75l0-.08C1.29,10.21.72,8.83.14,7.46l0-.07A1.46,1.46,0,0,1,.89,5.48C3.69,4.3,6.48,3.09,9.39,2.1A33.88,33.88,0,0,1,18.51.05a22.62,22.62,0,0,1,9.24,1.43c.73.26,1.45.51,2.15.82s1.41.58,2.09.92,1.36.62,2.08,1S35.43,5,36.07,5.26Zm0,0c-1.56-.51-2.87-.86-4.35-1.32s-2.89-.83-4.34-1.13A31.41,31.41,0,0,0,23,2.13a22.94,22.94,0,0,0-4.31.15,37.08,37.08,0,0,0-8.38,2.4C7.59,5.79,4.83,7,2.08,8.19l.75-2c.62,1.42,1.25,2.85,1.84,4.29l-2-.83c2.55-1.06,5.1-2.12,7.76-3A32.16,32.16,0,0,1,18.8,4.91a22.67,22.67,0,0,1,8.46,1.21,57.17,57.17,0,0,1,7.67,3.22l-.54.3A17.73,17.73,0,0,1,36.07,5.26Z"/>
+                                      </g>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="animate" v-if="show">
+                                <svg class="header__close" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 61.79 61.86">
+                                    <path d="M31.37,47.51l-.31,13.72a.27.27,0,0,1-.53,0h0l-1.18-13,.54.29c-9.45,4.89-19.18,9.19-29,13.26a.64.64,0,0,1-.83-.35.62.62,0,0,1,.23-.77h0c9.56-6.45,19-13.09,27.92-20.35l-.32.82c-.59-3.34-1.19-6.68-2.06-9.94a61.27,61.27,0,0,0-3.22-9.55,27.73,27.73,0,0,0-5.28-8.28,16.46,16.46,0,0,0-3.76-2.92A15.27,15.27,0,0,0,9.09,9h0A1.15,1.15,0,0,1,8.13,7.7a1.21,1.21,0,0,1,.3-.61,34.84,34.84,0,0,1,5.31-4.72A16.33,16.33,0,0,1,17,.61,8.69,8.69,0,0,1,21,0,7,7,0,0,1,24.7,1.69a12.42,12.42,0,0,1,2.45,3,27.62,27.62,0,0,1,2.68,6.69,81.86,81.86,0,0,1,2.28,13.78c.42,4.61.6,9.22.68,13.83l-2.51-1.16c2.44-2.09,4.86-4.2,7.16-6.41A74.53,74.53,0,0,0,44,24.44a30.29,30.29,0,0,0,4.81-7.83,10.94,10.94,0,0,0,.7-4.16A7.48,7.48,0,0,0,48,8.72l0-.07a1.35,1.35,0,0,1,1.71-2,35.87,35.87,0,0,1,6.49,4.12,15.69,15.69,0,0,1,4.91,6.27,10.41,10.41,0,0,1,.68,4.1,12.58,12.58,0,0,1-1,4,22.27,22.27,0,0,1-4.46,6.32,47.57,47.57,0,0,1-5.71,4.94,73.11,73.11,0,0,1-6.2,4.18c-2.13,1.29-4.29,2.51-6.48,3.68-1.09.59-2.19,1.15-3.3,1.71Zm-.26-.16,3.27-1.9c1.06-.65,2.14-1.25,3.19-1.9,2.1-1.28,4.18-2.61,6.21-4A64.54,64.54,0,0,0,55,30.18a20.7,20.7,0,0,0,3.84-5.88,10.51,10.51,0,0,0,.66-3.24,7.87,7.87,0,0,0-.6-3.14,13.26,13.26,0,0,0-4.28-5.16A34.37,34.37,0,0,0,48.5,9.09l1.66-2a10.25,10.25,0,0,1,2.12,5.17,13.73,13.73,0,0,1-.76,5.38,30.89,30.89,0,0,1-5.19,8.75,76.34,76.34,0,0,1-6.74,7.28c-2.34,2.31-4.85,4.41-7.35,6.52A1.5,1.5,0,0,1,30.1,40a1.56,1.56,0,0,1-.37-1c0-4.56-.18-9.1-.52-13.62a78.48,78.48,0,0,0-2-13.33A24.69,24.69,0,0,0,24.93,6c-1.05-1.8-2.49-3.3-4.28-3.48s-3.8.66-5.57,1.84a31.31,31.31,0,0,0-5,4.33L9.43,6.75a17.21,17.21,0,0,1,5.2,1.77,18.68,18.68,0,0,1,4.26,3.37,30,30,0,0,1,5.58,9,62.94,62.94,0,0,1,3.19,9.89c.86,3.35,1.43,6.75,2,10.14a.87.87,0,0,1-.32.82C20.24,48.91,10.69,55.46,1,61.75L.41,60.62c9.86-3.89,19.64-8,29.14-12.73h0a.36.36,0,0,1,.49.16.74.74,0,0,1,0,.14l1,13h-.53Z"/>
+                                </svg>
+                            </div>                              
+                        </div>
+                        <transition name="slide-fade">
+                            <div v-if="show" class="header__menu">
+                                <ul class="header__items">
+                                    <a href="#" class="header__link">
+                                        <li class="header__item">
+                                            Home
+                                        </li>
+                                    </a>
+                                    <a href="#" class="header__link">
+                                        <li class="header__item">
+                                            About Us
+                                        </li>
+                                    </a>
+                                    <a href="#" class="header__link">
+                                        <li class="header__item">
+                                            Gallery
+                                        </li>
+                                    </a>
+                                    <a href="#" class="header__link">
+                                        <li class="header__item">
+                                            Contact
+                                        </li>
+                                    </a>
+                                </ul>
+                            </div>
+                        </transition>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <section class="about">
+                <div class="about__about">
+                    <div class="about__title">
+                        About Us
+                    </div>
+                </div>
+                <div class="about__description">
+                    <div class="inner">
+                        <div class="about__logo">
+                            <svg 
+                                xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                width="84px" height="58px">
+                                <image  x="0px" y="0px" width="84px" height="58px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAAA6CAYAAAAulX7rAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QA/wD/AP+gvaeTAAAAB3RJTUUH5AISFwkMAMx91wAAJ/tJREFUeNrlfHd8VNeV/7mvTB9NkzTqMxJCDSEJIRBFAkw13RQDrpvYSWyv7cVx27jtOsSxHTvexHFix8YN22BsTAtggwBRJEAYFVSRhKRRGbXRFE0vr9z9Y95YchJA5JPs5vfb8/m8z0gzb94993vPOffcUwZhjOFvJAoAkPA3czNftFqt0NraCiKRCDQaDbz22msQDAbhk08+AYZhASEAgiBgPG8EQQBC6GaG+VuIFl4xALB/Kyh/C6kAIEF4DQiXBQC8ABD8R8/670xiAJADQCwASITLCQADwutN0c0CSgKADAAmAYAaAHiBARoA4gHAAwBuAOiBMLD8/zZa1yACwkAaAEAJAAoBi4imyQBACgBXAcAHANxEH3yzgCYLg4MwOBKukMCkXPhcBwCjAOAHAJvwGvpfBlEkgKQTXtXCexG7EuEPjwPQAGEh6f57A0oCQDQAaIXBWAiruRTCas5CeMUlwv1iANAL/4cAwAVhiWUAwBsdHe0vKSnxAoCvra0NMwwDFHV9VjDGE7WhCMISJhf4k0NYg8QAECWAGBDu5QUA/QJ/lPDdgDAnUpizHwCsMAFJnSig4nFgYgBgOI5DNptN9+23384JBAJUaWlpjV6v949jFASwIxOUCgzKOI4LEQTBIoTsmZmZPampqY7Dhw8LcCAYE5qbJg0AGDDGWowxRRCECMZUFgkgRTTruwUYHh7WVlRUTJdIJOzMmTMv63Q6J0mSjLAQnDB3t/Cs6xL54osvToRRlXABAPAYY8+JEyfyHnzwwaf27t17665du5ZwHKdcsGDBaYIg6HHfi5gEGYQlPEVgLggAXoSQFAA0CxYskGVkZDiNRiOPMQDGPBAE8RdM/LX3AABOnz5NGY3GdOH5CowxjxBSI4RShHFJYZH/YudmWdb38ssvP/r888//sKKiIv/QoUNTDQbD1bS0tG6EkEjgnxB4/rsBGgVh440AwGu1WpOeffbZh8rLyxc7HI6oUChEj46OiktK5rbExcUPQ1jysXC/AsKbWDSEJd3l8/mkbrcbRCJRiAijpDIajZHF4jHGBELoLza08YAyDEMBIJIgkNJoNMZD2L4THMeRNptNw/O8TiwWsxCWWpUwBy+ETVCEt0BDQ33Wq6/+arPZbNY7HA6l2WxOdjgckqVLlzbL5XK7wDOCsNp7bgQUcaMbBLILqywCAK6qqmrG5cuXi2NjY32ZmVm2lJQUF0GQiGU5VpCCiEqRAJABYVsa9Pv91KVLl2aXlR1f/sP773+lorKyWJAccseOHXecOnVqLcexk0iSjIew7fseRfxSjuPkJEnGcxw76ULVhbXHjh27IyKFJ8vLixctWfLKrl27lh89emy2x+OhBOmSCLyQwuNQWEA5liBIlJKS4srMzLLFxsb6Ll++XFxVVTUDwuouEr5jnwhQEwU0YndInufVzc3NOovFogsEAkRMdIynuHiOmSAp5osvv1zCc6wcwgY8wLDsFGEMBgCApmlvR0eHvvLcuaKgP5Auoumkvr6+ghe3/fxH73/w4cqmppblZrO5gCAIFUIoEcJ293vEcZwUIZRIEIRqYGCgYKB/cPmf/nRo5Ycfffij4eHhAp7jkro6OtP3HzhQVHe5Ti8Wi73CQjAYYyLEMFMgvOlYeY6Vf/Hll0sIkmKKi+eYY6JjPIFAgLBYLLrm5mYdz/NqAUwEEzy8THRTogQmCK/Xq2pra8tnGIaiKIqzOWwSqVTKDw0Oxrz37vYt6emTBvv7BzVFRdPpqKio6FkzZ1ZKpFIOADBFUfza2247xmM+BgHCV1paY976/VtzBgaGaZfLpXxv+3tpWVkZ7rS0tGaCQCqeB44giM7xjCCEEggCqQAgYLPZFu4/sP8WApHB6uq6qN6e3sz8/IKrjz/xpFmvjx7+wb/84BhN07ywqMjn9VKHvv5mEcsy+W2tbUxSUoLjvXe3b5FKpUxsdPSIzWGTMAxDMAxDtbW15Xu93jKlUukX5j7eT70mTdSGYkFaVA6HQ3ausjK3uqYml+d5HAj46fa2dg0ggBSDYfTkiRMzDAZDdE11TbHH6xUVTJv2rUwqjTASslhG1Nu3f5g9fXqhY+tjWxdfrqtLIBEhAsDk0089eXLDhg1HASABAFkRQmJh7IjtikMIxQiuQG5CQkKnWCwW1dTUZDlHHerdu3cb+wcGMo2G5Cter58qLJzWJZfL3QKgnM1uh7d+99bS3Z/vLqZoSrvzs53z9HFxXqt1RNbe3qbxB/y03+8nMcbkrOLiujlz5zYoFAoWwr60YyJATRRQgLAjLKmtrS3evXv3yt7e3miMMR8KhiiMMRKLxVitUXvmzZ/Xn5OTwxkNKX0bN6w/mpCQ0CEshi8YDOKDfzo0w2QyRW/d+m97ZUp5TE93jyQ+Pt528OCBt+bPn3+c53mlsCERApAKQTJkAJAo8KIHAAnP81RmZmbV/PnzOw4fPpJNUiTcvmlj64MPPPjVhQsXpgAASk1N7SJJMggAlFKhsORkZzn8fr9EIpUScqXC4XA4ZM7RUXkgGCBDwRCJw/aBlEildEFBQb/BYOiC8O4+OlFVnij5AMDvdLnILpNJB2POIg8AKBgMEKOOUeXq1Wu+1Wk1Lq/PR6o1Gh/DMPE0TTu6urommbq703RaLdnQ0JD02mu/XvrLX/7ibREtXl9bU5tYW1tX2tzSnFJaUnpRKpXyBEGoYMxv1AljcRD2DVU8j/lgKEjW1dWttAyPGBKTkjyr1qxuu/fuu/f94e13tgwODibJ5fKrZ89W3JKamtqVlpbaGQqF4mNiYnz506Z1K5UKbmhoOOq5Z59LDwYDhDCfyJxwl8mkc7pcJIR39xu6S38LoHYASFu9atX+RynqYQi7IxHCoVCIFIkoVVZmxtWMjIz6nz3zzLOWYYt+zZrVR0mS9H/62WebLcPDWpfbDe1X26PTJ09iTp0+VWgwGAZIgoCOzg4FApSfnZVzMiY2hqEpWk7TVDT85emEZFmOZ1nW67CP0nv27M1XKOTsnNmz+2P1sQO1dbWFPd2mzKqqKv2IdWRxv9kM8+fPt2/btu2FQCAQ/dHHn8yvuliV8NWeL1++fPlyvtVqWS8IxfhxeJqifKtXrdoPYb+5daIgTXSXj0iHm+d5tTY6OkTTNDf+KIgQ4tMmTXLs2fPVvI6Ojoya6upJpfPm1ahUqsYzFRWbnKNObUdnR+xnn34au2jhwsCWzXfUHz9+whgbEztw5513li1fvmJ7R0cn8fY777w+Yh1J53neCQAhjDELYd8xBAAsxjjEY95ptY2k/+Kll19nQgxx5513bb91+a1lKpV6oKKi0piVlVOvVCoDBw8ciK2uro6trb2sPVp2fJNWq21cs3Z1TWXF2UmNjY0Zb7/9zrz0yZMd431ehBDQNM1po6NDwi7vhpsIjtyMDUUAEPL7fWkej19aVlZWDIC/53xjjEXBEBNl7jNrDYYU++o1q48woVDUIw8/8lONRhM8f/68/K6777Y9/dRTe/506FBmV2dnjlan5ePi4pofeuhfnzl4YH8+QSBHIBBIzs/Lr2NZ1kqSpAIAeJ7ngeM4MhAIWAOBoGbnzp0/aGu7oqivvzzV3G+eWjS96OyBgwdu2fHxjuJAMIS3/fzFMpPJlNLV1SVNTk727vj449xHHnm4QqvTWa+0tEw6c+ZsWuW5c5m9PT0Kjvs+XjyPRVu3PrZn+vRpXTQtaoWbCOzcDKAAAGqaFkllcvno0aNHZzudo2qEUOScDEwoBDzHS+Lj49xbt27dpVAoBl966aXHKisrUpUKpaioqMh63333fbZjx445ZWXHCtxut7yry5TYZ+5LbW5uiV68dFlzcXFxe93l+niP2zMpKkrZy2McVX/58uT29vY4sVTC2qx26b69++4x9/dHzyia0ayPi3cPDQ7ph4YGs1595ZXpg4MD6qamxjiXy0X87Gc/O2juM6fV1tZo7XabZGhoKH7FihXl+Xn5Q1/t3TuzqaEhkWFC3wUOEEIYAEQpBmP/c889+25KSsowhE9XNzwh/a2AxgCAOi5O3+NyudRnz54pxBh/F83gWA5CTIjQaLQoLy/vam1t7bS33nprlVgsZlIMKR25ubnV7e3t6Xv27JmNMWYYlkU0RUkAoSiz2Ux88umOX6nVav+hg3+advLkiTyFUpmUmZnZtP2D9x87dqys8NZbb63cuevz+xob6mcFAwHf+g0bTi5cuPDsqfKTKz//fHesw+FQIIR4hBDX1NSUpNPpgjk5OVdYlqV6e3vV1dXVKampqX6O4+HLL7+cMzw8JEOAxkdiSIJA8NhjP/18y+ZNhxBCcghvSqMTVuObTIHkYoyjEEKcw+Fgly1f/kH1t99OxRhHdAbTNA2xsXpR7tRcm8/rJYaHh9Xr16+/lJub23v+/Pms48ePZ2OMCQDgOY6D+fPnd07OyBh1jI5q/D6/+MCBg8pQ0MeUls6zczxOVGs0PSVzZ+8nSRKaW9rWffzRh4aHHnygf+fOz7T5BYU0RVNurVYbJAA52tpa1adPn54kzIkAAH7dunVXFi9e3FpdXZ3y8ccfz0hMTByVyeV8e1u7DgBHVBkJEkoWzZzZeOybb+7XaDQUxphECLkAoGmiAN3MLk8DgFQw4Eij0TCbN20+dunixXwYiysCwzDgcNg5lgkFp02bNpyYmORITExwHDlyJK+qqipDYByio6Pdjz766CGTyaTjOC6hsb4+xul0qSdPnuz+jxeee1elVlU9/dS/vxcI+HMTEhLO+nw+eOP1X+UaDEbLbetu+9mSpUtn/fSxxx6ura1NSUxMHF22bJm3sLCwY+PGjRe3bdu2enh4WA0A5P79+3MdDodo06ZNjbGxek93t0nT2NigB8B/vtEgjDGxedPmYxqNhgEAWpirVJj7hI6eE5VQBOGcSxaM5YywydQdu2HD+l/X19en8jwPMM6PU6lU4tjYWPZCVdXTL7/88haPx01WVlTmiMVihkAEfv6F578wmUxxBw8enD46OpookUr9KpWaQgCUwWgcTklJbjhVXp7K8fxkv98PF6uqAAAgPz//amnpPFNTc1PemdOn9QRBsDRNs4FAQDplypT+9evX12RmZg49/tPHN3OYR0woRC9avKhFFaXiXnvttd0Gg+E1v98fCZhE3BREEATk5+eb9u7d92RqqtEy7jMxhN0mC0wgUDtRQCUwlkcav7K+L774Yv1dd931H5ywVSKEOIyxKCoqKvjLX770p+6e3uSysmO5Wo3Wk5qaNpA9JadaRNPqCxcu5LZeuZLodDpVLMuGVq1aZe7rM6e43S5CJBKjYDBA+P1+D8aY1Ov10m+++QaioqL8JEly42wlFovF/KxZs3orKiqSWJYV6XQ659S8vP7Fixc3UTQ9WnW+qujKleYEq82qWLVqdVPulJy+F1/8+Rqv1ytGCIUwxiQAAEmS5M6dO7dt3rx5H4RPZREiIWxDO2Es0n9NmqgfqoVwTHG8m8SEQiG5w+GI4jgOKRSKQHx8ghtjTMtk0tDChYvq4uLirfv27i22WW1yt9tNFBfP6puSkyNjGJaqrKiYYrPZVAzDhAKBAGpqaqIGhwZpqVQaMpv7CJbjmJiYGIU+Pv7iI488+sEXX375wdzS0osOh0NBEASDMSakUmnI7/fTw8PDFMdxCCEUstlsqtOnTk0JBkNUfn6+bNasWX2BQICwWW3yzz79tDgpMdm6ZMnSOplMGsIY0/HxCW6FQhHgOA4JsV05fF+9eWHu2okANZFdXgkASRC2JRHp5AHAtnPnzttfffXVuxwOh9JgMNooimIcDrtq5crV1UuXLasrP3V6Wntba4pOp3Vu2rzl0uDQcM6bb741X6PRqGJiou0kSWpMJhOKiYkBtUqtZRiWTUxM6JTL5QRBkAq5QuHLyswM/vGdd/JHHY7JWdk5aHCgX2G32yUGg8GWkZFh9vp8mt7eXi1CiBekjXjmmWe6LSNWw/MvvDA3MzNLVFCQ39TV2RHrcrmlBEWzixYtqkOAUGtra7Jer7dHRUWFHA67orW1NVmn03ny8/MvCFIaUXtKuHxwA590IoAmCyuEAYDjeZ5ECLnOnz9f8vzzzz905coVI0VRIbvdqvR4PIoUg8GyauXqS2dOn55Sfqp85pScKX1Llyw1Xaquzj18+EiCNlpHuJyuKJfTFWBZhtVoNKK4OD3JY4xlUhlubWvV+gMBUqlQsrdv3PCN3WZj9u/fnx8VpVIWF8+snzNndnNbe3uq0Wik3R5PTLfJhIQiCIJACN99zz0uihLB22//PoEJhZDH41Hr9XGayZPS2zEG/vTp09kEIH7GzJkdpm6T3mzui7XZRuQkSbJWq1VjMpkS8vLyzMnJyV08z0sFPzsCKoIbRJ2uByiCcFRHD0I0PBgMMk1NTQkYY/+99977BsuyypGRERnGGDDGmOM4essdd5512O1RR44cns6yIXrDxg0nmpqa59Y3NCnSJ09GCrkckQQgg9HgJxAa7OjojLE7RsmY6Gi+vb2dLCqa4ZqUPsl1zz337Jk5s/jd/Pw8u9vtyYvV65333nPP9qysnINZWVnQbepJpkgKDwwOyjiWxTzPk+np6biwcHpXQ2Oj0tTVJYdwjAGTFCXu7zfrFi9ZfKbqwvlss9msSUpKcmRkZvVfrKrKxBhYjDFCCEFMTAxTVlZWtGrVqkOdnZ3xWq3WQVEUAWHzKBK09JrBkuvZUAmE80ASAAj4/X7Yt2/vrTNnFu+aPXv2wZqamiyGYQBjjDDGQBAEWVRU1J6SlDRaWXk2T6PRyh548KGegYHB+Y5RhywuXo+idbqgRCxmeAyYIEn04MOPvr923bqr6emTeLvdhtLT0/menl6Nw+7wL12y5LPKcxW3LVq06J377vvha1s2b3otKyvrnRMnj9+2Zs2az4ypRn/Z8eOagN/HY4wRLaL52zdvvrpi1er33W43AgAcHR3DaLXa4JWWZlRXVycrLz81//ZNm3r8/oCsvPxEXnJi4mhRUVE7QRCkIBSIYRioqanJmj179sGZM4t37du391a/3w8Q3pDGY3LTgMohnNjiAIArLz+d8/jjT25lWUbW29ubCABca2trvPA5io6Odk6bNq2/u9uUOjxskc+aPafDbB5QtrVejRkaGkY93SYK8xxOMRqHVGp10OVyi03dXatvXb5i/4h1BDo7O4lgMAiLliy88v4H7/+kuaU5a/v27bdPnz69MT09/WpmZubVkpLSxjfeeOP2hob6rGeffeYnW+7YdEWhUABCiAAAWLxk6f6a6kurh4cs4rj4xOCSZbcOiURibLFYKIZhUE11dUxUlEY5f8EtHRbLiLytrTW1oKCgPzo62ilo5Hdz6u3tTWRZRvb4409uLS8/nRPBQcBEfi3QrqXyCMIpWRUADDQ0NORs27btxw0N9bkwVkgVceZJmqaZFSuWN8lkcsJmtyeUlJQOyeUyV21tbbpYLEYUTWOWZWFoeJgWiyVSAiHG5XLJbVarJn3y5GbriC27s6NTnJWdOfjKy6+sjdbpuK5Ok9Fut6ueee653xsNho6oqChX8axZbX29vfHZ2TmmnOzszpKSks+dLtdt/WazIik52XnLwkVNr//qV7eaTJ1RSqUi0NraqhoaGpLwPA8IAeZ5HnV1dUrmlZZ2ZGZmedqvtus0GrU3Pi7O1tHRoed5PpKH54WL8Hg8CovFElVQkN+h1+s7IbzbYwhH8ScsoRjCpwMfy7KK//rNb9aXnyqfI3z2vdw2RVHkosWLuhISk+0SqZTR6/X0m7/7XX6XqbuopaWJ9Pu9WCSiITnZAACYn1ZQ0KiMivL6/X6CEtEcSRLigoJpDblT8zwMww1q1Go/ADAlJXNPv/nmm49nZWRcQghRCCFqSk7OpY8++ujxhQtvOQ0AjE6r9Xs83sHsnCme+3/04waEQCyRSzmWZYn4hETvhg0bG9VqFY9Q+HSGEMJ2u508ePBg0cDgYH5ycjJN02ImxZBqn1sytwvGMqIwfq7lp8rn/NdvfrOeZVmFYD9puIaTfz2VFwEAv2PHJ6s/37VrPc9x4sgABEFgAKBpmiY1Gi2zdetPv+E4vnDhwkUdABAonjUbDwwMUEqlCl9pvUJ4fX6gKIqPj48Hm82qIxBiJVIpp4pS+Xz+ACuRSmya6BhvSem8zvr6+vkejydiasQQToFEoukK4T3O6/VGXWm5Mr+4eFZnitHoVWs0thDDsslJyT6Kprn09HSWCYV0VqsVBJcKhBgCHhwcoE4cP4a9Pm9g2bJbO9ra2gufeurfvxGJxIwAKi3MEQCA5TlO/PmuXet37PhktSC5omuBdr2zfCsA5GVkTO6PiYmx9/f3J373JYrCqamp9jlz5pgomvbabTb91c5OCcOxyz//7LNEfXw8mxCfiAwGI1FTcwmpVUreZrNgq9WKgyEmVSGXDRXPntuUlJTcV1/fkEZT9IjX48EDg4OJpp7euJycnHZhqIhZiUwuUokCCCHcY+6Lc4yOJkolUtzb1++020fTVq9e25hiSB0N+Dz69959NwkhFMIACCGEhAIKTFEUnzYpHVecOTspOdkgSUpOkgwNDurvvOvO836fT15VVZU6ODioCIVC30XQY2Ji7BkZk/sFMBuuBdr13CYWADiDweBJSEgwNzQ0ZDidTg1FUbxCoSCVSiVev37D2Xm3zO86VX5qBWDE9ph64lmWQR1XOwiFUoWVqig0KS2NY5kQlkplSKuNIfRx8R6KFolaW5pFDscooYyKsnlcHiUCjI4cPpQtFtHshg3rvxTUCgmgEuP+RhCOatk/+vDDHx0+fKQ4MyOjD2PgARBjHbEYnKOjcd9W18hlMkXQ5XSKAcJunSB1KDo6Fqelp1NX29ugrbVVUTK31HG24qzxZ8/87KRELPEcP16W6/F4RAghTBAEkZ6ebnrllVf+a+XKld8CQD9cxxe9kWPvBYBgbm5ud0lp6SWb1ZpoNpvTPR4PwbJscEpuXvQ777w73+/zyBsbGlQESZIatYZDBElKpGJeJhF7OI6jaUpE2O02wmq1otjYWDa/YFpLb29fTJRS0VtaWtJ5rrKi0Od1k08++cSHDz304C6ZTMYIUhnJ9YxCOC453naJCgsLG5KSEofb29rzWJbRziqe2dDW1hblcnvjb1m4sK3qQoWeYVgRw4QQQgiJxWKs0+m8CCFRU2M9qVKpuFAoRPb29MidzlGJPxAqtFqt2rq6WpnP55NijMnbbrvt9Fu///0LSxYvPgfhAIkVrhMkuRGgkVI/Lj4ujrv99ttPL1y4sMLn86Vu2bKla0pu7uXzFy7kjzpd0t7ebiIQ8ENMTCzo9XpWJpMwIlrkCgQCcgKRCBEEEtEUFkskvNfrU8pkMsu/P/30bx02a0plZcWS7Oxsx/PPPfeIVCr1CW5QBNBhCFcS+yAcIYoELrBEIrFPyck5X3bs6A/27tuXPnNGUe2q1asOms3mwgvnzyd73F5RKOgnA4EAEvJfOCUlxTHqHBVRFIUxxgTGGI2MjJA2m40GBPwdmzcfMhqNfgAY3b1791NPPPHErvi4uBEAGOZ53ilE9a9JEw2O+AUxD8XFx0v9/iDxyqu/mnXvPffc67BZxbEx0aGc7Cnc4MAACoWCqL/fjNrb2kifPxDn83rJEBPkaRHFY4yJxvrLklnFM5oJknCeOnN65WOP/fQnKpUqYDAY9gGAZ1xxQ0AA0wNjboxHeC8AAFi41xOfkLgP8zjw6aef/qTuct1Kj8fjLC0tafb6vBK3202AUITGsizZ0dER53a5SY/HgzweD/L5fEij1XDpk9NDF6uqxDt2fHxvTW3trOLi2YTRmCqF8NndIWBwQ5poCkQLAPzZisqpjzzyyJPfXqrNvGXhoh4EWNfW1krSIhEUF88ailKrJJe+vchFKaNAIpUSIhFN2G02pNHqMCIIIAiKzMrKcm5Yt35nU2NDdFfH1YSfv/ifHy1ceMtHmzZtOkmSJC2otRsARq4xiRCMlcZIAEA0c+bMtuLiGd/m5+Vdqa6umSEWixwL5s0/29TYNN1k6pQSBMELIkrwPA/hiCXGGGNOqVTyq1avsVxpuRLl9XgIq9WK167b0HX4yNdpZ06fMiYlJ182GFJ6AUCKMfbdqOh3IoDKAEDk9XrFd931Lx9fOH+uoGD69JYUgxF5Pe44giSxSCQKcTwncY6Oeg3GVDmBAJQqFeJ5Hqs1Gnz16lWSJAkCY0BpqWmmhIT49kmpxsGnnn76ndypU782Go3DJEkiAUwPhJ3m60V1OAiH2CgAkJEkyRmNxu7s7Oxzc+fOrUMYyxFCFCKo5HPnzsXwHIcQAkIIdERKGRFCiIqNjXW2d1xV5k3Nx729PaTX6yUXL1lqsVit1rKj30xram7Nu/POLbtFIhEvgHndyP2NVJ6CcNjOuf/AgVVDgwPagmmFzbnZ2fUk4h0YY9Dr47BSoSR8Xu8ow3IqjuOQ2+Ml3E4nARhTDM9TWq0OiWmaK8jPM9ntdmd/v1l927p1ZUql0gZj3ReRCjcrTKyTJCjcG6kMlABArFwuty1avLjMYhlW+/1e57x580wURXE8jxHP8xTP85RIJCIUSiUBAGhgcFCl0+pGL126SHAcF7aPmHOkGQz1+QXTmocGB7T7DxxYBWE7LoUbpI1ulFOSQtiRdpeWlJ5Zs27N199eqs4PhAIkxYt9BdMK+k6Vlyc0NzWKCqZN12ZlZbr0sXqbXKEINDc1agmCAKVSRVSeO6fNz8+35GRn12s0mtrVq1Y0isXiSL1lxMgHbgLM8aAOwVjAAgMAEolE9hUrVpykKJElNze30JBioEymzli9Ps6u02l4WiQChVxud3vckupLl3QtV9q0TqdTJJFIuLVr1/Z5fAFfIBQgaYnYt2bdmgulJaVnhPHEAibuazF0PZUnIFxugwFApFar+hOTkgbNfX0p0TH6oR/e98OLt61ZU82wjDwxMYlfsXJFs91mC0XrdJ1ZObnVlhEr1VjfoP3jO394iecxffbs2fiZxTPrHnjgxzuFyuCIf8lCeAe3wARSDH+FGBhzqSKBYCyVSkdzc6e0t7W2Zbe2tWWuXbP2wo9/fP/2EyfKSyalT24vnjX7gkIm59PTJ6MFCxZ0sCyDN2/e3Pz667/+ODU1rbmjs4vQqFTeBx944L3MjIwmAQsEYcfeB9dwna6XU1JCODgSCYQwPMaB8vJTCxBBhebOLo4aHR2dOjg8TDlGR7UyidR38eK3Sd98fXhaT2+fSq/XezMzswfWrV9z6r0//nHx22+//WZcXFyXwEjEDmEI+5iDcBPlLtcSDgj3SqlhLNJOAwCy2Wxpr7766tYNGzeeqKw8f8vAQH+C2+WWx8ZGO6cXzazLysoyh5iQTKlU2HUaLSuTyxorKi+4MM+KFi685TSBUKQXixAWzHktKSWuw1wUfP/oR9httoSyY8cWVF04XwQIbCGGobtN3WkcxxEen09MkKSo/WqX/vnnnz3y5BOPH/J6POIPPvhg+c9ffPGruLi4HmGiGMKqAwKYlr8DmCA8wwJjRQkR9wvpdLqeBx988KsjX3+9PBgIijfdvvHQHXdsPjI0NKIXicQihmXECCHCbrOnsRxLAwZb1YXzRWXHji2w22wJAk4RHHgBG/KvMXEtlY+CsRxS5EGBEydPzjP3m/V1dbWFFsuICpF03OTJkwYxBqi7fDl19+7PC4ctFnVCQpJHq9U4u3tMuv984YU9OTk5NQJT49tthiBc0XdTfaITADXScxTpTSIAQKTVaocmp6fbWq60ZOj1cfYuU+/k1qttaU7nqEqj0Qbi4uJGdDqdfXDIot+/f3/8mTOnCvV6vQUQQpmZma0wdhRGMNaU8Rf2/q8BSkDYyAOMtaKQAOAnSDpYUlJysaWlpVAhl1typ+ZWSyRS8pujR4u//PzzwsGBAU1GZqZVKqY9Dodd8YttP/8iKSmpFsaaw7wQ7qEcgbDK/CNaF3kY69jwwdjGG1SpVMN5eXnDZyvOznG73VKpVErZbTbdwEB/tEQi5RISEhoDweDllqYmOUVT9OOPP/FbtVpj02k1jnECRsJYOsQDf2ZL/xqgagiHyfwA4LPb7TESicTPMBxdf7k2d+euz+/x+Xzy9rZWY0F+QWVzS5Po9ddevxcw8AtuWXQpJSnBYu7vV73z+9//UhkVVQlhNXQIQEY2nr+nVF6LWBhzrWzCYjrEYnFX7pQpnUe++XpZfHxcN49R34XzF/SHDx9OSkiIPywiacu+fXtXSyRSvq7ucqFOq7YlJxtGCAKBw+HQSKVSO4SlVApjJ7prAiqC8KmIDAaD/Ju/e+v+jo4uY1HR9LMXqi7OOnjgwPJukymxqbEp6/7779+xfPmyI5PSJvWnpU3qsFit6vrLdYbp0wqO//Y3v/lXqVR6VZhEQJjYePPxP0Xjq6xDAh8+iqK6586Z8/mJsrLkfQcOFKcYjc0PP/Svv125YnnZpEmprTyPqT1f7lmLMc9aLJYYlVrjMqQkX/nk0513nDlzZvb0wsImKtxLGWnm+G4P+HNAIy2Iwe3b37/7P/7zxWcfeujBTyorKkr/+Mc//oSkSBQTo3OtXbt2z+YtWw6LxWJeLBYH9XExAwGfF4qLZ1TffdddX2g0mj/3Mf+ngbwWfXdupGk6lJWZeTVKpRxNMxraVq5aflSr0TgpiiIyMjO7ZDKpw+fzxjpdLs2xo0eXchwrMRqNgw8//MgbOq3WNWNG0WUY63Ud0zghkh25UjHGk61Wa7Y+Ln6QFolC237xi5f+7bGtfzhy5MjdcfHxPYcPH94o3CvHGCuEV2rcMwiMMS1cZCQr+k9yIYGnCH/EuM+o8XPieR4OHz68MS4+vufIkSN3/9tjW/+w7Re/eIkWiUL6uPhBq9WajTGeLGD23RgRP5SA8BFQDQCtJSWlVSRJiXt7e3TZOVNauk1dhrS0VNNXX321USKR+GGskZaBsc65iMGOuBZ/868i/A9QpGghErgezzsF4R2dBAB7IBCQbty48auuLlOqMTWt50pLc05KisHGcWywsrJiFoQL6EYhvD/wEUBjAEDCcZzkiSeefPrIka8X0CKaWbbs1ork5KT+vLypl+bOmXNRKpVG3AUOvm8bI+oUUal/FhW/Hl2LXxLGWtVJAEB+v589d/58cUND44y+PnPisWNHS5kQQ69cueL0G2/8+jWSJCO/ajFCvvjiiyQA6GtqavO2v//hHb19fck264hs2bJl51atWlG2aOHCqry8vHaapkkYy00HhQf8udvz/wKQN+J3/A8QEADhbGRaWtpAaqpxQKNR2TGPqZ6e7jiFMoprbm7JUCqV/oSEeBcAuABjXowxTjx16sx9W7bceUwXrbNdunRpHcZYKdiTJIxxLMZY8k9mD/9hF8/z313CnCUCBkkCJspLly6t00XrbFu23Hns1Kkz92GMEzHmxYjneRIA9BzHxTY2NqbYbDbN4sWLTwoiH8nnRNqi/0/QX4tvCL3zcgjvMyQABE6cOLFIp9M5pk6d2kuSpAUAhpHQdCCF8O9r8DzP0wRBsBB27J1wEwX7/7/Q9YqQEUJqCAeNpDzPUwRBMBA2DT0A4P8u2oQxjg03pgILYRBH4J/3V23+oXSjqm4hiRgDYWmlMMYjCCELwF+G7yKNqpFfPfg/SRMpkxdyVCIYS9sAAMB/AztLSArhKecrAAAAAElFTkSuQmCC" />
+                            </svg>
+                        </div>
+                        <div class="about__text">
+                            <h2 class="about__article">
+                                Aliquam ac justo interdum, elementum ligula et, condimentum orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </h2>
+                            <p class="about__txt">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc risus eros, ultricies quis erat sit amet, elementum vulputate lorem. Sed at lacinia lectus, quis blandit libero. Quisque ac malesuada lectus.
+                            </p>
+                            <p class="about__txt">
+                                Proin gravida feugiat commodo. Phasellus fermentum sem ut felis vehicula aliquet. Donec rhoncus, mi et euismod dictum, purus lorem vehicula justo, a iaculis mi nulla et risus.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about__gallery">
+                    <ul class="about__items">
+                        <li class="about__item">
+                            <div class="about__image">
+                                <img class="about__photo" src="./img/img1.jpeg">
+                                <div class="hover">
+                                    <div class="hover__zoom">
+                                        <svg 
+                                             xmlns="http://www.w3.org/2000/svg"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             width="30px" height="30px">
+                                            <defs>
+                                            <filter id="Filter_0">
+                                                <feFlood flood-color="rgb(0, 0, 0)" flood-opacity="1" result="floodOut" />
+                                                <feComposite operator="atop" in="floodOut" in2="SourceGraphic" result="compOut" />
+                                                <feBlend mode="normal" in="compOut" in2="SourceGraphic" />
+                                            </filter>
+                                            
+                                            </defs>
+                                            <g filter="url(#Filter_0)">
+                                            <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+                                             d="M28.592,28.573 L27.883,29.282 C27.099,30.066 25.829,30.066 25.045,29.282 L19.371,23.607 C18.713,22.950 18.641,21.964 19.087,21.196 L15.985,18.094 C14.317,19.332 12.258,20.073 10.021,20.073 C4.480,20.073 -0.011,15.582 -0.011,10.042 C-0.011,4.502 4.480,0.011 10.021,0.011 C15.561,0.011 20.052,4.502 20.052,10.042 C20.052,12.621 19.070,14.965 17.471,16.742 L20.506,19.777 C21.274,19.331 22.259,19.403 22.917,20.060 L28.592,25.735 C29.375,26.519 29.375,27.789 28.592,28.573 ZM17.523,10.000 C17.523,5.845 14.155,2.477 10.000,2.477 C8.842,2.477 7.759,2.759 6.780,3.226 C7.303,3.764 8.093,4.568 8.135,4.568 C7.320,4.568 4.651,7.236 4.651,8.114 C4.651,8.072 3.802,7.266 3.246,6.743 C2.767,7.732 2.476,8.828 2.476,10.000 C2.476,14.155 5.845,17.524 10.000,17.524 C14.155,17.524 17.523,14.155 17.523,10.000 Z"/>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="about__item">
+                            <div class="about__image">
+                                <img class="about__photo" src="./img/img2.jpeg">
+                                <div class="hover">
+                                    <div class="hover__zoom">
+                                        <svg 
+                                             xmlns="http://www.w3.org/2000/svg"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             width="30px" height="30px">
+                                            <defs>
+                                            <filter id="Filter_0">
+                                                <feFlood flood-color="rgb(0, 0, 0)" flood-opacity="1" result="floodOut" />
+                                                <feComposite operator="atop" in="floodOut" in2="SourceGraphic" result="compOut" />
+                                                <feBlend mode="normal" in="compOut" in2="SourceGraphic" />
+                                            </filter>
+                                            
+                                            </defs>
+                                            <g filter="url(#Filter_0)">
+                                            <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+                                             d="M28.592,28.573 L27.883,29.282 C27.099,30.066 25.829,30.066 25.045,29.282 L19.371,23.607 C18.713,22.950 18.641,21.964 19.087,21.196 L15.985,18.094 C14.317,19.332 12.258,20.073 10.021,20.073 C4.480,20.073 -0.011,15.582 -0.011,10.042 C-0.011,4.502 4.480,0.011 10.021,0.011 C15.561,0.011 20.052,4.502 20.052,10.042 C20.052,12.621 19.070,14.965 17.471,16.742 L20.506,19.777 C21.274,19.331 22.259,19.403 22.917,20.060 L28.592,25.735 C29.375,26.519 29.375,27.789 28.592,28.573 ZM17.523,10.000 C17.523,5.845 14.155,2.477 10.000,2.477 C8.842,2.477 7.759,2.759 6.780,3.226 C7.303,3.764 8.093,4.568 8.135,4.568 C7.320,4.568 4.651,7.236 4.651,8.114 C4.651,8.072 3.802,7.266 3.246,6.743 C2.767,7.732 2.476,8.828 2.476,10.000 C2.476,14.155 5.845,17.524 10.000,17.524 C14.155,17.524 17.523,14.155 17.523,10.000 Z"/>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="about__item">
+                            <div class="about__image">
+                                <img class="about__photo" src="./img/img3.jpeg">
+                                <div class="hover">
+                                    <div class="hover__zoom">
+                                        <svg 
+                                             xmlns="http://www.w3.org/2000/svg"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             width="30px" height="30px">
+                                            <defs>
+                                            <filter id="Filter_0">
+                                                <feFlood flood-color="rgb(0, 0, 0)" flood-opacity="1" result="floodOut" />
+                                                <feComposite operator="atop" in="floodOut" in2="SourceGraphic" result="compOut" />
+                                                <feBlend mode="normal" in="compOut" in2="SourceGraphic" />
+                                            </filter>
+                                            
+                                            </defs>
+                                            <g filter="url(#Filter_0)">
+                                            <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+                                             d="M28.592,28.573 L27.883,29.282 C27.099,30.066 25.829,30.066 25.045,29.282 L19.371,23.607 C18.713,22.950 18.641,21.964 19.087,21.196 L15.985,18.094 C14.317,19.332 12.258,20.073 10.021,20.073 C4.480,20.073 -0.011,15.582 -0.011,10.042 C-0.011,4.502 4.480,0.011 10.021,0.011 C15.561,0.011 20.052,4.502 20.052,10.042 C20.052,12.621 19.070,14.965 17.471,16.742 L20.506,19.777 C21.274,19.331 22.259,19.403 22.917,20.060 L28.592,25.735 C29.375,26.519 29.375,27.789 28.592,28.573 ZM17.523,10.000 C17.523,5.845 14.155,2.477 10.000,2.477 C8.842,2.477 7.759,2.759 6.780,3.226 C7.303,3.764 8.093,4.568 8.135,4.568 C7.320,4.568 4.651,7.236 4.651,8.114 C4.651,8.072 3.802,7.266 3.246,6.743 C2.767,7.732 2.476,8.828 2.476,10.000 C2.476,14.155 5.845,17.524 10.000,17.524 C14.155,17.524 17.523,14.155 17.523,10.000 Z"/>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="about__item">
+                            <div class="about__image">
+                                <img class="about__photo" src="./img/img4.jpeg">
+                                <div class="hover">
+                                    <div class="hover__zoom">
+                                        <svg 
+                                             xmlns="http://www.w3.org/2000/svg"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             width="30px" height="30px">
+                                            <defs>
+                                            <filter id="Filter_0">
+                                                <feFlood flood-color="rgb(0, 0, 0)" flood-opacity="1" result="floodOut" />
+                                                <feComposite operator="atop" in="floodOut" in2="SourceGraphic" result="compOut" />
+                                                <feBlend mode="normal" in="compOut" in2="SourceGraphic" />
+                                            </filter>
+                                            
+                                            </defs>
+                                            <g filter="url(#Filter_0)">
+                                            <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+                                             d="M28.592,28.573 L27.883,29.282 C27.099,30.066 25.829,30.066 25.045,29.282 L19.371,23.607 C18.713,22.950 18.641,21.964 19.087,21.196 L15.985,18.094 C14.317,19.332 12.258,20.073 10.021,20.073 C4.480,20.073 -0.011,15.582 -0.011,10.042 C-0.011,4.502 4.480,0.011 10.021,0.011 C15.561,0.011 20.052,4.502 20.052,10.042 C20.052,12.621 19.070,14.965 17.471,16.742 L20.506,19.777 C21.274,19.331 22.259,19.403 22.917,20.060 L28.592,25.735 C29.375,26.519 29.375,27.789 28.592,28.573 ZM17.523,10.000 C17.523,5.845 14.155,2.477 10.000,2.477 C8.842,2.477 7.759,2.759 6.780,3.226 C7.303,3.764 8.093,4.568 8.135,4.568 C7.320,4.568 4.651,7.236 4.651,8.114 C4.651,8.072 3.802,7.266 3.246,6.743 C2.767,7.732 2.476,8.828 2.476,10.000 C2.476,14.155 5.845,17.524 10.000,17.524 C14.155,17.524 17.523,14.155 17.523,10.000 Z"/>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="about__item">
+                            <div class="about__image">
+                                <img class="about__photo" src="./img/img5.jpeg">
+                                <div class="hover">
+                                    <div class="hover__zoom">
+                                        <svg 
+                                             xmlns="http://www.w3.org/2000/svg"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             width="30px" height="30px">
+                                            <defs>
+                                            <filter id="Filter_0">
+                                                <feFlood flood-color="rgb(0, 0, 0)" flood-opacity="1" result="floodOut" />
+                                                <feComposite operator="atop" in="floodOut" in2="SourceGraphic" result="compOut" />
+                                                <feBlend mode="normal" in="compOut" in2="SourceGraphic" />
+                                            </filter>
+                                            
+                                            </defs>
+                                            <g filter="url(#Filter_0)">
+                                            <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+                                             d="M28.592,28.573 L27.883,29.282 C27.099,30.066 25.829,30.066 25.045,29.282 L19.371,23.607 C18.713,22.950 18.641,21.964 19.087,21.196 L15.985,18.094 C14.317,19.332 12.258,20.073 10.021,20.073 C4.480,20.073 -0.011,15.582 -0.011,10.042 C-0.011,4.502 4.480,0.011 10.021,0.011 C15.561,0.011 20.052,4.502 20.052,10.042 C20.052,12.621 19.070,14.965 17.471,16.742 L20.506,19.777 C21.274,19.331 22.259,19.403 22.917,20.060 L28.592,25.735 C29.375,26.519 29.375,27.789 28.592,28.573 ZM17.523,10.000 C17.523,5.845 14.155,2.477 10.000,2.477 C8.842,2.477 7.759,2.759 6.780,3.226 C7.303,3.764 8.093,4.568 8.135,4.568 C7.320,4.568 4.651,7.236 4.651,8.114 C4.651,8.072 3.802,7.266 3.246,6.743 C2.767,7.732 2.476,8.828 2.476,10.000 C2.476,14.155 5.845,17.524 10.000,17.524 C14.155,17.524 17.523,14.155 17.523,10.000 Z"/>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="about__item">
+                            <div class="about__image">
+                                <img class="about__photo" src="./img/img6.jpeg">
+                                <div class="hover">
+                                    <div class="hover__zoom">
+                                        <svg 
+                                             xmlns="http://www.w3.org/2000/svg"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             width="30px" height="30px">
+                                            <defs>
+                                            <filter id="Filter_0">
+                                                <feFlood flood-color="rgb(0, 0, 0)" flood-opacity="1" result="floodOut" />
+                                                <feComposite operator="atop" in="floodOut" in2="SourceGraphic" result="compOut" />
+                                                <feBlend mode="normal" in="compOut" in2="SourceGraphic" />
+                                            </filter>
+                                            
+                                            </defs>
+                                            <g filter="url(#Filter_0)">
+                                            <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+                                             d="M28.592,28.573 L27.883,29.282 C27.099,30.066 25.829,30.066 25.045,29.282 L19.371,23.607 C18.713,22.950 18.641,21.964 19.087,21.196 L15.985,18.094 C14.317,19.332 12.258,20.073 10.021,20.073 C4.480,20.073 -0.011,15.582 -0.011,10.042 C-0.011,4.502 4.480,0.011 10.021,0.011 C15.561,0.011 20.052,4.502 20.052,10.042 C20.052,12.621 19.070,14.965 17.471,16.742 L20.506,19.777 C21.274,19.331 22.259,19.403 22.917,20.060 L28.592,25.735 C29.375,26.519 29.375,27.789 28.592,28.573 ZM17.523,10.000 C17.523,5.845 14.155,2.477 10.000,2.477 C8.842,2.477 7.759,2.759 6.780,3.226 C7.303,3.764 8.093,4.568 8.135,4.568 C7.320,4.568 4.651,7.236 4.651,8.114 C4.651,8.072 3.802,7.266 3.246,6.743 C2.767,7.732 2.476,8.828 2.476,10.000 C2.476,14.155 5.845,17.524 10.000,17.524 C14.155,17.524 17.523,14.155 17.523,10.000 Z"/>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="about__item">
+                            <div class="about__image">
+                                <img class="about__photo" src="./img/img7.jpeg">
+                                <div class="hover">
+                                    <div class="hover__zoom">
+                                        <svg 
+                                             xmlns="http://www.w3.org/2000/svg"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             width="30px" height="30px">
+                                            <defs>
+                                            <filter id="Filter_0">
+                                                <feFlood flood-color="rgb(0, 0, 0)" flood-opacity="1" result="floodOut" />
+                                                <feComposite operator="atop" in="floodOut" in2="SourceGraphic" result="compOut" />
+                                                <feBlend mode="normal" in="compOut" in2="SourceGraphic" />
+                                            </filter>
+                                            
+                                            </defs>
+                                            <g filter="url(#Filter_0)">
+                                            <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+                                             d="M28.592,28.573 L27.883,29.282 C27.099,30.066 25.829,30.066 25.045,29.282 L19.371,23.607 C18.713,22.950 18.641,21.964 19.087,21.196 L15.985,18.094 C14.317,19.332 12.258,20.073 10.021,20.073 C4.480,20.073 -0.011,15.582 -0.011,10.042 C-0.011,4.502 4.480,0.011 10.021,0.011 C15.561,0.011 20.052,4.502 20.052,10.042 C20.052,12.621 19.070,14.965 17.471,16.742 L20.506,19.777 C21.274,19.331 22.259,19.403 22.917,20.060 L28.592,25.735 C29.375,26.519 29.375,27.789 28.592,28.573 ZM17.523,10.000 C17.523,5.845 14.155,2.477 10.000,2.477 C8.842,2.477 7.759,2.759 6.780,3.226 C7.303,3.764 8.093,4.568 8.135,4.568 C7.320,4.568 4.651,7.236 4.651,8.114 C4.651,8.072 3.802,7.266 3.246,6.743 C2.767,7.732 2.476,8.828 2.476,10.000 C2.476,14.155 5.845,17.524 10.000,17.524 C14.155,17.524 17.523,14.155 17.523,10.000 Z"/>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="about__item">
+                            <div class="about__image">
+                                <img class="about__photo" src="./img/img8.jpeg">
+                                <div class="hover">
+                                    <div class="hover__zoom">
+                                        <svg 
+                                             xmlns="http://www.w3.org/2000/svg"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             width="30px" height="30px">
+                                            <defs>
+                                            <filter id="Filter_0">
+                                                <feFlood flood-color="rgb(0, 0, 0)" flood-opacity="1" result="floodOut" />
+                                                <feComposite operator="atop" in="floodOut" in2="SourceGraphic" result="compOut" />
+                                                <feBlend mode="normal" in="compOut" in2="SourceGraphic" />
+                                            </filter>
+                                            
+                                            </defs>
+                                            <g filter="url(#Filter_0)">
+                                            <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+                                             d="M28.592,28.573 L27.883,29.282 C27.099,30.066 25.829,30.066 25.045,29.282 L19.371,23.607 C18.713,22.950 18.641,21.964 19.087,21.196 L15.985,18.094 C14.317,19.332 12.258,20.073 10.021,20.073 C4.480,20.073 -0.011,15.582 -0.011,10.042 C-0.011,4.502 4.480,0.011 10.021,0.011 C15.561,0.011 20.052,4.502 20.052,10.042 C20.052,12.621 19.070,14.965 17.471,16.742 L20.506,19.777 C21.274,19.331 22.259,19.403 22.917,20.060 L28.592,25.735 C29.375,26.519 29.375,27.789 28.592,28.573 ZM17.523,10.000 C17.523,5.845 14.155,2.477 10.000,2.477 C8.842,2.477 7.759,2.759 6.780,3.226 C7.303,3.764 8.093,4.568 8.135,4.568 C7.320,4.568 4.651,7.236 4.651,8.114 C4.651,8.072 3.802,7.266 3.246,6.743 C2.767,7.732 2.476,8.828 2.476,10.000 C2.476,14.155 5.845,17.524 10.000,17.524 C14.155,17.524 17.523,14.155 17.523,10.000 Z"/>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="about__item">
+                            <div class="about__image">
+                                <img class="about__photo" src="./img/img9.jpeg">
+                                <div class="hover">
+                                    <div class="hover__zoom">
+                                        <svg 
+                                             xmlns="http://www.w3.org/2000/svg"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             width="30px" height="30px">
+                                            <defs>
+                                            <filter id="Filter_0">
+                                                <feFlood flood-color="rgb(0, 0, 0)" flood-opacity="1" result="floodOut" />
+                                                <feComposite operator="atop" in="floodOut" in2="SourceGraphic" result="compOut" />
+                                                <feBlend mode="normal" in="compOut" in2="SourceGraphic" />
+                                            </filter>
+                                            
+                                            </defs>
+                                            <g filter="url(#Filter_0)">
+                                            <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+                                             d="M28.592,28.573 L27.883,29.282 C27.099,30.066 25.829,30.066 25.045,29.282 L19.371,23.607 C18.713,22.950 18.641,21.964 19.087,21.196 L15.985,18.094 C14.317,19.332 12.258,20.073 10.021,20.073 C4.480,20.073 -0.011,15.582 -0.011,10.042 C-0.011,4.502 4.480,0.011 10.021,0.011 C15.561,0.011 20.052,4.502 20.052,10.042 C20.052,12.621 19.070,14.965 17.471,16.742 L20.506,19.777 C21.274,19.331 22.259,19.403 22.917,20.060 L28.592,25.735 C29.375,26.519 29.375,27.789 28.592,28.573 ZM17.523,10.000 C17.523,5.845 14.155,2.477 10.000,2.477 C8.842,2.477 7.759,2.759 6.780,3.226 C7.303,3.764 8.093,4.568 8.135,4.568 C7.320,4.568 4.651,7.236 4.651,8.114 C4.651,8.072 3.802,7.266 3.246,6.743 C2.767,7.732 2.476,8.828 2.476,10.000 C2.476,14.155 5.845,17.524 10.000,17.524 C14.155,17.524 17.523,14.155 17.523,10.000 Z"/>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="about__item">
+                            <div class="about__image">
+                                <img class="about__photo" src="./img/img10.jpeg">
+                                <div class="hover">
+                                    <div class="hover__zoom">
+                                        <svg 
+                                             xmlns="http://www.w3.org/2000/svg"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             width="30px" height="30px">
+                                            <defs>
+                                            <filter id="Filter_0">
+                                                <feFlood flood-color="rgb(0, 0, 0)" flood-opacity="1" result="floodOut" />
+                                                <feComposite operator="atop" in="floodOut" in2="SourceGraphic" result="compOut" />
+                                                <feBlend mode="normal" in="compOut" in2="SourceGraphic" />
+                                            </filter>
+                                            
+                                            </defs>
+                                            <g filter="url(#Filter_0)">
+                                            <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+                                             d="M28.592,28.573 L27.883,29.282 C27.099,30.066 25.829,30.066 25.045,29.282 L19.371,23.607 C18.713,22.950 18.641,21.964 19.087,21.196 L15.985,18.094 C14.317,19.332 12.258,20.073 10.021,20.073 C4.480,20.073 -0.011,15.582 -0.011,10.042 C-0.011,4.502 4.480,0.011 10.021,0.011 C15.561,0.011 20.052,4.502 20.052,10.042 C20.052,12.621 19.070,14.965 17.471,16.742 L20.506,19.777 C21.274,19.331 22.259,19.403 22.917,20.060 L28.592,25.735 C29.375,26.519 29.375,27.789 28.592,28.573 ZM17.523,10.000 C17.523,5.845 14.155,2.477 10.000,2.477 C8.842,2.477 7.759,2.759 6.780,3.226 C7.303,3.764 8.093,4.568 8.135,4.568 C7.320,4.568 4.651,7.236 4.651,8.114 C4.651,8.072 3.802,7.266 3.246,6.743 C2.767,7.732 2.476,8.828 2.476,10.000 C2.476,14.155 5.845,17.524 10.000,17.524 C14.155,17.524 17.523,14.155 17.523,10.000 Z"/>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="about__item">
+                            <div class="about__image">
+                                <img class="about__photo" src="./img/img11.jpeg">
+                                <div class="hover">
+                                    <div class="hover__zoom">
+                                        <svg 
+                                             xmlns="http://www.w3.org/2000/svg"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             width="30px" height="30px">
+                                            <defs>
+                                            <filter id="Filter_0">
+                                                <feFlood flood-color="rgb(0, 0, 0)" flood-opacity="1" result="floodOut" />
+                                                <feComposite operator="atop" in="floodOut" in2="SourceGraphic" result="compOut" />
+                                                <feBlend mode="normal" in="compOut" in2="SourceGraphic" />
+                                            </filter>
+                                            
+                                            </defs>
+                                            <g filter="url(#Filter_0)">
+                                            <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+                                             d="M28.592,28.573 L27.883,29.282 C27.099,30.066 25.829,30.066 25.045,29.282 L19.371,23.607 C18.713,22.950 18.641,21.964 19.087,21.196 L15.985,18.094 C14.317,19.332 12.258,20.073 10.021,20.073 C4.480,20.073 -0.011,15.582 -0.011,10.042 C-0.011,4.502 4.480,0.011 10.021,0.011 C15.561,0.011 20.052,4.502 20.052,10.042 C20.052,12.621 19.070,14.965 17.471,16.742 L20.506,19.777 C21.274,19.331 22.259,19.403 22.917,20.060 L28.592,25.735 C29.375,26.519 29.375,27.789 28.592,28.573 ZM17.523,10.000 C17.523,5.845 14.155,2.477 10.000,2.477 C8.842,2.477 7.759,2.759 6.780,3.226 C7.303,3.764 8.093,4.568 8.135,4.568 C7.320,4.568 4.651,7.236 4.651,8.114 C4.651,8.072 3.802,7.266 3.246,6.743 C2.767,7.732 2.476,8.828 2.476,10.000 C2.476,14.155 5.845,17.524 10.000,17.524 C14.155,17.524 17.523,14.155 17.523,10.000 Z"/>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="about__item">
+                            <div class="about__image">
+                                <img class="about__photo" src="./img/img12.jpeg">
+                                <div class="hover">
+                                    <div class="hover__zoom">
+                                        <svg 
+                                             xmlns="http://www.w3.org/2000/svg"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             width="30px" height="30px">
+                                            <defs>
+                                            <filter id="Filter_0">
+                                                <feFlood flood-color="rgb(0, 0, 0)" flood-opacity="1" result="floodOut" />
+                                                <feComposite operator="atop" in="floodOut" in2="SourceGraphic" result="compOut" />
+                                                <feBlend mode="normal" in="compOut" in2="SourceGraphic" />
+                                            </filter>
+                                            
+                                            </defs>
+                                            <g filter="url(#Filter_0)">
+                                            <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+                                             d="M28.592,28.573 L27.883,29.282 C27.099,30.066 25.829,30.066 25.045,29.282 L19.371,23.607 C18.713,22.950 18.641,21.964 19.087,21.196 L15.985,18.094 C14.317,19.332 12.258,20.073 10.021,20.073 C4.480,20.073 -0.011,15.582 -0.011,10.042 C-0.011,4.502 4.480,0.011 10.021,0.011 C15.561,0.011 20.052,4.502 20.052,10.042 C20.052,12.621 19.070,14.965 17.471,16.742 L20.506,19.777 C21.274,19.331 22.259,19.403 22.917,20.060 L28.592,25.735 C29.375,26.519 29.375,27.789 28.592,28.573 ZM17.523,10.000 C17.523,5.845 14.155,2.477 10.000,2.477 C8.842,2.477 7.759,2.759 6.780,3.226 C7.303,3.764 8.093,4.568 8.135,4.568 C7.320,4.568 4.651,7.236 4.651,8.114 C4.651,8.072 3.802,7.266 3.246,6.743 C2.767,7.732 2.476,8.828 2.476,10.000 C2.476,14.155 5.845,17.524 10.000,17.524 C14.155,17.524 17.523,14.155 17.523,10.000 Z"/>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>  
+            </section>
+            <section class="testimonial">
+                <div class="reviews">
+                    <div class="reviews__review">
+                        <div class="reviews__text">
+                            <div class="wrap">
+                                <p class="reviews__description">
+                                    <b><i>Aliquam ac justo interdum, elementum ligula et, condimentum orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</i></b>
+                                </p>
+                                <p class="reviews__author">
+                                    <i>- john doe -</i>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reviews__review reviews__review-second">
+                        <div class="reviews__text">
+                            <div class="wrap">
+                                <p class="reviews__description">
+                                    <b><i>It was perfect time spended here. You are so cool guys!!!</i></b>
+                                </p>
+                                <p class="reviews__author">
+                                    <i>- ivan petrov -</i>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reviews__review reviews__review-third">
+                        <div class="reviews__text">
+                            <div class="wrap">
+                                <p class="reviews__description reviews__description-third">
+                                    <b><i>Most powerfull people are working here. Thanks for everyone of You!!!</i></b>
+                                </p>
+                                <p class="reviews__author reviews__author-third">
+                                    <i>- pavlo babik -</i>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="./slick/slick.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

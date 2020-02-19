@@ -1,0 +1,409 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@mixin middle1 {
+    @media (max-width: 1280px){
+        @content;
+    }
+}
+
+@mixin middle {
+    @media (max-width: 1024px){
+        @content;
+    }
+}
+
+@mixin small {
+    @media (max-width: 800px){
+        @content;
+    }
+}
+
+@mixin ipad {
+    @media (max-width: 768px){
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: 480px){
+        @content;
+    }
+}
+
+@mixin iphone6Plus {
+    @media (max-width: 414px){
+        @content;
+    }
+}
+
+@mixin iphone6 {
+    @media (max-width: 375px){
+        @content;
+    }
+}
+
+@mixin mobile1 {
+    @media (max-width: 360px){
+        @content;
+    }
+}
+
+@mixin iphone4 {
+    @media (max-width: 320px){
+        @content;
+    }
+}
+
+body {
+    background: #f2efe5;
+}
+
+.header {
+    width: 100vw;
+    min-height: 500px;
+    background-image: url(../img/BgHeader1920_1.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+
+    @include iphone6 {
+        min-height: 480px;
+        background-position: -600px;
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__logo {
+        fill: red;
+    }
+
+    &__content {
+        width: 100%;
+        position: relative;
+    }
+
+    &__open {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__menu {
+        width: 100%;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__items {
+        width: 100%;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: #000;  
+        transition: 0.5s;     
+
+        &:hover {
+            text-decoration: underline;
+            color: blueviolet;
+        }
+    }
+
+    &__item {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 20pt;
+        text-transform: uppercase;
+        font-weight: 700;
+        padding: 5px; 
+    }
+
+    &__toogle {
+        transition: 1s;        
+        
+        &:hover {
+            fill: royalblue;
+        }
+    }
+
+    &__close {
+        transition: 1s;        
+        
+        &:hover {
+            fill: royalblue;
+        }
+    }
+}
+
+.main {
+    width: 100vw;
+}
+
+.about {
+    width: 100%;
+    display: flex;
+    min-height: 600px;
+    flex-wrap: wrap;
+
+    &__about {
+        width: 1/2*100%;
+        background-image: url(../img/studio_bg.jpeg);
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include small {
+            width: 100%;
+        }
+    }
+
+    &__title {
+        min-width: 295px;
+        min-height: 90px;
+        border: 15px solid #010101;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 36pt;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #010101;
+
+        @include small {
+            min-width: 90px;
+        }
+    }
+
+    &__description {
+        width: 1/2*100%;
+
+        @include small {
+            width: 100%;
+        }
+    }
+
+    &__logo {
+        width: 100%;
+        margin-bottom: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    &__article {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 18pt;
+        font-weight: 400;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    &__txt {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 16pt;
+        font-weight: 400;
+    }
+
+    &__gallery {
+        width: 100%;
+        display: flex;
+    }
+
+    &__items {
+        width: 100%;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+
+    &__item {
+        width: 1/6*100%;
+
+        &:hover .hover {
+            opacity: 1;
+            transition: 1.5s;
+            transform: rotateY(360deg);
+        }
+
+        @include middle {
+            width: 1/4*100%;
+        }
+
+        @include small {
+            width: 1/2*100%;
+        }
+    }
+
+    &__image {    
+        position: relative;
+        display: flex;    
+    }    
+
+    &__photo {
+        width: 100%;        
+    }
+
+}
+
+.inner {
+    padding: 85px;
+
+    @include small {
+        padding: 20px;
+    }
+}
+
+.hover {
+    position: absolute;
+    background: rgba(255,255,255,.5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    opacity: 0;
+
+    &__zoom {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+}
+
+.animate {    
+    padding-top: 20px;
+    transition: 1s;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1200px;
+}
+
+.a{
+    fill: transparent;
+}
+
+.container {
+    width: 100%;
+    padding-top: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.testimonial{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.reviews {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    &__review {
+        width: 100vw;
+        min-height: 350px;
+        background-image: url(../img/Livello1.jpeg);
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+
+        &-second {
+            background-image: url(../img/Livello2.jpeg);
+        }
+
+        &-third {
+            background-image: url(../img/Livello3.jpeg);
+            color: #000;
+        }
+    }
+
+    &__text {
+        max-width: 100%;
+        min-height: 150px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    &__description {
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 24pt;
+        color: #f2efe5;
+
+        &-third {
+            color: #000;
+        }
+    }
+
+    &__author {
+        text-align: end;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 14pt;
+        text-transform: uppercase;
+        color: #f2efe5;
+        
+        &-third {
+            color: #000;
+        }
+    }
+}
+
+.wrap {
+    width: 100%;
+    max-width: 700px;
+    min-height: 350px;
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+}
+
+.slide-fade-enter-active {
+    transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+
+.slide-fade-leave-active {
+    transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+
+.slide-fade-enter, 
+.slide-fade-leave-to {
+    transform: rotateX(180deg);
+    opacity: 0;
+}
