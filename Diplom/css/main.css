@@ -269,6 +269,12 @@ body {
   }
 }
 
+@media (max-width: 375px) {
+  .about__item {
+    width: 100%;
+  }
+}
+
 .about__image {
   position: relative;
   display: -webkit-box;

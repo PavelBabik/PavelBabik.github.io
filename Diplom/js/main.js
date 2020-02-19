@@ -12,6 +12,7 @@ var app = new Vue ({
 
 $('.reviews').slick({
     dots: false,
+    arrows: false,
     infinite: true,
     autoplay: true,
     speed: 300,
