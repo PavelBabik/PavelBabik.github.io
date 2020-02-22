@@ -710,13 +710,24 @@ body {
 }
 
 .inner_cont {
-    padding: 100px;
+    padding: 150px;
+
+    @include small {
+        padding: 10px;
+    }
+}
+
+.contact_section {
+    width: 100%;
+    min-height: 800px;
     background-color: #e7e5d0;
 }
 
 .contact {
     width: 100%;
+    height: 100%;
     display: flex;
+    flex-wrap: wrap;
 
     &__title {
         width: 300px;
@@ -753,27 +764,134 @@ body {
     &__info {
         text-transform: uppercase;
         font-family: 'Times New Roman', Times, serif;
-        font-size: 16pt;
+        font-size: 14pt;
         font-weight: 700;
+    }
+
+    &__phone {
+        text-transform: uppercase;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 14pt;
+    }
+
+    &__mail {
+        text-transform: none;
+    }
+
+    &__social {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__form {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__txt {
+        height: 60px;
+        border: 3px solid #000;
+        border-radius: 5px;
+        background-color: transparent;
+
+        &::placeholder{
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 18pt;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+    }
+
+    &__message {
+        height: 220px;
+        border: 3px solid #000;
+        border-radius: 5px;
+        background-color: transparent;
+
+        &::placeholder{
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 18pt;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+    }
+
+    &__button {
+        height: 60px;
+        width: 370px;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 20pt;
+        color: #fff;
+        text-transform: uppercase;
+        border: none;
+        background-color: #9a977a;
+
+        @include iphone6Plus {
+            width: 300px;
+        }
+    }
+}
+
+.footer {
+    width: 100vw;
+    background-color: #aeaeae;
+
+    &__map {
+        width: 100%;
+        min-height: 500px;
+        max-height: 800px;
+        background-image: url(../img/Map.jpeg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    &__footer {
+        padding: 100px 0 100px 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        align-content: center;
+    }
+
+    &__txt {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 12pt;
+        font-weight: 700;
+        text-align: center;
     }
 }
 
 .cont_left {
     width: 50%;
-    padding: 15px;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+
+    @include small {
+        width: 100%;
+        height: 100%;
+    }
 }
 
 .cont_right {
     width: 50%;
-    padding: 15px;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+
+    @include small {
+        width: 100%;
+    }
 }
 
 .left_ab {
