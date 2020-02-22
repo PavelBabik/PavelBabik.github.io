@@ -109,7 +109,7 @@
                         <li class="about__item">
                             <div class="about__image">
                                 <img class="about__photo" src="./img/img1.jpeg">
-                                <div class="hover">
+                                <div @click="showImg" class="hover">
                                     <div class="hover__zoom">
                                         <svg 
                                              xmlns="http://www.w3.org/2000/svg"
@@ -135,7 +135,7 @@
                         <li class="about__item">
                             <div class="about__image">
                                 <img class="about__photo" src="./img/img2.jpeg">
-                                <div class="hover">
+                                <div @click="showImg" class="hover">
                                     <div class="hover__zoom">
                                         <svg 
                                              xmlns="http://www.w3.org/2000/svg"
@@ -161,7 +161,7 @@
                         <li class="about__item">
                             <div class="about__image">
                                 <img class="about__photo" src="./img/img3.jpeg">
-                                <div class="hover">
+                                <div @click="showImg" class="hover">
                                     <div class="hover__zoom">
                                         <svg 
                                              xmlns="http://www.w3.org/2000/svg"
@@ -187,7 +187,7 @@
                         <li class="about__item">
                             <div class="about__image">
                                 <img class="about__photo" src="./img/img4.jpeg">
-                                <div class="hover">
+                                <div @click="showImg" class="hover">
                                     <div class="hover__zoom">
                                         <svg 
                                              xmlns="http://www.w3.org/2000/svg"
@@ -213,7 +213,7 @@
                         <li class="about__item">
                             <div class="about__image">
                                 <img class="about__photo" src="./img/img5.jpeg">
-                                <div class="hover">
+                                <div @click="showImg" class="hover">
                                     <div class="hover__zoom">
                                         <svg 
                                              xmlns="http://www.w3.org/2000/svg"
@@ -239,7 +239,7 @@
                         <li class="about__item">
                             <div class="about__image">
                                 <img class="about__photo" src="./img/img6.jpeg">
-                                <div class="hover">
+                                <div @click="showImg" class="hover">
                                     <div class="hover__zoom">
                                         <svg 
                                              xmlns="http://www.w3.org/2000/svg"
@@ -265,7 +265,7 @@
                         <li class="about__item">
                             <div class="about__image">
                                 <img class="about__photo" src="./img/img7.jpeg">
-                                <div class="hover">
+                                <div @click="showImg" class="hover">
                                     <div class="hover__zoom">
                                         <svg 
                                              xmlns="http://www.w3.org/2000/svg"
@@ -291,7 +291,7 @@
                         <li class="about__item">
                             <div class="about__image">
                                 <img class="about__photo" src="./img/img8.jpeg">
-                                <div class="hover">
+                                <div @click="showImg" class="hover">
                                     <div class="hover__zoom">
                                         <svg 
                                              xmlns="http://www.w3.org/2000/svg"
@@ -317,7 +317,7 @@
                         <li class="about__item">
                             <div class="about__image">
                                 <img class="about__photo" src="./img/img9.jpeg">
-                                <div class="hover">
+                                <div @click="showImg" class="hover">
                                     <div class="hover__zoom">
                                         <svg 
                                              xmlns="http://www.w3.org/2000/svg"
@@ -343,7 +343,7 @@
                         <li class="about__item">
                             <div class="about__image">
                                 <img class="about__photo" src="./img/img10.jpeg">
-                                <div class="hover">
+                                <div @click="showImg" class="hover">
                                     <div class="hover__zoom">
                                         <svg 
                                              xmlns="http://www.w3.org/2000/svg"
@@ -369,7 +369,7 @@
                         <li class="about__item">
                             <div class="about__image">
                                 <img class="about__photo" src="./img/img11.jpeg">
-                                <div class="hover">
+                                <div @click="showImg" class="hover">
                                     <div class="hover__zoom">
                                         <svg 
                                              xmlns="http://www.w3.org/2000/svg"
@@ -395,7 +395,7 @@
                         <li class="about__item">
                             <div class="about__image">
                                 <img class="about__photo" src="./img/img12.jpeg">
-                                <div class="hover">
+                                <div @click="showImg" class="hover">
                                     <div class="hover__zoom">
                                         <svg 
                                              xmlns="http://www.w3.org/2000/svg"
@@ -419,15 +419,15 @@
                             </div>
                         </li>
                     </ul>
-                </div>  
-            </section>
+                </div>                    
+            </section>              
             <section class="testimonial">
                 <div class="reviews">
                     <div class="reviews__review">
                         <div class="reviews__text">
                             <div class="wrap">
                                 <p class="reviews__description">
-                                    <b><i>Aliquam ac justo interdum, elementum ligula et, condimentum orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</i></b>
+                                    <b><i>Perfect team! It was a very nice time. Well done!</i></b>
                                 </p>
                                 <p class="reviews__author">
                                     <i>- john doe -</i>
@@ -461,7 +461,611 @@
                     </div>
                 </div>
             </section>
+            <section class="team_section">
+                <div class="team">
+                    <ul class="team__items">
+                        <li class="team__header">
+                            <div class="team__title">
+                                team
+                            </div>
+                        </li>
+                        <li class="team__item">
+                            <img class="team__img" src="./img/corey.jpeg">
+                        </li>
+                        <li class="team__item team__item-color">
+                            <div class="container_team">
+                                <div class="team__details">
+                                    <h2 class="team__name">
+                                        corey miller
+                                    </h2>
+                                    <p class="team__description">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc risus eros, ultricies quis erat sit amet, elementum vulputate lorem. Sed at lacinia lectus, quis blandit libero.<br> 
+                                        Quisque ac malesuada lectus. Proin gravida feugiat commodo. Phasellus fermentum sem ut felis vehicula aliquet. Donec rhoncus, mi et euismod dictum, purus lorem vehicula justo, a iaculis mi nulla et risus.
+                                    </p>
+                                    <div class="team__social">
+                                        <a class="team__link" href="#">
+                                            <svg class="team__svg" fill="#000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50px" height="50px">    <path d="M17.525,9H14V7c0-1.032,0.084-1.682,1.563-1.682h1.868v-3.18C16.522,2.044,15.608,1.998,14.693,2 C11.98,2,10,3.657,10,6.699V9H7v4l3-0.001V22h4v-9.003l3.066-0.001L17.525,9z"/></svg>
+                                        </a>
+                                        <a class="team__link" href="#">
+                                            <svg class="team__svg" fill="#000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50px" height="50px">    <path d="M 8 3 C 5.243 3 3 5.243 3 8 L 3 16 C 3 18.757 5.243 21 8 21 L 16 21 C 18.757 21 21 18.757 21 16 L 21 8 C 21 5.243 18.757 3 16 3 L 8 3 z M 8 5 L 16 5 C 17.654 5 19 6.346 19 8 L 19 16 C 19 17.654 17.654 19 16 19 L 8 19 C 6.346 19 5 17.654 5 16 L 5 8 C 5 6.346 6.346 5 8 5 z M 17 6 A 1 1 0 0 0 16 7 A 1 1 0 0 0 17 8 A 1 1 0 0 0 18 7 A 1 1 0 0 0 17 6 z M 12 7 C 9.243 7 7 9.243 7 12 C 7 14.757 9.243 17 12 17 C 14.757 17 17 14.757 17 12 C 17 9.243 14.757 7 12 7 z M 12 9 C 13.654 9 15 10.346 15 12 C 15 13.654 13.654 15 12 15 C 10.346 15 9 13.654 9 12 C 9 10.346 10.346 9 12 9 z"/></svg>
+                                        </a>
+                                        <a class="team__link" href="#">
+                                            <svg class="team__svg" fill="#000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50px" height="50px"><path d="M 24 4.300781 C 23.101563 4.699219 22.199219 5 21.199219 5.101563 C 22.199219 4.5 23 3.5 23.398438 2.398438 C 22.398438 3 21.398438 3.398438 20.300781 3.601563 C 19.300781 2.601563 18 2 16.601563 2 C 13.898438 2 11.699219 4.199219 11.699219 6.898438 C 11.699219 7.300781 11.699219 7.699219 11.800781 8 C 7.699219 7.800781 4.101563 5.898438 1.699219 2.898438 C 1.199219 3.601563 1 4.5 1 5.398438 C 1 7.101563 1.898438 8.601563 3.199219 9.5 C 2.398438 9.398438 1.601563 9.199219 1 8.898438 C 1 8.898438 1 8.898438 1 9 C 1 11.398438 2.699219 13.398438 4.898438 13.800781 C 4.5 13.898438 4.101563 14 3.601563 14 C 3.300781 14 3 14 2.699219 13.898438 C 3.300781 15.898438 5.101563 17.300781 7.300781 17.300781 C 5.601563 18.601563 3.5 19.398438 1.199219 19.398438 C 0.800781 19.398438 0.398438 19.398438 0 19.300781 C 2.199219 20.699219 4.800781 21.5 7.5 21.5 C 16.601563 21.5 21.5 14 21.5 7.5 C 21.5 7.300781 21.5 7.101563 21.5 6.898438 C 22.5 6.199219 23.300781 5.300781 24 4.300781"/></svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="team__item">
+                            <img class="team__img" src="./img/kat.jpeg">
+                        </li>
+                        <li class="team__item team__item-color">
+                            <div class="container_team">
+                                <div class="team__details">
+                                    <h2 class="team__name">
+                                        kat von d
+                                    </h2>
+                                    <p class="team__description">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc risus eros, ultricies quis erat sit amet, elementum vulputate lorem. Sed at lacinia lectus, quis blandit libero.<br> 
+                                        Quisque ac malesuada lectus. Proin gravida feugiat commodo. Phasellus fermentum sem ut felis vehicula aliquet. Donec rhoncus, mi et euismod dictum, purus lorem vehicula justo, a iaculis mi nulla et risus.
+                                    </p>
+                                    <div class="team__social">
+                                        <a class="team__link" href="#">
+                                            <svg class="team__svg" fill="#000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50px" height="50px">    <path d="M17.525,9H14V7c0-1.032,0.084-1.682,1.563-1.682h1.868v-3.18C16.522,2.044,15.608,1.998,14.693,2 C11.98,2,10,3.657,10,6.699V9H7v4l3-0.001V22h4v-9.003l3.066-0.001L17.525,9z"/></svg>
+                                        </a>
+                                        <a class="team__link" href="#">
+                                            <svg class="team__svg" fill="#000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50px" height="50px">    <path d="M 8 3 C 5.243 3 3 5.243 3 8 L 3 16 C 3 18.757 5.243 21 8 21 L 16 21 C 18.757 21 21 18.757 21 16 L 21 8 C 21 5.243 18.757 3 16 3 L 8 3 z M 8 5 L 16 5 C 17.654 5 19 6.346 19 8 L 19 16 C 19 17.654 17.654 19 16 19 L 8 19 C 6.346 19 5 17.654 5 16 L 5 8 C 5 6.346 6.346 5 8 5 z M 17 6 A 1 1 0 0 0 16 7 A 1 1 0 0 0 17 8 A 1 1 0 0 0 18 7 A 1 1 0 0 0 17 6 z M 12 7 C 9.243 7 7 9.243 7 12 C 7 14.757 9.243 17 12 17 C 14.757 17 17 14.757 17 12 C 17 9.243 14.757 7 12 7 z M 12 9 C 13.654 9 15 10.346 15 12 C 15 13.654 13.654 15 12 15 C 10.346 15 9 13.654 9 12 C 9 10.346 10.346 9 12 9 z"/></svg>
+                                        </a>
+                                        <a class="team__link" href="#">
+                                            <svg class="team__svg" fill="#000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50px" height="50px"><path d="M 24 4.300781 C 23.101563 4.699219 22.199219 5 21.199219 5.101563 C 22.199219 4.5 23 3.5 23.398438 2.398438 C 22.398438 3 21.398438 3.398438 20.300781 3.601563 C 19.300781 2.601563 18 2 16.601563 2 C 13.898438 2 11.699219 4.199219 11.699219 6.898438 C 11.699219 7.300781 11.699219 7.699219 11.800781 8 C 7.699219 7.800781 4.101563 5.898438 1.699219 2.898438 C 1.199219 3.601563 1 4.5 1 5.398438 C 1 7.101563 1.898438 8.601563 3.199219 9.5 C 2.398438 9.398438 1.601563 9.199219 1 8.898438 C 1 8.898438 1 8.898438 1 9 C 1 11.398438 2.699219 13.398438 4.898438 13.800781 C 4.5 13.898438 4.101563 14 3.601563 14 C 3.300781 14 3 14 2.699219 13.898438 C 3.300781 15.898438 5.101563 17.300781 7.300781 17.300781 C 5.601563 18.601563 3.5 19.398438 1.199219 19.398438 C 0.800781 19.398438 0.398438 19.398438 0 19.300781 C 2.199219 20.699219 4.800781 21.5 7.5 21.5 C 16.601563 21.5 21.5 14 21.5 7.5 C 21.5 7.300781 21.5 7.101563 21.5 6.898438 C 22.5 6.199219 23.300781 5.300781 24 4.300781"/></svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="team__item team__item-white">
+                            <div class="container_team">
+                                <div class="team__details team__details-small">
+                                    <div>
+                                        <h2 class="team__name team__name-size">
+                                            newsletter
+                                        </h2>
+                                        <p class="team__description-size">
+                                            Join thousands of other<br>people subscribe to our news
+                                        </p> 
+                                    </div>
+                                    <input class="team__search" type="text" placeholder="insert mail">
+                                    <button class="team__button">
+                                        SUBMIT
+                                    </button>                                
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="twitter_section">
+                <div class="twitter">
+                    <div class="logo">
+                        <svg fill="#fff" xmlns="ht3tp://www.w3.org/2000/svg" viewBox="0 0 25 25" width="100" height="100"><path d="M 24 4.300781 C 23.101563 4.699219 22.199219 5 21.199219 5.101563 C 22.199219 4.5 23 3.5 23.398438 2.398438 C 22.398438 3 21.398438 3.398438 20.300781 3.601563 C 19.300781 2.601563 18 2 16.601563 2 C 13.898438 2 11.699219 4.199219 11.699219 6.898438 C 11.699219 7.300781 11.699219 7.699219 11.800781 8 C 7.699219 7.800781 4.101563 5.898438 1.699219 2.898438 C 1.199219 3.601563 1 4.5 1 5.398438 C 1 7.101563 1.898438 8.601563 3.199219 9.5 C 2.398438 9.398438 1.601563 9.199219 1 8.898438 C 1 8.898438 1 8.898438 1 9 C 1 11.398438 2.699219 13.398438 4.898438 13.800781 C 4.5 13.898438 4.101563 14 3.601563 14 C 3.300781 14 3 14 2.699219 13.898438 C 3.300781 15.898438 5.101563 17.300781 7.300781 17.300781 C 5.601563 18.601563 3.5 19.398438 1.199219 19.398438 C 0.800781 19.398438 0.398438 19.398438 0 19.300781 C 2.199219 20.699219 4.800781 21.5 7.5 21.5 C 16.601563 21.5 21.5 14 21.5 7.5 C 21.5 7.300781 21.5 7.101563 21.5 6.898438 C 22.5 6.199219 23.300781 5.300781 24 4.300781"/></svg>
+                    </div>
+                    <p class="twitter__text">
+                        <i>RT @collis: Trade growth ideas with other founders. Look for ways to cross promote. Small startups today may be big friends later. (9/10)  2 days ago</i>
+                    </p>
+                </div>
+            </section>
+            <section class="gallery_section">
+                <div class="gallery">
+                    <ul class="gallery__items">
+                        <li class="gallery__header">
+                            <div class="gallery__title">
+                                gallery
+                            </div>
+                        </li>
+                        <li class="gallery__item">
+                            <div class="gallery__image">
+                                <img class="gallery__photo" src="./img/gimg1.jpeg">
+                                <div class="hover">
+                                    <div class="hover__zoom">
+                                        <svg 
+                                             xmlns="http://www.w3.org/2000/svg"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             width="30px" height="30px">
+                                            <defs>
+                                            <filter id="Filter_0">
+                                                <feFlood flood-color="rgb(0, 0, 0)" flood-opacity="1" result="floodOut" />
+                                                <feComposite operator="atop" in="floodOut" in2="SourceGraphic" result="compOut" />
+                                                <feBlend mode="normal" in="compOut" in2="SourceGraphic" />
+                                            </filter>
+                                            
+                                            </defs>
+                                            <g filter="url(#Filter_0)">
+                                            <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+                                             d="M28.592,28.573 L27.883,29.282 C27.099,30.066 25.829,30.066 25.045,29.282 L19.371,23.607 C18.713,22.950 18.641,21.964 19.087,21.196 L15.985,18.094 C14.317,19.332 12.258,20.073 10.021,20.073 C4.480,20.073 -0.011,15.582 -0.011,10.042 C-0.011,4.502 4.480,0.011 10.021,0.011 C15.561,0.011 20.052,4.502 20.052,10.042 C20.052,12.621 19.070,14.965 17.471,16.742 L20.506,19.777 C21.274,19.331 22.259,19.403 22.917,20.060 L28.592,25.735 C29.375,26.519 29.375,27.789 28.592,28.573 ZM17.523,10.000 C17.523,5.845 14.155,2.477 10.000,2.477 C8.842,2.477 7.759,2.759 6.780,3.226 C7.303,3.764 8.093,4.568 8.135,4.568 C7.320,4.568 4.651,7.236 4.651,8.114 C4.651,8.072 3.802,7.266 3.246,6.743 C2.767,7.732 2.476,8.828 2.476,10.000 C2.476,14.155 5.845,17.524 10.000,17.524 C14.155,17.524 17.523,14.155 17.523,10.000 Z"/>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="gallery__item">
+                            <div class="gallery__image">
+                                <img class="gallery__photo" src="./img/gimg2.jpeg">
+                                <div class="hover">
+                                    <div class="hover__zoom">
+                                        <svg 
+                                             xmlns="http://www.w3.org/2000/svg"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             width="30px" height="30px">
+                                            <defs>
+                                            <filter id="Filter_0">
+                                                <feFlood flood-color="rgb(0, 0, 0)" flood-opacity="1" result="floodOut" />
+                                                <feComposite operator="atop" in="floodOut" in2="SourceGraphic" result="compOut" />
+                                                <feBlend mode="normal" in="compOut" in2="SourceGraphic" />
+                                            </filter>
+                                            
+                                            </defs>
+                                            <g filter="url(#Filter_0)">
+                                            <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+                                             d="M28.592,28.573 L27.883,29.282 C27.099,30.066 25.829,30.066 25.045,29.282 L19.371,23.607 C18.713,22.950 18.641,21.964 19.087,21.196 L15.985,18.094 C14.317,19.332 12.258,20.073 10.021,20.073 C4.480,20.073 -0.011,15.582 -0.011,10.042 C-0.011,4.502 4.480,0.011 10.021,0.011 C15.561,0.011 20.052,4.502 20.052,10.042 C20.052,12.621 19.070,14.965 17.471,16.742 L20.506,19.777 C21.274,19.331 22.259,19.403 22.917,20.060 L28.592,25.735 C29.375,26.519 29.375,27.789 28.592,28.573 ZM17.523,10.000 C17.523,5.845 14.155,2.477 10.000,2.477 C8.842,2.477 7.759,2.759 6.780,3.226 C7.303,3.764 8.093,4.568 8.135,4.568 C7.320,4.568 4.651,7.236 4.651,8.114 C4.651,8.072 3.802,7.266 3.246,6.743 C2.767,7.732 2.476,8.828 2.476,10.000 C2.476,14.155 5.845,17.524 10.000,17.524 C14.155,17.524 17.523,14.155 17.523,10.000 Z"/>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="gallery__item">
+                            <div class="gallery__image">
+                                <img class="gallery__photo" src="./img/gimg3.jpeg">
+                                <div class="hover">
+                                    <div class="hover__zoom">
+                                        <svg 
+                                             xmlns="http://www.w3.org/2000/svg"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             width="30px" height="30px">
+                                            <defs>
+                                            <filter id="Filter_0">
+                                                <feFlood flood-color="rgb(0, 0, 0)" flood-opacity="1" result="floodOut" />
+                                                <feComposite operator="atop" in="floodOut" in2="SourceGraphic" result="compOut" />
+                                                <feBlend mode="normal" in="compOut" in2="SourceGraphic" />
+                                            </filter>
+                                            
+                                            </defs>
+                                            <g filter="url(#Filter_0)">
+                                            <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+                                             d="M28.592,28.573 L27.883,29.282 C27.099,30.066 25.829,30.066 25.045,29.282 L19.371,23.607 C18.713,22.950 18.641,21.964 19.087,21.196 L15.985,18.094 C14.317,19.332 12.258,20.073 10.021,20.073 C4.480,20.073 -0.011,15.582 -0.011,10.042 C-0.011,4.502 4.480,0.011 10.021,0.011 C15.561,0.011 20.052,4.502 20.052,10.042 C20.052,12.621 19.070,14.965 17.471,16.742 L20.506,19.777 C21.274,19.331 22.259,19.403 22.917,20.060 L28.592,25.735 C29.375,26.519 29.375,27.789 28.592,28.573 ZM17.523,10.000 C17.523,5.845 14.155,2.477 10.000,2.477 C8.842,2.477 7.759,2.759 6.780,3.226 C7.303,3.764 8.093,4.568 8.135,4.568 C7.320,4.568 4.651,7.236 4.651,8.114 C4.651,8.072 3.802,7.266 3.246,6.743 C2.767,7.732 2.476,8.828 2.476,10.000 C2.476,14.155 5.845,17.524 10.000,17.524 C14.155,17.524 17.523,14.155 17.523,10.000 Z"/>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="gallery__item">
+                            <div class="gallery__image">
+                                <img class="gallery__photo" src="./img/gimg4.jpeg">
+                                <div class="hover">
+                                    <div class="hover__zoom">
+                                        <svg 
+                                             xmlns="http://www.w3.org/2000/svg"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             width="30px" height="30px">
+                                            <defs>
+                                            <filter id="Filter_0">
+                                                <feFlood flood-color="rgb(0, 0, 0)" flood-opacity="1" result="floodOut" />
+                                                <feComposite operator="atop" in="floodOut" in2="SourceGraphic" result="compOut" />
+                                                <feBlend mode="normal" in="compOut" in2="SourceGraphic" />
+                                            </filter>
+                                            
+                                            </defs>
+                                            <g filter="url(#Filter_0)">
+                                            <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+                                             d="M28.592,28.573 L27.883,29.282 C27.099,30.066 25.829,30.066 25.045,29.282 L19.371,23.607 C18.713,22.950 18.641,21.964 19.087,21.196 L15.985,18.094 C14.317,19.332 12.258,20.073 10.021,20.073 C4.480,20.073 -0.011,15.582 -0.011,10.042 C-0.011,4.502 4.480,0.011 10.021,0.011 C15.561,0.011 20.052,4.502 20.052,10.042 C20.052,12.621 19.070,14.965 17.471,16.742 L20.506,19.777 C21.274,19.331 22.259,19.403 22.917,20.060 L28.592,25.735 C29.375,26.519 29.375,27.789 28.592,28.573 ZM17.523,10.000 C17.523,5.845 14.155,2.477 10.000,2.477 C8.842,2.477 7.759,2.759 6.780,3.226 C7.303,3.764 8.093,4.568 8.135,4.568 C7.320,4.568 4.651,7.236 4.651,8.114 C4.651,8.072 3.802,7.266 3.246,6.743 C2.767,7.732 2.476,8.828 2.476,10.000 C2.476,14.155 5.845,17.524 10.000,17.524 C14.155,17.524 17.523,14.155 17.523,10.000 Z"/>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>  
+                        <li class="gallery__item">
+                            <div class="gallery__image">
+                                <img class="gallery__photo" src="./img/gimg5.jpeg">
+                                <div class="hover">
+                                    <div class="hover__zoom">
+                                        <svg 
+                                             xmlns="http://www.w3.org/2000/svg"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             width="30px" height="30px">
+                                            <defs>
+                                            <filter id="Filter_0">
+                                                <feFlood flood-color="rgb(0, 0, 0)" flood-opacity="1" result="floodOut" />
+                                                <feComposite operator="atop" in="floodOut" in2="SourceGraphic" result="compOut" />
+                                                <feBlend mode="normal" in="compOut" in2="SourceGraphic" />
+                                            </filter>
+                                            
+                                            </defs>
+                                            <g filter="url(#Filter_0)">
+                                            <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+                                             d="M28.592,28.573 L27.883,29.282 C27.099,30.066 25.829,30.066 25.045,29.282 L19.371,23.607 C18.713,22.950 18.641,21.964 19.087,21.196 L15.985,18.094 C14.317,19.332 12.258,20.073 10.021,20.073 C4.480,20.073 -0.011,15.582 -0.011,10.042 C-0.011,4.502 4.480,0.011 10.021,0.011 C15.561,0.011 20.052,4.502 20.052,10.042 C20.052,12.621 19.070,14.965 17.471,16.742 L20.506,19.777 C21.274,19.331 22.259,19.403 22.917,20.060 L28.592,25.735 C29.375,26.519 29.375,27.789 28.592,28.573 ZM17.523,10.000 C17.523,5.845 14.155,2.477 10.000,2.477 C8.842,2.477 7.759,2.759 6.780,3.226 C7.303,3.764 8.093,4.568 8.135,4.568 C7.320,4.568 4.651,7.236 4.651,8.114 C4.651,8.072 3.802,7.266 3.246,6.743 C2.767,7.732 2.476,8.828 2.476,10.000 C2.476,14.155 5.845,17.524 10.000,17.524 C14.155,17.524 17.523,14.155 17.523,10.000 Z"/>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="gallery__item">
+                            <div class="gallery__image">
+                                <img class="gallery__photo" src="./img/gimg6.jpeg">
+                                <div class="hover">
+                                    <div class="hover__zoom">
+                                        <svg 
+                                             xmlns="http://www.w3.org/2000/svg"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             width="30px" height="30px">
+                                            <defs>
+                                            <filter id="Filter_0">
+                                                <feFlood flood-color="rgb(0, 0, 0)" flood-opacity="1" result="floodOut" />
+                                                <feComposite operator="atop" in="floodOut" in2="SourceGraphic" result="compOut" />
+                                                <feBlend mode="normal" in="compOut" in2="SourceGraphic" />
+                                            </filter>
+                                            
+                                            </defs>
+                                            <g filter="url(#Filter_0)">
+                                            <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+                                             d="M28.592,28.573 L27.883,29.282 C27.099,30.066 25.829,30.066 25.045,29.282 L19.371,23.607 C18.713,22.950 18.641,21.964 19.087,21.196 L15.985,18.094 C14.317,19.332 12.258,20.073 10.021,20.073 C4.480,20.073 -0.011,15.582 -0.011,10.042 C-0.011,4.502 4.480,0.011 10.021,0.011 C15.561,0.011 20.052,4.502 20.052,10.042 C20.052,12.621 19.070,14.965 17.471,16.742 L20.506,19.777 C21.274,19.331 22.259,19.403 22.917,20.060 L28.592,25.735 C29.375,26.519 29.375,27.789 28.592,28.573 ZM17.523,10.000 C17.523,5.845 14.155,2.477 10.000,2.477 C8.842,2.477 7.759,2.759 6.780,3.226 C7.303,3.764 8.093,4.568 8.135,4.568 C7.320,4.568 4.651,7.236 4.651,8.114 C4.651,8.072 3.802,7.266 3.246,6.743 C2.767,7.732 2.476,8.828 2.476,10.000 C2.476,14.155 5.845,17.524 10.000,17.524 C14.155,17.524 17.523,14.155 17.523,10.000 Z"/>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="gallery__item">
+                            <div class="gallery__image">
+                                <img class="gallery__photo" src="./img/gimg7.jpeg">
+                                <div class="hover">
+                                    <div class="hover__zoom">
+                                        <svg 
+                                             xmlns="http://www.w3.org/2000/svg"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             width="30px" height="30px">
+                                            <defs>
+                                            <filter id="Filter_0">
+                                                <feFlood flood-color="rgb(0, 0, 0)" flood-opacity="1" result="floodOut" />
+                                                <feComposite operator="atop" in="floodOut" in2="SourceGraphic" result="compOut" />
+                                                <feBlend mode="normal" in="compOut" in2="SourceGraphic" />
+                                            </filter>
+                                            
+                                            </defs>
+                                            <g filter="url(#Filter_0)">
+                                            <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+                                             d="M28.592,28.573 L27.883,29.282 C27.099,30.066 25.829,30.066 25.045,29.282 L19.371,23.607 C18.713,22.950 18.641,21.964 19.087,21.196 L15.985,18.094 C14.317,19.332 12.258,20.073 10.021,20.073 C4.480,20.073 -0.011,15.582 -0.011,10.042 C-0.011,4.502 4.480,0.011 10.021,0.011 C15.561,0.011 20.052,4.502 20.052,10.042 C20.052,12.621 19.070,14.965 17.471,16.742 L20.506,19.777 C21.274,19.331 22.259,19.403 22.917,20.060 L28.592,25.735 C29.375,26.519 29.375,27.789 28.592,28.573 ZM17.523,10.000 C17.523,5.845 14.155,2.477 10.000,2.477 C8.842,2.477 7.759,2.759 6.780,3.226 C7.303,3.764 8.093,4.568 8.135,4.568 C7.320,4.568 4.651,7.236 4.651,8.114 C4.651,8.072 3.802,7.266 3.246,6.743 C2.767,7.732 2.476,8.828 2.476,10.000 C2.476,14.155 5.845,17.524 10.000,17.524 C14.155,17.524 17.523,14.155 17.523,10.000 Z"/>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="gallery__item">
+                            <div class="gallery__image">
+                                <img class="gallery__photo" src="./img/gimg8.jpeg">
+                                <div class="hover">
+                                    <div class="hover__zoom">
+                                        <svg 
+                                             xmlns="http://www.w3.org/2000/svg"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             width="30px" height="30px">
+                                            <defs>
+                                            <filter id="Filter_0">
+                                                <feFlood flood-color="rgb(0, 0, 0)" flood-opacity="1" result="floodOut" />
+                                                <feComposite operator="atop" in="floodOut" in2="SourceGraphic" result="compOut" />
+                                                <feBlend mode="normal" in="compOut" in2="SourceGraphic" />
+                                            </filter>
+                                            
+                                            </defs>
+                                            <g filter="url(#Filter_0)">
+                                            <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+                                             d="M28.592,28.573 L27.883,29.282 C27.099,30.066 25.829,30.066 25.045,29.282 L19.371,23.607 C18.713,22.950 18.641,21.964 19.087,21.196 L15.985,18.094 C14.317,19.332 12.258,20.073 10.021,20.073 C4.480,20.073 -0.011,15.582 -0.011,10.042 C-0.011,4.502 4.480,0.011 10.021,0.011 C15.561,0.011 20.052,4.502 20.052,10.042 C20.052,12.621 19.070,14.965 17.471,16.742 L20.506,19.777 C21.274,19.331 22.259,19.403 22.917,20.060 L28.592,25.735 C29.375,26.519 29.375,27.789 28.592,28.573 ZM17.523,10.000 C17.523,5.845 14.155,2.477 10.000,2.477 C8.842,2.477 7.759,2.759 6.780,3.226 C7.303,3.764 8.093,4.568 8.135,4.568 C7.320,4.568 4.651,7.236 4.651,8.114 C4.651,8.072 3.802,7.266 3.246,6.743 C2.767,7.732 2.476,8.828 2.476,10.000 C2.476,14.155 5.845,17.524 10.000,17.524 C14.155,17.524 17.523,14.155 17.523,10.000 Z"/>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="gallery__item">
+                            <div class="gallery__image">
+                                <img class="gallery__photo" src="./img/gimg9.jpeg">
+                                <div class="hover">
+                                    <div class="hover__zoom">
+                                        <svg 
+                                             xmlns="http://www.w3.org/2000/svg"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             width="30px" height="30px">
+                                            <defs>
+                                            <filter id="Filter_0">
+                                                <feFlood flood-color="rgb(0, 0, 0)" flood-opacity="1" result="floodOut" />
+                                                <feComposite operator="atop" in="floodOut" in2="SourceGraphic" result="compOut" />
+                                                <feBlend mode="normal" in="compOut" in2="SourceGraphic" />
+                                            </filter>
+                                            
+                                            </defs>
+                                            <g filter="url(#Filter_0)">
+                                            <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+                                             d="M28.592,28.573 L27.883,29.282 C27.099,30.066 25.829,30.066 25.045,29.282 L19.371,23.607 C18.713,22.950 18.641,21.964 19.087,21.196 L15.985,18.094 C14.317,19.332 12.258,20.073 10.021,20.073 C4.480,20.073 -0.011,15.582 -0.011,10.042 C-0.011,4.502 4.480,0.011 10.021,0.011 C15.561,0.011 20.052,4.502 20.052,10.042 C20.052,12.621 19.070,14.965 17.471,16.742 L20.506,19.777 C21.274,19.331 22.259,19.403 22.917,20.060 L28.592,25.735 C29.375,26.519 29.375,27.789 28.592,28.573 ZM17.523,10.000 C17.523,5.845 14.155,2.477 10.000,2.477 C8.842,2.477 7.759,2.759 6.780,3.226 C7.303,3.764 8.093,4.568 8.135,4.568 C7.320,4.568 4.651,7.236 4.651,8.114 C4.651,8.072 3.802,7.266 3.246,6.743 C2.767,7.732 2.476,8.828 2.476,10.000 C2.476,14.155 5.845,17.524 10.000,17.524 C14.155,17.524 17.523,14.155 17.523,10.000 Z"/>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="gallery__item">
+                            <div class="gallery__image">
+                                <img class="gallery__photo" src="./img/gimg10.jpeg">
+                                <div class="hover">
+                                    <div class="hover__zoom">
+                                        <svg 
+                                             xmlns="http://www.w3.org/2000/svg"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             width="30px" height="30px">
+                                            <defs>
+                                            <filter id="Filter_0">
+                                                <feFlood flood-color="rgb(0, 0, 0)" flood-opacity="1" result="floodOut" />
+                                                <feComposite operator="atop" in="floodOut" in2="SourceGraphic" result="compOut" />
+                                                <feBlend mode="normal" in="compOut" in2="SourceGraphic" />
+                                            </filter>
+                                            
+                                            </defs>
+                                            <g filter="url(#Filter_0)">
+                                            <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+                                             d="M28.592,28.573 L27.883,29.282 C27.099,30.066 25.829,30.066 25.045,29.282 L19.371,23.607 C18.713,22.950 18.641,21.964 19.087,21.196 L15.985,18.094 C14.317,19.332 12.258,20.073 10.021,20.073 C4.480,20.073 -0.011,15.582 -0.011,10.042 C-0.011,4.502 4.480,0.011 10.021,0.011 C15.561,0.011 20.052,4.502 20.052,10.042 C20.052,12.621 19.070,14.965 17.471,16.742 L20.506,19.777 C21.274,19.331 22.259,19.403 22.917,20.060 L28.592,25.735 C29.375,26.519 29.375,27.789 28.592,28.573 ZM17.523,10.000 C17.523,5.845 14.155,2.477 10.000,2.477 C8.842,2.477 7.759,2.759 6.780,3.226 C7.303,3.764 8.093,4.568 8.135,4.568 C7.320,4.568 4.651,7.236 4.651,8.114 C4.651,8.072 3.802,7.266 3.246,6.743 C2.767,7.732 2.476,8.828 2.476,10.000 C2.476,14.155 5.845,17.524 10.000,17.524 C14.155,17.524 17.523,14.155 17.523,10.000 Z"/>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="gallery__item">
+                            <div class="gallery__image">
+                                <img class="gallery__photo" src="./img/gimg11.jpeg">
+                                <div class="hover">
+                                    <div class="hover__zoom">
+                                        <svg 
+                                             xmlns="http://www.w3.org/2000/svg"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             width="30px" height="30px">
+                                            <defs>
+                                            <filter id="Filter_0">
+                                                <feFlood flood-color="rgb(0, 0, 0)" flood-opacity="1" result="floodOut" />
+                                                <feComposite operator="atop" in="floodOut" in2="SourceGraphic" result="compOut" />
+                                                <feBlend mode="normal" in="compOut" in2="SourceGraphic" />
+                                            </filter>
+                                            
+                                            </defs>
+                                            <g filter="url(#Filter_0)">
+                                            <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+                                             d="M28.592,28.573 L27.883,29.282 C27.099,30.066 25.829,30.066 25.045,29.282 L19.371,23.607 C18.713,22.950 18.641,21.964 19.087,21.196 L15.985,18.094 C14.317,19.332 12.258,20.073 10.021,20.073 C4.480,20.073 -0.011,15.582 -0.011,10.042 C-0.011,4.502 4.480,0.011 10.021,0.011 C15.561,0.011 20.052,4.502 20.052,10.042 C20.052,12.621 19.070,14.965 17.471,16.742 L20.506,19.777 C21.274,19.331 22.259,19.403 22.917,20.060 L28.592,25.735 C29.375,26.519 29.375,27.789 28.592,28.573 ZM17.523,10.000 C17.523,5.845 14.155,2.477 10.000,2.477 C8.842,2.477 7.759,2.759 6.780,3.226 C7.303,3.764 8.093,4.568 8.135,4.568 C7.320,4.568 4.651,7.236 4.651,8.114 C4.651,8.072 3.802,7.266 3.246,6.743 C2.767,7.732 2.476,8.828 2.476,10.000 C2.476,14.155 5.845,17.524 10.000,17.524 C14.155,17.524 17.523,14.155 17.523,10.000 Z"/>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="gallery__item">
+                            <div class="gallery__image">
+                                <img class="gallery__photo" src="./img/gimg12.jpeg">
+                                <div class="hover">
+                                    <div class="hover__zoom">
+                                        <svg 
+                                             xmlns="http://www.w3.org/2000/svg"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             width="30px" height="30px">
+                                            <defs>
+                                            <filter id="Filter_0">
+                                                <feFlood flood-color="rgb(0, 0, 0)" flood-opacity="1" result="floodOut" />
+                                                <feComposite operator="atop" in="floodOut" in2="SourceGraphic" result="compOut" />
+                                                <feBlend mode="normal" in="compOut" in2="SourceGraphic" />
+                                            </filter>
+                                            
+                                            </defs>
+                                            <g filter="url(#Filter_0)">
+                                            <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+                                             d="M28.592,28.573 L27.883,29.282 C27.099,30.066 25.829,30.066 25.045,29.282 L19.371,23.607 C18.713,22.950 18.641,21.964 19.087,21.196 L15.985,18.094 C14.317,19.332 12.258,20.073 10.021,20.073 C4.480,20.073 -0.011,15.582 -0.011,10.042 C-0.011,4.502 4.480,0.011 10.021,0.011 C15.561,0.011 20.052,4.502 20.052,10.042 C20.052,12.621 19.070,14.965 17.471,16.742 L20.506,19.777 C21.274,19.331 22.259,19.403 22.917,20.060 L28.592,25.735 C29.375,26.519 29.375,27.789 28.592,28.573 ZM17.523,10.000 C17.523,5.845 14.155,2.477 10.000,2.477 C8.842,2.477 7.759,2.759 6.780,3.226 C7.303,3.764 8.093,4.568 8.135,4.568 C7.320,4.568 4.651,7.236 4.651,8.114 C4.651,8.072 3.802,7.266 3.246,6.743 C2.767,7.732 2.476,8.828 2.476,10.000 C2.476,14.155 5.845,17.524 10.000,17.524 C14.155,17.524 17.523,14.155 17.523,10.000 Z"/>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="gallery__item">
+                            <div class="gallery__image">
+                                <img class="gallery__photo" src="./img/gimg13.jpeg">
+                                <div class="hover">
+                                    <div class="hover__zoom">
+                                        <svg 
+                                             xmlns="http://www.w3.org/2000/svg"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             width="30px" height="30px">
+                                            <defs>
+                                            <filter id="Filter_0">
+                                                <feFlood flood-color="rgb(0, 0, 0)" flood-opacity="1" result="floodOut" />
+                                                <feComposite operator="atop" in="floodOut" in2="SourceGraphic" result="compOut" />
+                                                <feBlend mode="normal" in="compOut" in2="SourceGraphic" />
+                                            </filter>
+                                            
+                                            </defs>
+                                            <g filter="url(#Filter_0)">
+                                            <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+                                             d="M28.592,28.573 L27.883,29.282 C27.099,30.066 25.829,30.066 25.045,29.282 L19.371,23.607 C18.713,22.950 18.641,21.964 19.087,21.196 L15.985,18.094 C14.317,19.332 12.258,20.073 10.021,20.073 C4.480,20.073 -0.011,15.582 -0.011,10.042 C-0.011,4.502 4.480,0.011 10.021,0.011 C15.561,0.011 20.052,4.502 20.052,10.042 C20.052,12.621 19.070,14.965 17.471,16.742 L20.506,19.777 C21.274,19.331 22.259,19.403 22.917,20.060 L28.592,25.735 C29.375,26.519 29.375,27.789 28.592,28.573 ZM17.523,10.000 C17.523,5.845 14.155,2.477 10.000,2.477 C8.842,2.477 7.759,2.759 6.780,3.226 C7.303,3.764 8.093,4.568 8.135,4.568 C7.320,4.568 4.651,7.236 4.651,8.114 C4.651,8.072 3.802,7.266 3.246,6.743 C2.767,7.732 2.476,8.828 2.476,10.000 C2.476,14.155 5.845,17.524 10.000,17.524 C14.155,17.524 17.523,14.155 17.523,10.000 Z"/>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="gallery__item">
+                            <div class="gallery__image">
+                                <img class="gallery__photo" src="./img/gimg14.jpeg">
+                                <div class="hover">
+                                    <div class="hover__zoom">
+                                        <svg 
+                                             xmlns="http://www.w3.org/2000/svg"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             width="30px" height="30px">
+                                            <defs>
+                                            <filter id="Filter_0">
+                                                <feFlood flood-color="rgb(0, 0, 0)" flood-opacity="1" result="floodOut" />
+                                                <feComposite operator="atop" in="floodOut" in2="SourceGraphic" result="compOut" />
+                                                <feBlend mode="normal" in="compOut" in2="SourceGraphic" />
+                                            </filter>
+                                            
+                                            </defs>
+                                            <g filter="url(#Filter_0)">
+                                            <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+                                             d="M28.592,28.573 L27.883,29.282 C27.099,30.066 25.829,30.066 25.045,29.282 L19.371,23.607 C18.713,22.950 18.641,21.964 19.087,21.196 L15.985,18.094 C14.317,19.332 12.258,20.073 10.021,20.073 C4.480,20.073 -0.011,15.582 -0.011,10.042 C-0.011,4.502 4.480,0.011 10.021,0.011 C15.561,0.011 20.052,4.502 20.052,10.042 C20.052,12.621 19.070,14.965 17.471,16.742 L20.506,19.777 C21.274,19.331 22.259,19.403 22.917,20.060 L28.592,25.735 C29.375,26.519 29.375,27.789 28.592,28.573 ZM17.523,10.000 C17.523,5.845 14.155,2.477 10.000,2.477 C8.842,2.477 7.759,2.759 6.780,3.226 C7.303,3.764 8.093,4.568 8.135,4.568 C7.320,4.568 4.651,7.236 4.651,8.114 C4.651,8.072 3.802,7.266 3.246,6.743 C2.767,7.732 2.476,8.828 2.476,10.000 C2.476,14.155 5.845,17.524 10.000,17.524 C14.155,17.524 17.523,14.155 17.523,10.000 Z"/>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="gallery__item">
+                            <div class="gallery__image">
+                                <img class="gallery__photo" src="./img/gimg15.jpeg">
+                                <div class="hover">
+                                    <div class="hover__zoom">
+                                        <svg 
+                                             xmlns="http://www.w3.org/2000/svg"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             width="30px" height="30px">
+                                            <defs>
+                                            <filter id="Filter_0">
+                                                <feFlood flood-color="rgb(0, 0, 0)" flood-opacity="1" result="floodOut" />
+                                                <feComposite operator="atop" in="floodOut" in2="SourceGraphic" result="compOut" />
+                                                <feBlend mode="normal" in="compOut" in2="SourceGraphic" />
+                                            </filter>
+                                            
+                                            </defs>
+                                            <g filter="url(#Filter_0)">
+                                            <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+                                             d="M28.592,28.573 L27.883,29.282 C27.099,30.066 25.829,30.066 25.045,29.282 L19.371,23.607 C18.713,22.950 18.641,21.964 19.087,21.196 L15.985,18.094 C14.317,19.332 12.258,20.073 10.021,20.073 C4.480,20.073 -0.011,15.582 -0.011,10.042 C-0.011,4.502 4.480,0.011 10.021,0.011 C15.561,0.011 20.052,4.502 20.052,10.042 C20.052,12.621 19.070,14.965 17.471,16.742 L20.506,19.777 C21.274,19.331 22.259,19.403 22.917,20.060 L28.592,25.735 C29.375,26.519 29.375,27.789 28.592,28.573 ZM17.523,10.000 C17.523,5.845 14.155,2.477 10.000,2.477 C8.842,2.477 7.759,2.759 6.780,3.226 C7.303,3.764 8.093,4.568 8.135,4.568 C7.320,4.568 4.651,7.236 4.651,8.114 C4.651,8.072 3.802,7.266 3.246,6.743 C2.767,7.732 2.476,8.828 2.476,10.000 C2.476,14.155 5.845,17.524 10.000,17.524 C14.155,17.524 17.523,14.155 17.523,10.000 Z"/>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="gallery__item">
+                            <div class="gallery__image">
+                                <img class="gallery__photo" src="./img/gimg16.jpeg">
+                                <div class="hover">
+                                    <div class="hover__zoom">
+                                        <svg 
+                                             xmlns="http://www.w3.org/2000/svg"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             width="30px" height="30px">
+                                            <defs>
+                                            <filter id="Filter_0">
+                                                <feFlood flood-color="rgb(0, 0, 0)" flood-opacity="1" result="floodOut" />
+                                                <feComposite operator="atop" in="floodOut" in2="SourceGraphic" result="compOut" />
+                                                <feBlend mode="normal" in="compOut" in2="SourceGraphic" />
+                                            </filter>
+                                            
+                                            </defs>
+                                            <g filter="url(#Filter_0)">
+                                            <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+                                             d="M28.592,28.573 L27.883,29.282 C27.099,30.066 25.829,30.066 25.045,29.282 L19.371,23.607 C18.713,22.950 18.641,21.964 19.087,21.196 L15.985,18.094 C14.317,19.332 12.258,20.073 10.021,20.073 C4.480,20.073 -0.011,15.582 -0.011,10.042 C-0.011,4.502 4.480,0.011 10.021,0.011 C15.561,0.011 20.052,4.502 20.052,10.042 C20.052,12.621 19.070,14.965 17.471,16.742 L20.506,19.777 C21.274,19.331 22.259,19.403 22.917,20.060 L28.592,25.735 C29.375,26.519 29.375,27.789 28.592,28.573 ZM17.523,10.000 C17.523,5.845 14.155,2.477 10.000,2.477 C8.842,2.477 7.759,2.759 6.780,3.226 C7.303,3.764 8.093,4.568 8.135,4.568 C7.320,4.568 4.651,7.236 4.651,8.114 C4.651,8.072 3.802,7.266 3.246,6.743 C2.767,7.732 2.476,8.828 2.476,10.000 C2.476,14.155 5.845,17.524 10.000,17.524 C14.155,17.524 17.523,14.155 17.523,10.000 Z"/>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="gallery__item">
+                            <div class="gallery__image">
+                                <img class="gallery__photo" src="./img/gimg17.jpeg">
+                                <div class="hover">
+                                    <div class="hover__zoom">
+                                        <svg 
+                                             xmlns="http://www.w3.org/2000/svg"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             width="30px" height="30px">
+                                            <defs>
+                                            <filter id="Filter_0">
+                                                <feFlood flood-color="rgb(0, 0, 0)" flood-opacity="1" result="floodOut" />
+                                                <feComposite operator="atop" in="floodOut" in2="SourceGraphic" result="compOut" />
+                                                <feBlend mode="normal" in="compOut" in2="SourceGraphic" />
+                                            </filter>
+                                            
+                                            </defs>
+                                            <g filter="url(#Filter_0)">
+                                            <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+                                             d="M28.592,28.573 L27.883,29.282 C27.099,30.066 25.829,30.066 25.045,29.282 L19.371,23.607 C18.713,22.950 18.641,21.964 19.087,21.196 L15.985,18.094 C14.317,19.332 12.258,20.073 10.021,20.073 C4.480,20.073 -0.011,15.582 -0.011,10.042 C-0.011,4.502 4.480,0.011 10.021,0.011 C15.561,0.011 20.052,4.502 20.052,10.042 C20.052,12.621 19.070,14.965 17.471,16.742 L20.506,19.777 C21.274,19.331 22.259,19.403 22.917,20.060 L28.592,25.735 C29.375,26.519 29.375,27.789 28.592,28.573 ZM17.523,10.000 C17.523,5.845 14.155,2.477 10.000,2.477 C8.842,2.477 7.759,2.759 6.780,3.226 C7.303,3.764 8.093,4.568 8.135,4.568 C7.320,4.568 4.651,7.236 4.651,8.114 C4.651,8.072 3.802,7.266 3.246,6.743 C2.767,7.732 2.476,8.828 2.476,10.000 C2.476,14.155 5.845,17.524 10.000,17.524 C14.155,17.524 17.523,14.155 17.523,10.000 Z"/>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="gallery__item">
+                            <div class="gallery__image">
+                                <img class="gallery__photo" src="./img/gimg18.jpeg">
+                                <div class="hover">
+                                    <div class="hover__zoom">
+                                        <svg 
+                                             xmlns="http://www.w3.org/2000/svg"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             width="30px" height="30px">
+                                            <defs>
+                                            <filter id="Filter_0">
+                                                <feFlood flood-color="rgb(0, 0, 0)" flood-opacity="1" result="floodOut" />
+                                                <feComposite operator="atop" in="floodOut" in2="SourceGraphic" result="compOut" />
+                                                <feBlend mode="normal" in="compOut" in2="SourceGraphic" />
+                                            </filter>
+                                            
+                                            </defs>
+                                            <g filter="url(#Filter_0)">
+                                            <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+                                             d="M28.592,28.573 L27.883,29.282 C27.099,30.066 25.829,30.066 25.045,29.282 L19.371,23.607 C18.713,22.950 18.641,21.964 19.087,21.196 L15.985,18.094 C14.317,19.332 12.258,20.073 10.021,20.073 C4.480,20.073 -0.011,15.582 -0.011,10.042 C-0.011,4.502 4.480,0.011 10.021,0.011 C15.561,0.011 20.052,4.502 20.052,10.042 C20.052,12.621 19.070,14.965 17.471,16.742 L20.506,19.777 C21.274,19.331 22.259,19.403 22.917,20.060 L28.592,25.735 C29.375,26.519 29.375,27.789 28.592,28.573 ZM17.523,10.000 C17.523,5.845 14.155,2.477 10.000,2.477 C8.842,2.477 7.759,2.759 6.780,3.226 C7.303,3.764 8.093,4.568 8.135,4.568 C7.320,4.568 4.651,7.236 4.651,8.114 C4.651,8.072 3.802,7.266 3.246,6.743 C2.767,7.732 2.476,8.828 2.476,10.000 C2.476,14.155 5.845,17.524 10.000,17.524 C14.155,17.524 17.523,14.155 17.523,10.000 Z"/>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="contact_section">
+                <div class="inner_cont">
+                    <div class="contact">
+                        <div class="cont_left">
+                            <div class="contact__header">
+                                <div class="contact__title">
+                                    contact us
+                                </div>
+                            </div>
+                            <div class="contact__description">
+                                Aliquam ac justo interdum, elementum ligula et, condimentum orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </div>
+                            <div class="contact__about">
+                                <div class="left_ab">
+                                    <p class="contact__info">
+                                        info:
+                                    </p>
+                                </div>
+                                <div class="right_ab">
+                                    <p class="contact__info">
+                                        work hours:
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cont_right">
+
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
+        
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
