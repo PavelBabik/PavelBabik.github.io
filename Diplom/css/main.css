@@ -903,7 +903,7 @@ body {
 
 @media (max-width: 800px) {
   .gallery__item {
-    width: 33.33333%;
+    width: 50%;
   }
 }
 
