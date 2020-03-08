@@ -1,125 +1,373 @@
-body{
-    font-family: 'Montserrat',sans-serif;
-    background: #440bd4;
-    padding: 0;
-    margin: 0;
-    font-weight: 400;
-    color: darkkhaki;
+* {
+  margin: 0;
+  padding: 0;
 }
-.logo,
-.education,
-.job,
-.dod,
-.os,
-.contact,
-.menu,
-.logos {
-    background: #441bd8;
+
+.bg {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../img/BG.jpg);
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.header {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.header__logo {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header__menu {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header__link {
+  text-decoration: none;
+}
+
+.header__nav {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.header__item {
+  color: #fff;
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 20px;
+  opacity: 0.4;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg);
+}
+
+.header__item:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.about {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.about__content {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+}
+
+.about__photo {
+  max-width: 200px;
+}
+
+.about__img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.about__text {
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 20px;
+  color: #00FF24;
+}
+
+.about__text-small {
+  font-size: 16px;
+}
+
+.about__items {
+  list-style: none;
+}
+
+.inner_cont {
+  padding: 15px 15px 15px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.inner_txt {
+  padding-left: 15px;
+}
+
+.more {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.logo {
+  max-width: 300px;
+}
+
+.logoimg {
+  width: 100%;
+}
+
+.title {
+  text-align: center;
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 20px;
+  color: #00FF24;
+  text-decoration: underline;
+  padding: 30px 30px 30px 30px;
+}
+
+.title_left {
+  text-align: start;
+}
+
+.scroll {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container {
+  padding: 50px 0 50px 0;
+}
+
+.gallery {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.gallery__content {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+}
+
+.gallery__logos {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.gallery__item {
+  width: 33.33333%;
+}
+
+@media (max-width: 480px) {
+  .gallery__item {
+    width: 50%;
+  }
+}
+
+@media (max-width: 375px) {
+  .gallery__item {
     width: 100%;
+    max-width: 300px;
+  }
 }
 
-.education,
-.job,
-.dod,
-.os,
-.logos {
-    border-left: 2px solid mediumseagreen;
+.gallery__logo {
+  width: 100%;
 }
 
-.logos, .draftings {
-    width:1140px;
-    display:flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-h1{
-    font-size: 50px;
-    color: mediumspringgreen;
-}
-.picture{
-    width: 300px;
-}
-.st2 .st3 .st4 {
-    font-family: 'Montserrat',sans-serif;;
+.gallery__drawings {
+  width: 100%;
 }
 
-
-div,p,a,img,button,.header{
-    box-sizing: border-box;
+.gallery__drawing {
+  width: 100%;
+  border-radius: 5px;
 }
 
-i {
-    width: 100%;
+.gallery__sites {
+  list-style: none;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
+
+.gallery__site {
+  width: 50%;
+  min-width: 300px;
+  max-width: 300px;
+  border-radius: 5px;
+}
+
+.gallery__img {
+  width: 100%;
+  border-radius: 5px;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.gallery__img:hover {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+
 .contact {
-    width: 1140px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    align-content: center;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-.menu {
-    width: 1140px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    align-content: center;
+
+.contact__content {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
 }
-.number {
-    font-size:15px;
+
+.contact__items {
+  width: 100%;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
-.ahead {
-    color: crimson;
-    letter-spacing: .1em;
-    font-weight: 900;
-    text-transform: uppercase;
+
+.contact__item {
+  width: 35px;
+  height: 35px;
 }
-.draftA1 {
-    width: 1140px;
+
+.contact__item:hover .icons {
+  fill: #00FF24;
+  -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg);
 }
-.draftings {
-    display: flex;
-    flex-wrap: wrap;
+
+.footer {
+  width: 100%;
+  background-color: #000;
+  padding: 50px 0 50px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-.contact a:hover,
-.menu a:hover {
-    color: crimson;
+
+.footer__text {
+  color: #fff;
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 20px;
 }
-.menuitem {
-    height: 100px;
-    font-size:45px;
-    width: 20%;
+
+.footer__logo {
+  max-width: 250px;
+  margin-top: 50px;
 }
-a{
-    text-decoration: none;
-    color: mediumspringgreen;
+
+.icons {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
-ul, li{
-    display: block;
-    padding: 0;
-    margin: 0;
+
+.slide-fade-enter-active {
+  -webkit-transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
 }
-.nav{
-    display: flex;
-    align-items: center;
-    margin-top: 42px;
+
+.slide-fade-leave-active {
+  -webkit-transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
 }
-.header{
-    display: flex;    
-    margin-top: 42px;
+
+.slide-fade-enter,
+.slide-fade-leave-to {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+  opacity: 0;
 }
-.container,
-h3,
-nav,
-.job,
-.education,
-.logos,
-.portfolio,
-.draftings,
-.dod,
-.os{
-    width: 1140px;
-    margin: 0 auto;    
-}
+/*# sourceMappingURL=main.css.map */
