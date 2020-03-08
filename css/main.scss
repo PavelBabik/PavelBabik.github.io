@@ -3,17 +3,18 @@
     padding: 0;
 }
 
+@mixin iphone6 {
+    @media (max-width: 375px){
+        @content;
+    }
+}
+
 @mixin mobile {
     @media (max-width: 480px){
         @content;
     }
 }
 
-@mixin iphone6 {
-    @media (max-width: 375px){
-        @content;
-    }
-}
 
 .bg {
     width: 100%;
