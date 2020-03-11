@@ -66,7 +66,7 @@
   text-decoration: none;
   color: #fff;
   font-family: 'Red Hat Display', sans-serif;
-  font-size: 20pt;
+  font-size: 25px;
   opacity: 0.4;
   font-weight: 700;
   -webkit-transition: 1s;
@@ -95,13 +95,6 @@
           align-items: center;
   -ms-flex-line-pack: center;
       align-content: center;
-}
-
-.header__item {
-  color: #fff;
-  font-family: 'Roboto';
-  font-size: 20px;
-  font-weight: 700;
 }
 
 .about {
