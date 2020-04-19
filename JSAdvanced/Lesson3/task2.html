@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOP</title>
+</head>
+<body>
+    <script>
+        //function createPerson(firstName, secondName){
+        //   this.firstName = firstName;
+        //   this.secondName = secondName;
+        //}
+        //const personItem = new createPerson("v", "D");
+        //console.log(personItem);
+        function shopProduct(title, price){
+            this.title = title,
+            this.price = price
+        }
+
+        shopProduct.prototype.GetTitle = function (){
+            return this.title;
+        };
+
+        shopProduct.prototype.GetPrice = function (){
+            return this.price;
+        };
+
+        shopProduct.prototype.SetTitle = function (title){
+            this.title = title;  
+        };
+
+        shopProduct.prototype.SetPrice = function (price){
+            this.price = price;
+        };
+
+        shopProduct.prototype.GetInfo = function (){
+            return `${this.title} - ${this.price}`;
+        };
+
+        function BookProduct(numPages, title, price){
+            shopProduct.apply(this, [title, price]);
+            this.numPages = numPages;
+        }
+
+        function CDProduct(playLength, title, price){
+            shopProduct.apply(this, [title, price]);
+            this.playLength = playLength;
+        }
+
+        BookProduct.prototype = Object.create(shopProduct.prototype);
+        CDProduct.prototype = Object.create(shopProduct.prototype);
+
+        BookProduct.constructor = BookProduct;
+        CDProduct.constructor = CDProduct;
+
+        let cd = new CDProduct(25, 'AC DC', 250);
+
+        alert(`${cd.playLength} - ${cd.title} - ${cd.price}`);
+        
+    </script>
+</body>
+</html>

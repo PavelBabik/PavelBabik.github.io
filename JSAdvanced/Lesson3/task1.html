@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOP</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <h1>Click add button to add a song to playList:</h1>
+    <ul id="playlist" class="list-group">
+
+    </ul>
+    <button onclick="addItem()">ADD a Song</button>
+    <script>
+        let number = 0;
+        let artist = '';
+        let songName = '';
+        let songLength = 0;
+        let song = '';
+        const list = document.getElementById('playlist');
+        function playlist(num, name, song, long) {
+                this.num = num, 
+                this.name = name, 
+                this.song = song,
+                this.long = long
+            };
+        function addItem() {
+            number ++;
+            artist = prompt('Enter artist name:');
+            songName = prompt('Enter song name:')
+            songLength = Number(prompt('Enter a length of song'));
+            song = `song${number}`;
+            song = new playlist(number, artist, songName, songLength);
+
+            let li = document.createElement('li');
+            li.innerHTML = `${number}. ${artist} - ${songName} - ${songLength}`;
+            li.className = 'list-group-item';
+            list.appendChild(li);
+        }
+    </script>
+</body>
+</html>
