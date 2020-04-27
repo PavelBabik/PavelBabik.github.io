@@ -1,0 +1,124 @@
+===================================== snippet   1
+1. Install webpack
+
+  npm init -y
+  npm i -D webpack webpack-cli webpack-dev-server 
+
+-------------------------------------------- 
+
+1.  webpack.config.js
+
+2.  cli
+     webpack <entry.js> <outpub.js> --colors --progress
+     webpack-dev-server <entry.js>  --port=3000
+
+3. js file
+   const webpack = require('webpack')
+   webpack({
+            // configuration object here
+   }, (err, status) => {
+            // Compile callback
+   });
+
+-----------------------------------------------
+Entry file -> src/index.js -> dist/index.js
+
+    webpack --mode=development
+
+===================================== snippet   2
+2. run webpack from package.json
+
+ "scripts": {
+    "webpack": "webpack",
+    "dev": "npm run webpack --  --mode development --watch",
+    "prod": "npm run webpack -- --mode production"
+  }}
+
+===================================== snippet   3    
+3. webpack config file
+
+https://webpack.js.org/concepts/entry-points/
+https://webpack.js.org/concepts/output/
+
+// ------------------------------ webpack.config.js
+
+module.exports =  (env = {mode: 'development'})  => {
+    const isProduction = env.mode === 'production';
+    return {
+        mode: env.mode,
+        entry: "./src/index.js",
+        output: {
+            path:   __dirname + "/dist",
+            filename:"bundle.js"
+        }
+    }
+}
+
+------------------------------ //
+
+"scripts": {
+    "webpack": "webpack",
+    "dev": "npm run webpack --  --env.mode development --watch",
+    "prod": "npm run webpack -- --env.mode production"
+  }
+
+===================================== snippet   4    
+4. Loaders
+
+https://webpack.js.org/concepts/loaders/
+
+-----------------------------------------------  loader
+module: {
+        rules: [
+                { ... loader 1 ...},
+                { ... loader 2 ...},
+                 .....
+                { ... loader n ...},
+        ]
+}
+
+----------------------------------------------------------- 
+
+install babel-loader
+https://webpack.js.org/loaders/babel-loader/
+https://babeljs.io/setup#installation
+
+
+npm i -D babel-loader @babel/core @babel/preset-env
+
+------------------------------- rules
+{
+    test: /\.js$/,
+    exclude: /node_modules/,
+    use: {
+        loader: 'babel-loader',
+        options: {
+            presets: ['@babel/preset-env']
+        }
+    }
+}
+
+===================================== snippet   5   
+5.  webpack_dev_server
+https://webpack.js.org/configuration/dev-server/#src/components/Sidebar/Sidebar.jsx
+
+"scripts": {
+    ...
+    "dev": "webpack-dev-server  --env.mode development --progress --hide-modules --open",
+    ...
+  }
+---------------------------
+ 
+ <script src="bundle.js"></script>
+
+// ------------------------------ webpack.config.js 
+
+  devServer: {
+      contentBase: path.join(__dirname, "src"),
+      compress: true,
+      port: 9000,
+      overlay: true,
+      stats: {
+        modules: false
+      }
+    }
