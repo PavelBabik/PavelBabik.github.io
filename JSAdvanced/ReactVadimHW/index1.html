@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@16.12.0/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/prop-types@15.7.2/prop-types.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"
+    ></script>
+
+    <script type="text/babel">
+      const root = document.getElementById("root");
+
+      function App(props) {
+        const [isShow, setShow]=React.useState();
+        const change = () => setShow({isShow:!isShow});
+        
+        return (
+          <div className="container pt-3">
+            <h1 className="mb-3">Users form</h1>
+            <form action="#" className="col-md-4">
+              <div className="form-group">
+                <label htmlFor="password">Password</label>
+                <input type={isShow ? "text" : "password"} 
+                id="password" className="form-control" />
+              </div>
+              <div className="form-check">
+                <input
+                  className="form-check-input"
+                  type="checkbox"
+                  onChange={change}
+                  value=""
+                  id="passwordCheck"
+                />
+                <label className="form-check-label" htmlFor="passwordCheck">
+                  Show password
+                </label>
+              </div>
+
+              <button className="btn btn-primary mt-3">Send</button>
+            </form>
+          </div>
+        );
+      }
+      ReactDOM.render(<App />, root);
+    </script>
+  </body>
+</html>
