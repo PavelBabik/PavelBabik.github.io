@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.List {
+    width: 800px;
+    list-style: none;
+    border: 2px solid red;
+}
+
+.ListItems {
+    width: 100%;
+    display: flex;
+    border: 1px solid red;
+}
+
+.ListText {
+    width: 25%;
+    border: 1px solid red;
+}
+
+.ListEmail {
+    width: 50%;
+    border: 1px solid red;
+}

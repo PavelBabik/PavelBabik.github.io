@@ -35,8 +35,8 @@
       const root = document.getElementById("root");
 
       function App(props) {
-        const [isShow, setShow]=React.useState();
-        const change = () => setShow({isShow:!isShow});
+        const [isShow, setShow]=React.useState(false);
+        const change = () => setShow(!isShow);
         
         return (
           <div className="container pt-3">
