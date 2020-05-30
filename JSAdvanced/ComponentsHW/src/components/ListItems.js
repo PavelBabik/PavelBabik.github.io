@@ -9,7 +9,7 @@ class ListItems extends Component {
   }
   state = {
     title: '',
-    items:this.props.items
+    items: this.props.items
   };
   
   updateFilter = ( {searchTerm} ) => {
