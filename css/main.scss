@@ -95,6 +95,22 @@
         border-radius: 15px;
     }
 
+    &__skills {
+        list-style: none;
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    &__skillsitem {
+        background-color: #00FF24;
+        color: grey;
+        margin: 5px;
+        padding: 10px;
+        border: 3px solid green;
+        border-radius: 15px;
+    }
+
     &__photo {
         max-width: 200px;
     }
@@ -108,6 +124,12 @@
         font-family: 'Red Hat Display', sans-serif;
         font-size: 20px;
         color: #00FF24;
+
+        &_skills {
+            width: 100%;
+            font-size: 22px;
+            margin-bottom: 30px;
+        }
 
         &-small {
             font-size: 16px;
@@ -303,4 +325,17 @@
 .slide-fade-leave-to {
     transform: rotateX(180deg);
     opacity: 0;
+}
+.box {
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link {
+    text-decoration: none;
+    color: #00FF24;
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 20px;
 }

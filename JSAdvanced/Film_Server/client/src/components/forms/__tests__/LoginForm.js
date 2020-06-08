@@ -5,6 +5,7 @@ import { MemoryRouter } from "react-router-dom";
 import { toHaveAttribute, toHaveTextContent } from "@testing-library/jest-dom/matchers"
 // import { getQueriesForElement } from "@testing-library/dom"
 import {render,fireEvent} from "@testing-library/react"
+import user from "@testing-library/user-event";
 
 expect.extend({toHaveAttribute, toHaveTextContent})
 
@@ -13,7 +14,7 @@ const submit = jest.fn(() => Promise.resolve())
 const data = {
     email: "test@mail.com",
     password: "mypass",
-  }
+  };
 
 test("LoginForm should render correct", () => {
   const { getByLabelText } = render(
@@ -43,7 +44,7 @@ test("LoginForm snaphot", () => {
     expect(container.firstChild).toMatchSnapshot()
   })
 
-  test("LoginForm submit", () => {
+  test("LoginForm submit (fireevent)", () => {
     const { debug, getByLabelText, getByTestId } = render(
       <MemoryRouter>
         <LoginForm submit={submit}/>
@@ -59,6 +60,23 @@ test("LoginForm snaphot", () => {
     fireEvent.click(loginButton)
     expect(submit).toHaveBeenCalledTimes(1);
     expect(submit).toHaveBeenCalledWith(data)
+  })
+
+  test("LoginForm submit (user event)", async () => {
+    const { getByLabelText, getByTestId } = render(
+        <MemoryRouter>
+          <LoginForm submit={submit}/>
+        </MemoryRouter>
+      );
+      const emailElem = getByLabelText(/email/i);
+      const passwordElem = getByLabelText(/password/i);
+      const loginBut = getByTestId("login")
+
+      user.type(emailElem,data.email)
+      user.type(passwordElem,data.password)
+
+      fireEvent.click(loginBut)
+      expect(submit).toHaveBeenCalledTimes(1);
   })
 
 

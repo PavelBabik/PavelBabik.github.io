@@ -112,6 +112,25 @@
   border-radius: 15px;
 }
 
+.about__skills {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.about__skillsitem {
+  background-color: #00FF24;
+  color: grey;
+  margin: 5px;
+  padding: 10px;
+  border: 3px solid green;
+  border-radius: 15px;
+}
+
 .about__photo {
   max-width: 200px;
 }
@@ -125,6 +144,12 @@
   font-family: 'Red Hat Display', sans-serif;
   font-size: 20px;
   color: #00FF24;
+}
+
+.about__text_skills {
+  width: 100%;
+  font-size: 22px;
+  margin-bottom: 30px;
 }
 
 .about__text-small {
@@ -371,5 +396,25 @@
   -webkit-transform: rotateX(180deg);
           transform: rotateX(180deg);
   opacity: 0;
+}
+
+.box {
+  min-height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.link {
+  text-decoration: none;
+  color: #00FF24;
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 20px;
 }
 /*# sourceMappingURL=main.css.map */
