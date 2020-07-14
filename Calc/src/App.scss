@@ -1,0 +1,121 @@
+$font: "Montserrat Alternates", sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: $font;
+}
+
+#myMap {
+  display: none;
+  height: 500px;
+  width: 100%;
+}
+
+body {
+  background-color: goldenrod;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.wrapper {
+  width: 100%;
+  min-width: 200px;
+  max-width: 1000px;
+}
+
+.button {
+  margin: 25px 0px 25px 0px;
+}
+
+.calculator {
+  width: 100%;
+  text-align: center;
+  border: 2px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__title {
+    color: #303030;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 35px;
+  }
+
+  &__price {
+    width: 75%;
+    height: 45px;
+    border: none;
+    font-size: 40px;
+  }
+
+  &__label {
+    font-size: 15px;
+    font-weight: 200;
+  }
+
+  &__select {
+    width: 75%;
+    height: 45px;
+    border: none;
+    font-size: 25px;
+
+    &-error {
+      border: 2px solid red;
+      background-color: rgba(255, 0, 0, 0.4);
+    }
+  }
+
+  &__distance {
+    width: 75%;
+    display: flex;
+
+    &__small {
+      width: 50%;
+    }
+  }
+
+  &__button {
+    width: 75%;
+    min-height: 45px;
+    font-size: 30px;
+
+    &-small {
+      min-width: 50%;
+      font-size: 15px;
+    }
+  }
+}
+.table {
+  width: 100%;
+
+  &__row {
+    background-color: khaki;
+    font-size: 22px;
+    text-align: start;
+    height: 100px;
+
+    &-light {
+      background-color: lightyellow;
+    }
+
+    &-last {
+      background-color: lime;
+    }
+
+    &-all {
+      background-color: mediumvioletred;
+    }
+  }
+
+  &__txt {
+    width: 80%;
+  }
+}
