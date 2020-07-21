@@ -1,282 +1,605 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="format-detection" content="telephone=no">
-    <link href="https://fonts.googleapis.com/css?family=Red+Hat+Display:400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;400;500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/animate1.css" />
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
     <title>Pavlo Babik</title>
 </head>
+
 <body>
-    <div id="app">
-        <div class="bg"></div>
-        <div class="content">
-            <header class="header">
-                <div class="header__logo">
-                    <div class="logo">
-                        <img class="logoimg" src="./images/LOGO.png" alt="LOGO">
-                    </div>
-                </div>
-                <div class="header__menu">
-                    <div class="header__nav">
-                        <a href="#about" class="header__link">
-                            About Me
+    <div id="root"></div>
+
+    <script crossorigin src="https://unpkg.com/react@16.12.0/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/prop-types@15.7.2/prop-types.js"></script>
+    <script crossorigin src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+    <script type="text/babel">
+        const rootElement = document.getElementById("root");
+
+        class Header extends React.Component {
+            render() {
+                return (
+                    <div id="top" className="header">
+                        <div className="line" />
+                        <div className="wrapper">
+                            <div className="header__content">
+                                <div className="header__toogle">
+                                    <img src="./images/Toogle.png" alt="toogle" />
+                                </div>
+                                <div className="header__nav">
+                                    <ul className="header__menu wow animate__animated animate__fadeInUp">
+                                        <li className="header__item">
+                                            <a href="#about" className="header__link">
+                                                ABOUT ME
                         </a>
-                        <a href="#gallery" class="header__link">
-                            Gallery
+                                        </li>
+                                        <li className="header__item">
+                                            <a href="#portfolio" className="header__link">
+                                                PORTFOLIO
                         </a>
-                        <a href="#contact" class="header__link">
-                           Contact
+                                        </li>
+                                        <li className="header__item">
+                                            <a href="#footer" className="header__link">
+                                                CONTACT ME
                         </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div className="cont__logo wow animate__animated animate__fadeInUp">
+                                    <div className="cubecont">
+                                        <div className="cube">
+                                            <div className=" side front">
+                                                <img
+                                                    className="cube__img"
+                                                    src="./images/LogoLetters.png"
+                                                />
+                                            </div>
+                                            <div className=" side back">
+                                                <div className="clock">
+                                                    <div className="clock__hour">
+                                                        <div className="clock__hr" id="hr"></div>
+                                                    </div>
+                                                    <div className="clock__min">
+                                                        <div className="clock__mn" id="mn"></div>
+                                                    </div>
+                                                    <div className="clock__sec">
+                                                        <div className="clock__sc" id="sc"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className=" side right">
+                                                <div className="clock">
+                                                    <div className="clock__hour">
+                                                        <div className="clock__hr" id="hr1"></div>
+                                                    </div>
+                                                    <div className="clock__min">
+                                                        <div className="clock__mn" id="mn1"></div>
+                                                    </div>
+                                                    <div className="clock__sec">
+                                                        <div className="clock__sc" id="sc1"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className=" side left">
+                                                <div className="clock">
+                                                    <div className="clock__hour">
+                                                        <div className="clock__hr" id="hr2"></div>
+                                                    </div>
+                                                    <div className="clock__min">
+                                                        <div className="clock__mn" id="mn2"></div>
+                                                    </div>
+                                                    <div className="clock__sec">
+                                                        <div className="clock__sc" id="sc2"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className=" side bottom"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="header__text wow animate__animated animate__fadeInUp">
+                                    PAVLO BABIK
+                  </div>
+                                <div className="header__ribbon wow animate__animated animate__fadeInUp">
+                                    <div className="txt">MY PORTFOLIO</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="bubbles">
+                            <a href="#top" className="bubbles__link scroll selected">
+                                <div className="bubbles__item">HOME</div>
+                            </a>
+                            <a href="#about" className="bubbles__link scroll">
+                                <div className="bubbles__item">ABOUT</div>
+                            </a>
+                            <a href="#portfolio" className="bubbles__link scroll">
+                                <div className="bubbles__item">PORTFOLIO</div>
+                            </a>
+                            <a href="#footer" className="bubbles__link scroll">
+                                <div className="bubbles__item">CONTACT</div>
+                            </a>
+                        </div>
+                        <div className="line line-bottom" />
                     </div>
-                </div>
-                <div class="scroll">
-                    <div class="scrimg">
-                        <img src="./images/scrol_down.png" alt="">
+                );
+            }
+        }
+
+        class About extends React.Component {
+            render() {
+                return (
+                    <div id="about" className="about">
+                        <div className="line" />
+                        <div className="wrapper">
+                            <div className="about__content">
+                                <div className="cont">
+                                    <div className="cont-titles wow animate__animated animate__fadeInUp">
+                                        <div className="one">ABOUT ME</div>
+                                        <div className="two">ABOUT ME</div>
+                                        <div className="three">ABOUT ME</div>
+                                    </div>
+                                    <div className="ribbon wow animate__animated animate__fadeInUp">
+                                        <div className="ribbon__img"></div>
+                                    </div>
+                                </div>
+                                <div className="cont">
+                                    <div className="about__greetings wow animate__animated animate__fadeInUp">
+                                        HELLO EVERYONE! MY NAME IS PAVLO! I’M WEB DEVELOPER
                     </div>
-                </div>
-            </header>
-            <main class="main">
-                <div class="container">
-                    <section id="about" class="about">
-                        <div class="wrapper">
-                            <h2 class="title">About Me</h2>
-                            <div class="about__content">
-                                <div class="inner_cont">
-                                    <div class="about__text about__text_skills">
-                                        <h2 class="title">Skills</h2>
-                                        <ul class="about__skills">
-                                            <li class="about__skillsitem">HTML5</li>
-                                            <li class="about__skillsitem">CSS3</li>
-                                            <li class="about__skillsitem">SASS</li>
-                                            <li class="about__skillsitem">Javascript</li>
-                                            <li class="about__skillsitem">Vue JS</li>
-                                            <li class="about__skillsitem">React JS</li>
-                                            <li class="about__skillsitem">JQuery</li>
-                                            <li class="about__skillsitem">C++</li>
-                                            <li class="about__skillsitem">.NET</li>
-                                            <li class="about__skillsitem">Adobe Photoshop</li>
-                                            <li class="about__skillsitem">Adobe Illustrator</li>
-                                            <li class="about__skillsitem">MS VisualStudio</li>
-                                            <li class="about__skillsitem">AutoCAD</li>
+                                </div>
+                                <div className="cont">
+                                    <div className="about__greetings wow animate__animated animate__fadeInUp">
+                                        MY SKILLS
+                    </div>
+                                    <div className="about__skills">
+                                        <ul className="about__items wow animate__animated animate__fadeInUp">
+                                            <li className="about__skillsitem">HTML5</li>
+                                            <li className="about__skillsitem">CSS3</li>
+                                            <li className="about__skillsitem">SASS</li>
+                                            <li className="about__skillsitem">Javascript</li>
+                                            <li className="about__skillsitem">Vue JS</li>
+                                            <li className="about__skillsitem">React JS</li>
+                                            <li className="about__skillsitem">JQuery</li>
+                                            <li className="about__skillsitem">C++</li>
+                                            <li className="about__skillsitem">.NET</li>
+                                            <li className="about__skillsitem">Adobe Photoshop</li>
+                                            <li className="about__skillsitem">Adobe Illustrator</li>
+                                            <li className="about__skillsitem">MS VisualStudio</li>
+                                            <li className="about__skillsitem">AutoCAD</li>
                                         </ul>
                                     </div>
-                                    <div class="about__photo">
-                                        <img class="about__img" src="./images/DDD.jpg" alt="">
-                                    </div>
-                                    <div class="about__text">
-                                        <div class="inner_txt">
-                                            Hello everyone!<br><br><br>
-                                            My name is Pavlo. I am a Junior Front-End Developer.<br>
-                                            I like to make sites. I will help you to make some functional and beautifull site.
-                                        </div>
-                                    </div>
-                                    <div class="more">
-                                        <div class="inner_txt">
-                                            <img @click="openMenu" src="./images/Arrow.png" alt="">
-                                        </div>
-                                    </div>
-                                    <transition name="slide-fade">
-                                        <div v-if="show" class="about__text">
-                                            <h3 class="about__title"><br>Experience</h3>
-                                            <div class="about__job">
-                                                <ul class="about__items">
-                                                    <li class="about__text-small"><strong>-15.07.2015  for now</strong>  -  military service under contract.</li>
-                                                    <li class="about__text-small"><strong>-23.05.2014 – 08.07.2015 – КP «RS BТІ»</strong>- Engineer inventory property</li>
-                                                    <li class="about__text-small"><strong>-01.04.2013 – 12.05.2014 – КP «RS BТІ»</strong>- Head of department</li>
-                                                    <li class="about__text-small"><strong>-17.09.2010 – 01.04.2013 – КP «Rivne State Bureau of Inventarization»</strong>- Engineer inventory property</li>
-                                                    <li class="about__text-small"><strong>-11. 12.2009 – 10.09.2010 - Garden Club LLC</strong>- Regional sales manager of agricultural products</li>
-                                                    <li class="about__text-small"><strong>-28.08.2009-16. 11. 2009 -  RivneOptTrade LLC</strong> -  Oil sales manager</li>
-                                                    <li class="about__text-small"><strong>-17.07.2007-16.02.2009 – UkrSibBank</strong> – Consultant Car Loans; financial consultant</li>
-                                                </ul>
-                                            </div>
-                                            <h3 class="about__title"><br>Education<br></h3>
-                                            <div class="about__job">
-                                                <ul class="about__items">
-                                                    <li class="about__text-small">Beetroot Academy - 2020 year of ending - Junior Front-End Developer</li>
-                                                    <li class="about__text-small">NUWEE - 2009 y. of ending; specialist  - “Business Economics”</li>
-                                                    <li class="about__text-small">ІDPPО - 2008 y. of ending; bachelor – “Accounting and Auditing”/li>
-                                                    <li class="about__text-small">RSAK – 2006 y. of ending; young specialist – “Finances”</li>
-                                                </ul>
-                                            </div>
-                                            <h3 class="about__title"><br>Additional skills<br></h3>
-                                            <p class="about__text-small">
-                                                I am currently studying at BeetRoot Academy in Advanced JavaScript. Studied at KA STEP in the direction of programming. I have experience with AUTOCad, MS VisualStudio, AdobeIllustrator, AdobePhotoshop. I have experience in C ++, C #, SQL programming.
-                                                Confident PC Windows user, I have "B" driver's license, English level - Pre-Intermediate.
-                                            </p>
-                                            <h3 class="about__title"><br>Personal qualities<br></h3>
-                                            <p class="about__text-small">
-                                                Purposeful, stress resistant, initiative and creative, sociable, hardworking, quick to learn and adapt, good organizational skills.
-                                            </p>
-                                        </div>
-                                    </transition>
                                 </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-                <div class="container">
-                    <section id="gallery" class="gallery">
-                        <div class="wrapper">
-                            <h2 class="title">Gallery</h2>
-                            <div class="gallery__content">
-                                <div class="inner_cont">
-                                    <h2 class="title title_left">My Sites</h2>
-                                    <ul class="gallery__sites">
-                                        <li class="gallery__site">
-                                            <a href="https://pavelbabik.github.io/EXAM_JS/index.html" class="gallery__link">
-                                                <img src="./images/Monticcelo.png" class="gallery__img">
-                                            </a>
-                                        </li>
-                                        <li class="gallery__site">
-                                            <a href="https://pavelbabik.github.io/Rivne/index.html" class="gallery__link">
-                                                <img src="./images/Rivne.png" class="gallery__img">
-                                            </a>
-                                        </li>
-                                        <li class="gallery__site">
-                                            <a href="https://pavelbabik.github.io/Diplom/index.html" class="gallery__link">
-                                                <img src="./images/InkTatoo.png" class="gallery__img">
-                                            </a>
-                                        </li>
-                                        <li class="gallery__site">
-                                            <a href="https://pavelbabik.github.io/Exam-HTML-CSS/index.html" class="gallery__link">
-                                                <img src="./images/Bhromaon.png" class="gallery__img">
-                                            </a>
-                                        </li>
-                                        <li class="gallery__site">
-                                            <a href="https://pavelbabik.github.io/Lesson%2016%20HW/index.html" class="gallery__link">
-                                                <img src="./images/Cahee.png" class="gallery__img">
-                                            </a>
-                                        </li>
-                                        <li class="gallery__site">
-                                            <a href="https://pavelbabik.github.io/Lesson%2010%20HW/L10E1/index.html" class="gallery__link">
-                                                <img src="./images/Blog.png" class="gallery__img">
-                                            </a>
-                                        </li>
-                                        <li class="gallery__site">
-                                            <a href="https://pavelbabik.github.io/Lesson%2010%20HW/L10E2/index.html" class="gallery__link">
-                                                <img src="./images/WhoWeAre.png" class="gallery__img">
-                                            </a>
-                                        </li>
-                                        <li class="gallery__site">
-                                            <a href="https://pavelbabik.github.io/Lesson%2013%20HW/index.html" class="gallery__link">
-                                                <img src="./images/DesignLab.png" class="gallery__img">
-                                            </a>
-                                        </li>
-                                        <li class="gallery__site">
-                                            <a href="https://pavelbabik.github.io/Lesson%2011%20HW/L11E2/index.html" class="gallery__link">
-                                                <img src="./images/Nike.png" class="gallery__img">
-                                            </a>
-                                        </li>
-                                    </ul>
-                                    <h2 id="logo" class="title title_left">My Logo</h2>
-                                    <ul class="gallery__logos">
-                                        <li class="gallery__item">
-                                            <img src="./images/Cineforge Productions-8.png" class="gallery__logo">
-                                        </li>
-                                        <li class="gallery__item">
-                                            <img src="./images/Electrical Contracting, Inc.png" class="gallery__logo">
-                                        </li>
-                                        <li class="gallery__item">
-                                            <img src="./images/Goverment.png" class="gallery__logo">
-                                        </li>
-                                        <li class="gallery__item">
-                                            <img src="./images/Mr. Green Plus-8.png" class="gallery__logo">
-                                        </li>
-                                        <li class="gallery__item">
-                                            <img src="./images/Sara Ferguson Farrier Service-8.png" class="gallery__logo">
-                                        </li>
-                                        <li class="gallery__item">
-                                            <img src="./images/Wilson Medical Group-8.png" class="gallery__logo">
-                                        </li>
-                                    </ul>
-                                    <a href="logos.html" class="link">See more</a>
-                                    <h2 class="title title_left">My Drawings</h2>
-                                    <div class="gallery__drawings">
-                                        <img src="./images/sarny.jpg" class="gallery__drawing">
-                                        <img src="./images/third.jpg" class="gallery__drawing">
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <div class="container">
-                    <section id="contact" class="contact">
-                            <div class="wrapper">
-                                <h2 class="title">Contacts</h2>
-                                <div class="contact__content">
-                                    <div class="inner_cont">
-                                        <ul class="contact__items">
-                                            <li class="contact__item">
-                                                <a href="https://www.facebook.com/pasha.rv" class="contact__link">
-                                                    <svg class="icons" class="team__svg" fill="#000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" width="100%" height="100%">    
-                                                        <path d="M17.525,9H14V7c0-1.032,0.084-1.682,1.563-1.682h1.868v-3.18C16.522,2.044,15.608,1.998,14.693,2 C11.98,2,10,3.657,10,6.699V9H7v4l3-0.001V22h4v-9.003l3.066-0.001L17.525,9z"/></svg>
-                                                </a>
+                                <div className="cont">
+                                    <div className="about__jobs">
+                                        <ul className="about__jobsitems">
+                                            <li className="about__jobsitem wow animate__animated animate__fadeInUp">
+                                                <div className="about__image">
+                                                    <div className="svg1"></div>
+                                                </div>
+                                                <div className="about__text">
+                                                    I can make you a beautiful and response site.
+                          </div>
                                             </li>
-                                            <li class="contact__item">
-                                                <a href="https://www.instagram.com/pavel_babik" class="contact__link">
-                                                    <svg class="icons" class="team__svg" fill="#000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" width="100%" height="100%">    
-                                                        <path d="M 8 3 C 5.243 3 3 5.243 3 8 L 3 16 C 3 18.757 5.243 21 8 21 L 16 21 C 18.757 21 21 18.757 21 16 L 21 8 C 21 5.243 18.757 3 16 3 L 8 3 z M 8 5 L 16 5 C 17.654 5 19 6.346 19 8 L 19 16 C 19 17.654 17.654 19 16 19 L 8 19 C 6.346 19 5 17.654 5 16 L 5 8 C 5 6.346 6.346 5 8 5 z M 17 6 A 1 1 0 0 0 16 7 A 1 1 0 0 0 17 8 A 1 1 0 0 0 18 7 A 1 1 0 0 0 17 6 z M 12 7 C 9.243 7 7 9.243 7 12 C 7 14.757 9.243 17 12 17 C 14.757 17 17 14.757 17 12 C 17 9.243 14.757 7 12 7 z M 12 9 C 13.654 9 15 10.346 15 12 C 15 13.654 13.654 15 12 15 C 10.346 15 9 13.654 9 12 C 9 10.346 10.346 9 12 9 z"/></svg>
-                                                </a>
+                                            <li className="about__jobsitem wow animate__animated animate__fadeInUp">
+                                                <div className="about__image">
+                                                    <div className="svg2"></div>
+                                                </div>
+                                                <div className="about__text">
+                                                    I can make you a beautiful modern design of site or
+                                                    logo
+                          </div>
                                             </li>
-                                            <li class="contact__item">
-                                                <a href="https://www.linkedin.com/in/павел-бабик-80364914a" class="contact__link">
-                                                    <svg class="icons" version="1.1" fill="#000" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                        	 viewBox="0 0 455 455" style="enable-background:new 0 0 455 455;" xml:space="preserve">
-                                                        <g>
-                                                        	<path style="fill-rule:evenodd;clip-rule:evenodd;" d="M246.4,204.35v-0.665c-0.136,0.223-0.324,0.446-0.442,0.665H246.4z"/>
-                                                        	<path style="fill-rule:evenodd;clip-rule:evenodd;" d="M0,0v455h455V0H0z M141.522,378.002H74.016V174.906h67.506V378.002z
-                                                        		 M107.769,147.186h-0.446C84.678,147.186,70,131.585,70,112.085c0-19.928,15.107-35.087,38.211-35.087
-                                                        		c23.109,0,37.31,15.159,37.752,35.087C145.963,131.585,131.32,147.186,107.769,147.186z M385,378.002h-67.524V269.345
-                                                        		c0-27.291-9.756-45.92-34.195-45.92c-18.664,0-29.755,12.543-34.641,24.693c-1.776,4.34-2.24,10.373-2.24,16.459v113.426h-67.537
-                                                        		c0,0,0.905-184.043,0-203.096H246.4v28.779c8.973-13.807,24.986-33.547,60.856-33.547c44.437,0,77.744,29.02,77.744,91.398V378.002
-                                                        		z"/>
-                                                        </g>                                                    
-                                                    </svg>
-                                                </a>
-                                            </li>
-                                            <li class="contact__item">
-                                                <a href="tel:+380684079540" class="contact__link">
-                                                    <svg fill="#000" class="icons" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
-                                                        <path  d="M492.438,397.75l-2.375-7.156c-5.625-16.719-24.063-34.156-41-38.75l-62.688-17.125c-17-4.625-41.25,1.594-53.688,14.031
-                                                            L310,371.438c-82.453-22.281-147.109-86.938-169.359-169.375l22.688-22.688c12.438-12.438,18.656-36.656,14.031-53.656L160.266,63
-                                                            c-4.625-16.969-22.094-35.406-38.781-40.969l-7.156-2.406c-16.719-5.563-40.563,0.063-53,12.5L27.391,66.094
-                                                            c-6.063,6.031-9.938,23.281-9.938,23.344C16.266,197.188,58.516,301,134.734,377.219c76.031,76.031,179.453,118.219,286.891,117.313
-                                                            c0.563,0,18.313-3.813,24.375-9.844l33.938-33.938C492.375,438.313,498,414.469,492.438,397.75z"></path>
-                                                        </svg>
-                                                </a>
-                                            </li>
-                                            <li class="contact__item">
-                                                <a href="mailto:pasha.rv1234@gmail.com" class="contact__link">
-                                                    <svg class="icons" fill="#000" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 485.411 485.411" style="enable-background:new 0 0 485.411 485.411;" xml:space="preserve" width="100%" height="100%">
-                                                        <g>
-                                                            <path  d="M0,81.824v321.763h485.411V81.824H0z M242.708,280.526L43.612,105.691h398.187L242.708,280.526z    M163.397,242.649L23.867,365.178V120.119L163.397,242.649z M181.482,258.533l61.22,53.762l61.22-53.762L441.924,379.72H43.487   L181.482,258.533z M322.008,242.655l139.535-122.536v245.059L322.008,242.655z"></path>
-                                                        </g>                                    
-                                                    </svg>
-                                                </a>
+                                            <li className="about__jobsitem wow animate__animated animate__fadeInUp">
+                                                <div className="about__image">
+                                                    <div className="svg3"></div>
+                                                </div>
+                                                <div className="about__text">
+                                                    I am a tutor of web developing and I have two
+                                                    courses in Ukrainian and Russian languages on Udemy
+                          </div>
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
-                        </section>
+                        </div>
+                        <div className="line line-bottom" />
                     </div>
-                </div>
-            </main>
-            <footer class="footer">
-                <p class="footer__text">
-                    Made by Pavlo Babik
-                </p>
-                <div class="footer__logo">
-                    <img class="logoimg" src="./images/LOGO.png" alt="LOGO">
-                </div>
-            </footer>
-        </div>
-    </div>
+                );
+            }
+        }
+        class Portfolio extends React.Component {
+            render() {
+                return (
+                    <div id="portfolio" className="portfolio">
+                        <div className="line" />
+                        <div className="wrapper">
+                            <div className="portfolio__content">
+                                <div className="cont">
+                                    <div className="cont-titles wow animate__animated animate__fadeInUp">
+                                        <div className="one">PORTFOLIO</div>
+                                        <div className="two">PORTFOLIO</div>
+                                        <div className="three">PORTFOLIO</div>
+                                    </div>
+                                    <div className="ribbon wow animate__animated animate__fadeInUp">
+                                        <div className="ribbon__img"></div>
+                                    </div>
+                                </div>
+                                <div className="cont">
+                                    <div className="portfolio__list">
+                                        <div className="portfolio__txt"> Choose category</div>
+                                        <ul className="portfolio__categories wow animate__animated animate__fadeInUp">
+                                            <li className="portfolio__cat portfolio__cat-sites active">
+                                                WEB SITES
+                        </li>
+                                            <li className="portfolio__cat portfolio__cat-logos">
+                                                LOGOS
+                        </li>
+                                            <li className="portfolio__cat portfolio__cat-courses">
+                                                COURSES
+                        </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div className="cont">
+                                    <div className="portfolio__sites wow animate__animated animate__fadeInUp">
+                                        <ul className="portfolio__sitesitems">
+                                            <li className="portfolio__sitesitem wow animate__animated animate__fadeInUp">
+                                                <div className="portfolio__siteimg">
+                                                    <img
+                                                        src="./images/Monticcelo.png"
+                                                        className="portfolio__img"
+                                                    />
+                                                </div>
+                                                <div className="portfolio__sitelink">
+                                                    <a
+                                                        href="https://pavelbabik.github.io/EXAM_JS/index.html"
+                                                        className="portfolio__link"
+                                                    >
+                                                        See more
+                            </a>
+                                                </div>
+                                            </li>
+                                            <li className="portfolio__sitesitem wow animate__animated animate__fadeInUp">
+                                                <div className="portfolio__siteimg">
+                                                    <img
+                                                        src="./images/Rivne.png"
+                                                        className="portfolio__img"
+                                                    />
+                                                </div>
+                                                <div className="portfolio__sitelink">
+                                                    <a
+                                                        href="https://pavelbabik.github.io/Rivne/index.html"
+                                                        className="portfolio__link"
+                                                    >
+                                                        See more
+                            </a>
+                                                </div>
+                                            </li>
+                                            <li className="portfolio__sitesitem wow animate__animated animate__fadeInUp">
+                                                <div className="portfolio__siteimg">
+                                                    <img
+                                                        src="./images/InkTatoo.png"
+                                                        className="portfolio__img"
+                                                    />
+                                                </div>
+                                                <div className="portfolio__sitelink">
+                                                    <a
+                                                        href="https://pavelbabik.github.io/Diplom/index.html"
+                                                        className="portfolio__link"
+                                                    >
+                                                        See more
+                            </a>
+                                                </div>
+                                            </li>
+                                            <li className="portfolio__sitesitem wow animate__animated animate__fadeInUp">
+                                                <div className="portfolio__siteimg">
+                                                    <img
+                                                        src="./images/Bhromaon.png"
+                                                        className="portfolio__img"
+                                                    />
+                                                </div>
+                                                <div className="portfolio__sitelink">
+                                                    <a
+                                                        href="https://pavelbabik.github.io/Exam-HTML-CSS/index.html"
+                                                        className="portfolio__link"
+                                                    >
+                                                        See more
+                            </a>
+                                                </div>
+                                            </li>
+                                            <li className="portfolio__sitesitem wow animate__animated animate__fadeInUp">
+                                                <div className="portfolio__siteimg">
+                                                    <img
+                                                        src="./images/Cahee.png"
+                                                        className="portfolio__img"
+                                                    />
+                                                </div>
+                                                <div className="portfolio__sitelink">
+                                                    <a
+                                                        href="https://pavelbabik.github.io/Lesson%2016%20HW/index.html"
+                                                        className="portfolio__link"
+                                                    >
+                                                        See more
+                            </a>
+                                                </div>
+                                            </li>
+                                            <li className="portfolio__sitesitem wow animate__animated animate__fadeInUp">
+                                                <div className="portfolio__siteimg">
+                                                    <img
+                                                        src="./images/Blog.png"
+                                                        className="portfolio__img"
+                                                    />
+                                                </div>
+                                                <div className="portfolio__sitelink">
+                                                    <a
+                                                        href="https://pavelbabik.github.io/Lesson%2010%20HW/L10E1/index.html"
+                                                        className="portfolio__link"
+                                                    >
+                                                        See more
+                            </a>
+                                                </div>
+                                            </li>
+                                            <li className="portfolio__sitesitem wow animate__animated animate__fadeInUp">
+                                                <div className="portfolio__siteimg">
+                                                    <img
+                                                        src="./images/WhoWeAre.png"
+                                                        className="portfolio__img"
+                                                    />
+                                                </div>
+                                                <div className="portfolio__sitelink">
+                                                    <a
+                                                        href="https://pavelbabik.github.io/Lesson%2010%20HW/L10E2/index.html"
+                                                        className="portfolio__link"
+                                                    >
+                                                        See more
+                            </a>
+                                                </div>
+                                            </li>
+                                            <li className="portfolio__sitesitem wow animate__animated animate__fadeInUp">
+                                                <div className="portfolio__siteimg">
+                                                    <img
+                                                        src="./images/DesignLab.png"
+                                                        className="portfolio__img"
+                                                    />
+                                                </div>
+                                                <div className="portfolio__sitelink">
+                                                    <a
+                                                        href="https://pavelbabik.github.io/Lesson%2013%20HW/index.html"
+                                                        className="portfolio__link"
+                                                    >
+                                                        See more
+                            </a>
+                                                </div>
+                                            </li>
+                                            <li className="portfolio__sitesitem wow animate__animated animate__fadeInUp">
+                                                <div className="portfolio__siteimg">
+                                                    <img
+                                                        src="./images/Nike.png"
+                                                        className="portfolio__img"
+                                                    />
+                                                </div>
+                                                <div className="portfolio__sitelink">
+                                                    <a
+                                                        href="https://pavelbabik.github.io/Lesson%2011%20HW/L11E2/index.html"
+                                                        className="portfolio__link"
+                                                    >
+                                                        See more
+                            </a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div className="portfolio__logos wow animate__animated animate__fadeInUp notactive">
+                                        <ul className="portfolio__logositems">
+                                            <li className="portfolio__logoitem wow animate__animated animate__fadeInUp">
+                                                <img
+                                                    src="./images/Cineforge Productions-8.png"
+                                                    className="portfolio__logoimg"
+                                                />
+                                            </li>
+                                            <li className="portfolio__logoitem wow animate__animated animate__fadeInUp">
+                                                <img
+                                                    src="./images/Electrical Contracting, Inc.png"
+                                                    className="portfolio__logoimg"
+                                                />
+                                            </li>
+                                            <li className="portfolio__logoitem wow animate__animated animate__fadeInUp">
+                                                <img
+                                                    src="./images/Goverment.png"
+                                                    className="portfolio__logoimg"
+                                                />
+                                            </li>
+                                            <li className="portfolio__logoitem wow animate__animated animate__fadeInUp">
+                                                <img
+                                                    src="./images/Mr. Green Plus-8.png"
+                                                    className="portfolio__logoimg"
+                                                />
+                                            </li>
+                                            <li className="portfolio__logoitem wow animate__animated animate__fadeInUp">
+                                                <img
+                                                    src="./images/Sara Ferguson Farrier Service-8.png"
+                                                    className="portfolio__logoimg"
+                                                />
+                                            </li>
+                                            <li className="portfolio__logoitem wow animate__animated animate__fadeInUp">
+                                                <img
+                                                    src="./images/Wilson Medical Group-8.png"
+                                                    className="portfolio__logoimg"
+                                                />
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div className="portfolio__courses wow animate__animated animate__fadeInUp notactive">
+                                        <div className="portfolio__video wow animate__animated animate__fadeInUp">
+                                            <video
+                                                preload="metadata"
+                                                src="./images/IntroUKR.mp4"
+                                                controls
+                                            ></video>
+
+                                            <div>
+                                                <a
+                                                    className="portfolio__link"
+                                                    href="https://www.udemy.com/course/html-css-s/learn/lecture/19002800#overview"
+                                                >
+                                                    GO TO UKRAINIAN COURSE
+                          </a>
+                                            </div>
+                                        </div>
+
+                                        <div className="portfolio__video wow animate__animated animate__fadeInUp">
+                                            <div className="cont">
+                                                <video
+                                                    preload="metadata"
+                                                    src="./images/IntroRUS.mp4"
+                                                    controls
+                                                ></video>
+                                                <div>
+                                                    <a
+                                                        className="portfolio__link"
+                                                        href="https://www.udemy.com/course/html-css-gq/learn/lecture/20434767#overview"
+                                                    >
+                                                        GO TO RUSSIAN COURSE
+                            </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="portfolio__courseinfo">
+                                            <div className="cont">
+                                                <h2 className="portfolio__title">
+                                                    INFORMATION ABOUT COURSES:
+                          </h2>
+                                                <p className="portfolio__text">
+                                                    - HTML (Hyper Text Markup Language) intro
+                          </p>
+                                                <p className="portfolio__text">
+                                                    - CSS (Cascade Style Sheet) intro
+                          </p>
+                                                <p className="portfolio__text">- SASS (SCSS) intro</p>
+                                                <p className="portfolio__text">
+                                                    - BEM (Block Element Modificator) intro
+                          </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="line line-bottom" />
+                    </div>
+                );
+            }
+        }
+        class Footer extends React.Component {
+            render() {
+                return (
+                    <div id="footer" className="footer">
+                        <div className="line line-light" />
+                        <div className="wrapper">
+                            <div className="footer__content">
+                                <div className="cont">
+                                    <div className="cont-titles wow animate__animated animate__fadeInUp">
+                                        <div className="one one-light">CONTACT ME</div>
+                                        <div className="two two-dark">CONTACT ME</div>
+                                        <div className="three three-light">CONTACT ME</div>
+                                    </div>
+                                </div>
+                                <div className="ribbon">
+                                    <div className="ribbon__img ribbon__img-light"></div>
+                                </div>
+                                <div className="cont cont-footer">
+                                    <ul className="footer__contacts wow animate__animated animate__fadeInUp">
+                                        <li className="footer__item">
+                                            <a
+                                                href="https://www.facebook.com/pasha.rv"
+                                                className="footer__link"
+                                            >
+                                                <div className="footer__svg footer__svg-facebook"></div>
+                                                <div className="footer__continfo">
+                                                    <div>Facebook</div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li className="footer__item">
+                                            <a
+                                                href="https://www.instagram.com/pavel_babik"
+                                                className="footer__link"
+                                            >
+                                                <div className="footer__svg footer__svg-instagram"></div>
+                                                <div className="footer__continfo">
+                                                    <div>Instagram</div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li className="footer__item">
+                                            <a
+                                                href="http://linkedin.com/in/pavel-babik-80364914a"
+                                                className="footer__link"
+                                            >
+                                                <div className="footer__svg footer__svg-linkedin"></div>
+                                                <div className="footer__continfo">
+                                                    <div>LinkedIn</div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li className="footer__item">
+                                            <a href="tel:+380684079540" className="footer__link">
+                                                <div className="footer__svg footer__svg-mobile"></div>
+                                                <div className="footer__continfo">
+                                                    <div>+38 (068) 407-95-40</div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li className="footer__item">
+                                            <a
+                                                href="mailto:pasha.rv1234@gmail.com"
+                                                className="footer__link"
+                                            >
+                                                <div className="footer__svg footer__svg-email"></div>
+                                                <div className="footer__continfo">
+                                                    <div>pasha.rv1234@gmail.com</div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div className="footer__backtop">
+                                    <a href="#top" className="footer__backim"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="line line-lightbottom line-bottom" />
+                    </div>
+                );
+            }
+        }
+        class All extends React.Component {
+            render() {
+                return (
+                    <div>
+                        <Header />
+                        <About />
+                        <Portfolio />
+                        <Footer />
+                    </div>
+                );
+            }
+        }
+
+        ReactDOM.render(<All />, rootElement);
+    </script>
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="./js/main.js"></script>
 </body>
+
 </html>
