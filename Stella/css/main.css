@@ -223,7 +223,6 @@
       -ms-flex-pack: center;
           justify-content: center;
   padding: 50px 0 50px 0;
-  background: linear-gradient(45deg, #d0d0f2, #0f0e90);
 }
 
 .strongitems {
@@ -623,6 +622,14 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.footer {
+  background: url(../images/GasStationRoy.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 800px;
 }
 
 .footer__form {
