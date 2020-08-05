@@ -4,6 +4,21 @@
 }
 
 @font-face {
+  font-family: lobster;
+  src: url(../fonts/Lobster-Regular.ttf);
+}
+
+@font-face {
+  font-family: play;
+  src: url(../fonts/Play-Regular.ttf);
+}
+
+@font-face {
+  font-family: playB;
+  src: url(../fonts/Play-Bold.ttf);
+}
+
+@font-face {
   font-family: ussr;
   src: url(../fonts/USSR_STENCIL.ttf);
 }
@@ -254,9 +269,9 @@
 .title {
   width: 100%;
   margin-bottom: 40px;
-  font-family: ussr;
+  font-family: lobster;
   font-size: 65px;
-  color: #f69c9c;
+  color: #ffc72c;
   text-shadow: 0 0 15px #0f0e90;
 }
 
@@ -266,24 +281,24 @@
 
 .title-blink b {
   color: #fee;
-  text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ff449b, 0 0 0.5em #ff449b, 0 0 0.1em #ff449b, 0 10px 3px #000;
+  text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ffc72c, 0 0 0.5em #ffc72c, 0 0 0.1em #ffc72c, 0 5px 1px #000;
 }
 
 .title-blink b span {
-  -webkit-animation: blink linear infinite 2s;
-          animation: blink linear infinite 2s;
+  -webkit-animation: blink linear infinite 4s;
+          animation: blink linear infinite 4s;
 }
 
-.title-blink b span:nth-of-type(1) {
-  -webkit-animation: blink linear infinite 3s;
-          animation: blink linear infinite 3s;
+.title-blink b span:nth-of-type(2) {
+  -webkit-animation: blink linear infinite 6s;
+          animation: blink linear infinite 6s;
 }
 
 .title-menu {
-  font-family: ussr;
+  font-family: lobster;
   width: 100%;
   text-align: center;
-  color: #4c4c4c;
+  color: #ffc72c;
   text-shadow: none;
   font-size: 35px;
 }
@@ -333,14 +348,15 @@
 .square {
   width: 40px;
   height: 40px;
-  background-color: #0f0e90;
+  background-color: #ffc72c;
   margin-right: 10px;
 }
 
 .sttext {
   text-align: justify;
   width: 100%;
-  font-family: ussr;
+  font-family: play;
+  font-weight: 400;
   font-size: 25px;
   color: #d0d0f2;
   text-shadow: 0 0 20px black;
@@ -410,8 +426,8 @@
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
-  -webkit-animation: runArrow 5s infinite;
-          animation: runArrow 5s infinite;
+  -webkit-animation: runArrow 5s linear 0s normal none infinite running;
+          animation: runArrow 5s linear 0s normal none infinite running;
 }
 
 .arrowBg {
@@ -466,28 +482,6 @@
   100% {
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
-  }
-}
-
-@-webkit-keyframes rotatex {
-  0% {
-    -webkit-transform: rotateX(0deg);
-            transform: rotateX(0deg);
-  }
-  100% {
-    -webkit-transform: rotateX(360deg);
-            transform: rotateX(360deg);
-  }
-}
-
-@keyframes rotatex {
-  0% {
-    -webkit-transform: rotateX(0deg);
-            transform: rotateX(0deg);
-  }
-  100% {
-    -webkit-transform: rotateX(360deg);
-            transform: rotateX(360deg);
   }
 }
 
@@ -583,7 +577,7 @@
 .header__link {
   text-decoration: none;
   color: #fff;
-  font-family: ussr;
+  font-family: play;
   font-size: 30px;
 }
 
@@ -607,7 +601,7 @@
 .header__contlink {
   text-decoration: none;
   color: #fff;
-  font-family: ussr;
+  font-family: play;
   font-size: 20px;
 }
 
@@ -638,7 +632,7 @@
 
 .header__shortinfo {
   width: 100%;
-  font-family: ussr;
+  font-family: playB;
   font-size: 30px;
   color: #fff;
 }
@@ -684,12 +678,13 @@
   margin-left: 10px;
   width: 75%;
   text-align: justify;
-  font-family: ogilvie;
+  font-family: play;
   color: #4c4c4c;
   font-size: 20px;
 }
 
 .main__button {
+  font-family: playB;
   width: 75%;
   height: 100px;
   margin-top: 20px;
@@ -846,7 +841,7 @@
       -ms-flex-align: center;
           align-items: center;
   color: #4c4c4c;
-  font-family: ogilvie;
+  font-family: play;
   font-size: 19px;
   text-align: justify;
 }
@@ -859,6 +854,9 @@
 .footer__submit {
   width: 100%;
   border-radius: 25px;
+  color: #fff;
+  font-size: 2em;
+  font-family: play;
   border: none;
   -webkit-animation: 1s blic infinite;
           animation: 1s blic infinite;

@@ -8,6 +8,21 @@ $comfort: "Comfortaa", cursive;
 }
 
 @font-face {
+  font-family: lobster;
+  src: url(../fonts/Lobster-Regular.ttf);
+}
+
+@font-face {
+  font-family: play;
+  src: url(../fonts/Play-Regular.ttf);
+}
+
+@font-face {
+  font-family: playB;
+  src: url(../fonts/Play-Bold.ttf);
+}
+
+@font-face {
   font-family: ussr;
   src: url(../fonts/USSR_STENCIL.ttf);
 }
@@ -220,9 +235,9 @@ $comfort: "Comfortaa", cursive;
 .title {
   width: 100%;
   margin-bottom: 40px;
-  font-family: ussr;
+  font-family: lobster;
   font-size: 65px;
-  color: rgb(246, 156, 156);
+  color: #ffc72c;
   text-shadow: 0 0 15px rgba($color: #0f0e90, $alpha: 1);
 
   &-azs {
@@ -231,23 +246,23 @@ $comfort: "Comfortaa", cursive;
 
   &-blink b {
     color: #fee;
-    text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ff449b, 0 0 0.5em #ff449b,
-      0 0 0.1em #ff449b, 0 10px 3px #000;
+    text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ffc72c, 0 0 0.5em #ffc72c,
+      0 0 0.1em #ffc72c, 0 5px 1px #000;
   }
 
   &-blink b span {
-    animation: blink linear infinite 2s;
+    animation: blink linear infinite 4s;
   }
 
-  &-blink b span:nth-of-type(1) {
-    animation: blink linear infinite 3s;
+  &-blink b span:nth-of-type(2) {
+    animation: blink linear infinite 6s;
   }
 
   &-menu {
-    font-family: ussr;
+    font-family: lobster;
     width: 100%;
     text-align: center;
-    color: #4c4c4c;
+    color: #ffc72c;
     text-shadow: none;
     font-size: 35px;
   }
@@ -280,15 +295,15 @@ $comfort: "Comfortaa", cursive;
 .square {
   width: 40px;
   height: 40px;
-  background-color: #0f0e90;
+  background-color: #ffc72c;
   margin-right: 10px;
 }
 
 .sttext {
   text-align: justify;
   width: 100%;
-  // font-family: Arial, Helvetica, sans-serif;
-  font-family: ussr;
+  font-family: play;
+  font-weight: 400;
   font-size: 25px;
   color: #d0d0f2;
   text-shadow: 0 0 20px rgba($color: #000, $alpha: 1);
@@ -334,7 +349,7 @@ $comfort: "Comfortaa", cursive;
   justify-content: flex-start;
   align-items: center;
   position: absolute;
-  animation: runArrow 5s infinite;
+  animation: runArrow 5s linear 0s normal none infinite running;
 }
 
 .arrowBg {
@@ -354,27 +369,9 @@ $comfort: "Comfortaa", cursive;
   25% {
     transform: translateX(25%);
   }
-  // 20%{
-  //   transform: translateX(20%);
-  // }
-  // 30%{
-  //   transform: translateX(30%);
-  // }
-  // 40%{
-  //   transform: translateX(40%);
-  // }
   50% {
     transform: translateX(50%);
   }
-  // 60%{
-  //   transform: translateX(60%);
-  // }
-  // 70%{
-  //   transform: translateX(70%);
-  // }
-  // 80%{
-  //   transform: translateX(80%);
-  // }
   75% {
     transform: translateX(75%);
   }
@@ -383,19 +380,10 @@ $comfort: "Comfortaa", cursive;
   }
 }
 
-@keyframes rotatex {
-  0% {
-    transform: rotateX(0deg);
-  }
-  100% {
-    transform: rotateX(360deg);
-  }
-}
 .parheader {
   position: absolute;
   width: 100%;
   height: 100vh;
-  // background: url(../images/PricesStelaColor1.jpg);
   background-position: center bottom;
   background-size: cover;
   display: flex;
@@ -453,8 +441,7 @@ $comfort: "Comfortaa", cursive;
   &__link {
     text-decoration: none;
     color: #fff;
-    // font-family: ogilvie;
-    font-family: ussr;
+    font-family: play;
     font-size: 30px;
   }
 
@@ -469,8 +456,7 @@ $comfort: "Comfortaa", cursive;
   &__contlink {
     text-decoration: none;
     color: #fff;
-    // font-family: ogilvie;
-    font-family: ussr;
+    font-family: play;
     font-size: 20px;
   }
 
@@ -491,8 +477,7 @@ $comfort: "Comfortaa", cursive;
 
   &__shortinfo {
     width: 100%;
-    // font-family: Arial, Helvetica, sans-serif;
-    font-family: ussr;
+    font-family: playB;
     font-size: 30px;
     color: #fff;
   }
@@ -529,12 +514,13 @@ $comfort: "Comfortaa", cursive;
     margin-left: 10px;
     width: 75%;
     text-align: justify;
-    font-family: ogilvie;
+    font-family: play;
     color: #4c4c4c;
     font-size: 20px;
   }
 
   &__button {
+    font-family: playB;
     width: 75%;
     height: 100px;
     margin-top: 20px;
@@ -579,6 +565,7 @@ $comfort: "Comfortaa", cursive;
     display: flex;
     justify-content: space-around;
     background: linear-gradient(45deg, #d0d0f2, #0f0e90);
+    
     // background: url(../images/VintageColor.jpg);
     // background-position: bottom center;
     // background-size: cover;
@@ -656,7 +643,7 @@ $comfort: "Comfortaa", cursive;
     justify-content: flex-start;
     align-items: center;
     color: #4c4c4c;
-    font-family: ogilvie;
+    font-family: play;
     font-size: 19px;
     text-align: justify;
   }
@@ -669,6 +656,9 @@ $comfort: "Comfortaa", cursive;
   &__submit {
     width: 100%;
     border-radius: 25px;
+    color: #fff;
+    font-size: 2em;
+    font-family: play;
     border: none;
     animation: 1s blic infinite;
 

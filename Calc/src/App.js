@@ -71,7 +71,7 @@ function App() {
     setPriceAll(a + b);
   }
   function handleInUSA() {
-    let a=document.getElementById("unloading")
+    let a = document.getElementById("unloading");
     setShow(!show);
     AllSum();
     getCurs();
@@ -312,7 +312,15 @@ function App() {
     console.log(dol[0].rate);
   }
 
-  async function getUsers() { // функція для визначення відстані між координатами AzureMaps API
+  async function getAuto() {
+    const res = await fetch(
+      "https://uaprog.caucasusauto.com/admin.php?cat=allBranchCArs&view=all"
+    );
+    const d = await res.json();
+    console.log(`Auto ${d}`);
+  }
+  async function getUsers() {
+    // функція для визначення відстані між координатами AzureMaps API
     const response = await fetch(
       `https://atlas.microsoft.com/route/directions/json?subscription-key=0prE0fmokMgTu_9PNkoeCq2CUd5X13sOjLXQiL14PPM&api-version=1.0&query=${firstC}:${secondC}`
     );
@@ -465,6 +473,7 @@ function App() {
           </select>
           <br />
           <br />
+          <a href="https://uaprog.caucasusauto.com/admin.php?cat=allBranchCArs&view=all">Auto</a>
           <label htmlFor="auction" className="calculator__label">
             Выберите площадку
           </label>
