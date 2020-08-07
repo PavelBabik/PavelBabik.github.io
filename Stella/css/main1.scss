@@ -8,6 +8,11 @@ $comfort: "Comfortaa", cursive;
 }
 
 @font-face {
+  font-family: neon;
+  src: url(../fonts/MontserratAlternates-BlackItalic.ttf);
+}
+
+@font-face {
   font-family: lobster;
   src: url(../fonts/Lobster-Regular.ttf);
 }
@@ -235,15 +240,34 @@ $comfort: "Comfortaa", cursive;
 .title {
   width: 100%;
   margin-bottom: 40px;
-  font-family: lobster;
+  font-family: neon;
   font-size: 65px;
   color: #ffc72c;
   text-shadow: 0 0 15px rgba($color: #0f0e90, $alpha: 1);
 
   &-azs {
+    font-family: lobster;
     font-size: 40px;
+
+    transform: translate(-120%, 0);
+    opacity: 0;
+    transition: all 1s ease 0.5s;
   }
 
+  &-azs._active {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+
+  &-blink {
+    transform: translate(0, 120%);
+    opacity: 0;
+    transition: all 1s ease 0s;
+  }
+  &-blink._active {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
   &-blink b {
     color: #fee;
     text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ffc72c, 0 0 0.5em #ffc72c,
@@ -285,6 +309,31 @@ $comfort: "Comfortaa", cursive;
   flex-direction: column;
   list-style: none;
   justify-content: space-between;
+}
+
+.strongitems li {
+  transform: translate(120%, 0px);
+  transition: all 0.8s ease 0s;
+}
+
+.strongitems._active li {
+  transform: translate(0px, 0px);
+}
+.strongitems {
+  &._active {
+    li {
+      @for $var from 1 to 4 {
+        $delay: $var * 0.2;
+        &:nth-child(#{$var}) {
+          @if $var==1 {
+            transition: transform 0.8s ease 0s;
+          } @else {
+            transition: transform 0.8s ease #{$delay + s};
+          }
+        }
+      }
+    }
+  }
 }
 
 .stitem {
@@ -338,9 +387,13 @@ $comfort: "Comfortaa", cursive;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  // background: url(../images/paralax/PricesStellaColor2560.jpg);
+  // background-position: center;
+  // background-repeat: no-repeat;
+  // background-size: cover;
 }
 .parimg {
-  margin: 0 auto;
+  // width: 100%;
 }
 .arrow {
   width: 100%;
@@ -349,7 +402,7 @@ $comfort: "Comfortaa", cursive;
   justify-content: flex-start;
   align-items: center;
   position: absolute;
-  animation: runArrow 5s linear 0s normal none infinite running;
+  animation: runArrow 5s infinite;
 }
 
 .arrowBg {
@@ -429,10 +482,21 @@ $comfort: "Comfortaa", cursive;
     box-shadow: none;
   }
 
-  &__items {
+  &__toggle {
     width: 100%;
-    height: 100%;
     display: flex;
+    justify-content: center;
+  }
+
+  &__items {
+    display: none;
+  }
+
+  &__items.show {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
     list-style: none;
@@ -443,6 +507,11 @@ $comfort: "Comfortaa", cursive;
     color: #fff;
     font-family: play;
     font-size: 30px;
+    transition: all 0.5s ease 0s;
+
+    &:hover {
+      color: #000;
+    }
   }
 
   &__contacts {
@@ -480,9 +549,25 @@ $comfort: "Comfortaa", cursive;
     font-family: playB;
     font-size: 30px;
     color: #fff;
+
+    transform: translate(0, 120%);
+    opacity: 0;
+    transition: all 0.8s ease 1s;
+  }
+
+  &__shortinfo._active {
+    transform: translate(0, 0);
+    opacity: 1;
   }
 }
-
+.toggle {
+  min-width: 200px;
+  min-height: 80px;
+  background: url(../images/SVG/Menu.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
 .main {
   width: 100%;
   display: flex;
@@ -565,7 +650,7 @@ $comfort: "Comfortaa", cursive;
     display: flex;
     justify-content: space-around;
     background: linear-gradient(45deg, #d0d0f2, #0f0e90);
-    
+
     // background: url(../images/VintageColor.jpg);
     // background-position: bottom center;
     // background-size: cover;

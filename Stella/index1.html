@@ -24,37 +24,37 @@
   </head>
   <body>
     <div class="parallax-container">
+      <div class="header__toggle">
+        <div class="toggle"></div>
+      </div>
+      <ul class="header__items">
+        <li class="header__item">
+          <a href="#main" class="header__link">
+            Головна
+          </a>
+        </li>
+        <li class="header__item">
+          <a href="#about" class="header__link">
+            Про нас
+          </a>
+        </li>
+        <li class="header__item">
+          <a href="#gallery" class="header__link">
+            Фото
+          </a>
+        </li>
+        <li class="header__item">
+          <a href="#footer" class="header__link">
+            Контакти
+          </a>
+        </li>
+      </ul>
       <div class="parallax">
-        <img class="parimg" src="./images/PricesStelaColor1.jpg" alt="" />
-        <div class="parheader">
+        <img id="firstIMG" src="./images/paralax/PricesStellaColor1920.jpg" class="parimg" alt="" />
+        <div id="main" class="parheader">
           <div class="header__header">
-            <div class="header__logo">
-             
-            </div>
-            <nav class="header__menu">
-              <ul class="header__items">
-                <li class="header__item">
-                  <a href="#" class="header__link">
-                    Головна
-                  </a>
-                </li>
-                <li class="header__item">
-                  <a href="#" class="header__link">
-                    Про нас
-                  </a>
-                </li>
-                <li class="header__item">
-                  <a href="#" class="header__link">
-                    Фото
-                  </a>
-                </li>
-                <li class="header__item">
-                  <a href="#" class="header__link">
-                    Контакти
-                  </a>
-                </li>
-              </ul>
-            </nav>
+            <div class="header__logo"></div>
+            <nav class="header__menu"></nav>
             <div class="header__contacts">
               <a href="#" class="header__contlink">(033) 123-45-67</a>
               <a href="#" class="header__contlink">mail@mail.com</a>
@@ -64,23 +64,23 @@
             <div class="header__info">
               <div class="cont">
                 <div class="conttext">
-                  <h1 class="title title-blink">
+                  <h1 class="title title-blink _anim-items _anim-nohide">
                     <b>К<span>ом</span><span>п</span>ан<span>ія</span></b>
                   </h1>
-                  <h2 class="title title-azs">Стели</h2>
-                  <p class="header__shortinfo">
+                  <h2 class="title title-azs _anim-items">Стели</h2>
+                  <p class="header__shortinfo _anim-items">
                     Розробляємо дизайн стели для АЗС
                   </p>
-                  <p class="header__shortinfo">
+                  <p class="header__shortinfo _anim-items">
                     Виготовляємо на власному виробництві
                   </p>
-                  <p class="header__shortinfo">
+                  <p class="header__shortinfo _anim-items">
                     Доставляємо, монтуємo, підключаємо
                   </p>
                 </div>
               </div>
               <div class="cont cont-list">
-                <ul class="strongitems">
+                <ul class="strongitems _anim-items">
                   <li class="stitem">
                     <div class="square"></div>
                     <p class="sttext">
@@ -106,7 +106,7 @@
         </div>
       </div>
     </div>
-    <div class="main-container">
+    <div id="about" class="main-container">
       <div class="title title-menu">Про нас</div>
       <div class="wrapper">
         <div class="main__content">
@@ -140,7 +140,7 @@
     </div>
     <div class="parallax-container parallax-container-small">
       <div class="parallax">
-        <img src="./images/VintageColor.jpg" alt="" />
+        <img id="secondIMG" alt="" />
         <div class="arrow">
           <!-- <img src="./images/GreenArrow.png" alt=""> -->
           <div class="arrowBg"></div>
@@ -175,7 +175,7 @@
     </div>
     <div class="parallax-container parallax-container-small">
       <div class="parallax">
-        <img src="./images/MainRoute.jpg" alt="" />
+        <img id="thirdIMG" alt="" />
       </div>
     </div>
     <div class="main__slice">
@@ -187,10 +187,10 @@
     </div>
     <div class="parallax-container parallax-container-small">
       <div class="parallax">
-        <img src="./images/Ghost1.jpg" alt="" />
+        <img id="fourthIMG" alt="" />
       </div>
     </div>
-    <div class="main-container">
+    <div id="gallery" class="main-container">
       <div class="title title-menu">Наші роботи</div>
 
       <div class="main__examples">
@@ -587,10 +587,10 @@
     </div>
     <div class="parallax-container parallax-container-small">
       <div class="parallax">
-        <img src="./images/GasStationRoy.jpg" alt="" />
+        <img class="parimg" id="fifthIMG" alt="" />
       </div>
     </div>
-    <footer class="footer">
+    <footer id="footer" class="footer">
       <div class="main-container">
         <div class="title title-menu">Контакти</div>
         <div class="wrapper">
