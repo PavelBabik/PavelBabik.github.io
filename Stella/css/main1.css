@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: neo;
-  src: url(../fonts/AA-Neon.ttf);
+  src: url(../fonts/clip.regular.ttf);
 }
 
 @font-face {
@@ -46,6 +46,100 @@
 * {
   margin: 0;
   padding: 0;
+}
+
+.preload {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #0f0e90;
+  z-index: 20;
+}
+
+.prelsquare {
+  width: 200px;
+  height: 200px;
+  -webkit-animation: prel 10s linear 0s infinite running;
+          animation: prel 10s linear 0s infinite running;
+}
+
+.unvisible {
+  position: relative;
+  background: url(../images/SVG/Unvisible.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.visible1 {
+  position: absolute;
+  background: url(../images/SVG/YellowStar.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-animation: prel 9s linear 0s infinite running;
+          animation: prel 9s linear 0s infinite running;
+}
+
+.visible2 {
+  position: absolute;
+  background: url(../images/SVG/GreenStar.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-animation: prel 8s linear 0s infinite running;
+          animation: prel 8s linear 0s infinite running;
+}
+
+.visible3 {
+  position: absolute;
+  background: url(../images/SVG/BlueStar.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-animation: prel 7s linear 0s infinite running;
+          animation: prel 7s linear 0s infinite running;
+}
+
+.visible4 {
+  position: absolute;
+  background: url(../images/SVG/PinkStar.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-animation: prel 6s linear 0s infinite running;
+          animation: prel 6s linear 0s infinite running;
+}
+
+@-webkit-keyframes prel {
+  0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+
+@keyframes prel {
+  0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
 }
 
 .cubecont {
@@ -865,17 +959,17 @@
   background-color: rgba(255, 0, 137, 0.5);
 }
 
-.toggle-blink b {
+.toggle-blink h2 {
   color: #fee;
   text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ff0089, 0 0 0.5em #ff0089, 0 0 0.1em #ff0089, 0 5px 1px #000;
 }
 
-.toggle-blink b span {
+.toggle-blink h2 span {
   -webkit-animation: blink linear infinite 2s;
           animation: blink linear infinite 2s;
 }
 
-.toggle-blink b span:nth-of-type(2) {
+.toggle-blink h2 span:nth-of-type(2) {
   -webkit-animation: blink linear infinite 3s;
           animation: blink linear infinite 3s;
 }
