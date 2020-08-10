@@ -8,6 +8,11 @@ $comfort: "Comfortaa", cursive;
 }
 
 @font-face {
+  font-family: neo;
+  src: url(../fonts/AA-Neon.ttf);
+}
+
+@font-face {
   font-family: neon;
   src: url(../fonts/MontserratAlternates-BlackItalic.ttf);
 }
@@ -83,11 +88,6 @@ $comfort: "Comfortaa", cursive;
   width: 100px;
   height: 400px;
   perspective: 1500px;
-
-  @include mobile {
-    width: 140px;
-    height: 140px;
-  }
 }
 .cube {
   height: inherit;
@@ -124,10 +124,6 @@ $comfort: "Comfortaa", cursive;
     background: url(../images/SVG/STCandyFasad.svg);
     border: 2px solid #8a16c4;
   }
-
-  @include mobile {
-    transform: translateZ(70px);
-  }
 }
 .back {
   width: 100px;
@@ -148,10 +144,6 @@ $comfort: "Comfortaa", cursive;
     background: url(../images/SVG/STCandyBack.svg);
     border: 2px solid #8a16c4;
   }
-
-  @include mobile {
-    transform: rotateY(180deg) translateZ(70px);
-  }
 }
 .right {
   width: 20px;
@@ -168,10 +160,6 @@ $comfort: "Comfortaa", cursive;
   &-candy {
     background: #9a72ae;
     border: 2px solid #670697;
-  }
-
-  @include mobile {
-    transform: rotateY(90deg) translateZ(70px);
   }
 }
 .left {
@@ -190,15 +178,10 @@ $comfort: "Comfortaa", cursive;
     background: #9a72ae;
     border: 2px solid #8a16c4;
   }
-
-  @include mobile {
-    transform: rotateY(-90deg) translateZ(70px);
-  }
 }
 
 .conttext {
   width: 100%;
-  margin: 80px 20px 80px 80px;
 }
 
 .wrapper {
@@ -290,6 +273,11 @@ $comfort: "Comfortaa", cursive;
     text-shadow: none;
     font-size: 35px;
   }
+
+  @include ipad {
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
 }
 
 .main-container {
@@ -309,6 +297,11 @@ $comfort: "Comfortaa", cursive;
   flex-direction: column;
   list-style: none;
   justify-content: space-between;
+
+  @include ipad {
+    align-items: center;
+    justify-content: space-around;
+  }
 }
 
 .strongitems li {
@@ -319,6 +312,7 @@ $comfort: "Comfortaa", cursive;
 .strongitems._active li {
   transform: translate(0px, 0px);
 }
+
 .strongitems {
   &._active {
     li {
@@ -346,6 +340,10 @@ $comfort: "Comfortaa", cursive;
   height: 40px;
   background-color: #ffc72c;
   margin-right: 10px;
+  @include ipad {
+    width: 25px;
+    height: 25px;
+  }
 }
 
 .sttext {
@@ -356,6 +354,10 @@ $comfort: "Comfortaa", cursive;
   font-size: 25px;
   color: #d0d0f2;
   text-shadow: 0 0 20px rgba($color: #000, $alpha: 1);
+
+  @include mobile {
+    font-size: 15px;
+  }
 }
 
 .cont {
@@ -364,12 +366,25 @@ $comfort: "Comfortaa", cursive;
   &-list {
     height: 100%;
     max-height: 250px;
+
+    @include ipad {
+      width: 100%;
+    }
   }
 
   &-img {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @include ipad {
+      width: 100%;
+      min-height: 200px;
+    }
+  }
+
+  @include ipad {
+    width: 100%;
   }
 }
 .parallax-container {
@@ -387,14 +402,8 @@ $comfort: "Comfortaa", cursive;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  // background: url(../images/paralax/PricesStellaColor2560.jpg);
-  // background-position: center;
-  // background-repeat: no-repeat;
-  // background-size: cover;
 }
-.parimg {
-  // width: 100%;
-}
+
 .arrow {
   width: 100%;
   height: 100%;
@@ -412,8 +421,38 @@ $comfort: "Comfortaa", cursive;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  //animation: rotatex 2s linear 0s normal none infinite running;
+
+  &-sec {
+    width: 115px;
+    height: 115px;
+    background: url(../images/SVG/TopLeftArrow.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation: 10s linear 0s normal none infinite running rotateZ;
+  }
+
+  &-three {
+    width: 115px;
+    height: 115px;
+    background: url(../images/SVG/TopArrow.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation: 10s linear 0s normal none infinite running rotateZ;
+  }
+
+  &-four {
+    width: 115px;
+    height: 115px;
+    background: url(../images/SVG/TopRightArrow.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation: 10s linear 0s normal none infinite running rotateZ;
+  }
 }
+
 @keyframes runArrow {
   0% {
     transform: translateX(0);
@@ -433,6 +472,15 @@ $comfort: "Comfortaa", cursive;
   }
 }
 
+@keyframes rotateZ {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
 .parheader {
   position: absolute;
   width: 100%;
@@ -443,11 +491,14 @@ $comfort: "Comfortaa", cursive;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  @include ipad {
+    justify-content: center;
+  }
 }
 .header {
   width: 100%;
   height: 100vh;
-  background: url(../images/PricesStelaColor1.jpg);
+  //background: url(../images/PricesStelaColor1.jpg);
   background-position: center bottom;
   background-size: cover;
   display: flex;
@@ -469,6 +520,11 @@ $comfort: "Comfortaa", cursive;
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+
+    @include ipad {
+      width: 50px;
+      height: 50px;
+    }
   }
 
   &__logoimg {
@@ -508,8 +564,14 @@ $comfort: "Comfortaa", cursive;
     font-family: play;
     font-size: 30px;
     transition: all 0.5s ease 0s;
+  }
 
-    &:hover {
+  &__item {
+    background-color: rgba(255, 0, 137, 0.5);
+    width: 300px;
+    text-align: center;
+
+    &:hover a {
       color: #000;
     }
   }
@@ -542,6 +604,10 @@ $comfort: "Comfortaa", cursive;
     align-items: center;
     justify-content: center;
     color: #4c4c4c;
+
+    @include ipad {
+      flex-direction: column;
+    }
   }
 
   &__shortinfo {
@@ -553,6 +619,9 @@ $comfort: "Comfortaa", cursive;
     transform: translate(0, 120%);
     opacity: 0;
     transition: all 0.8s ease 1s;
+    @include ipad {
+      font-size: 15px;
+    }
   }
 
   &__shortinfo._active {
@@ -561,13 +630,37 @@ $comfort: "Comfortaa", cursive;
   }
 }
 .toggle {
-  min-width: 200px;
-  min-height: 80px;
-  background: url(../images/SVG/Menu.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100%;
+  width: 200px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  //border: 2px solid transparent;
+  font-family: neo;
+  font-size: 40px;
+  transition: all 0.5s;
+
+  &:hover {
+    box-shadow: 0 0 0.5em #ff0089, 0 0 0.1em #ff0089;
+    background-color: rgba(255, 0, 137, 0.5);
+  }
+
+  &-blink b {
+    color: #fee;
+    text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ff0089, 0 0 0.5em #ff0089,
+      0 0 0.1em #ff0089, 0 5px 1px #000;
+  }
+
+  &-blink b span {
+    animation: blink linear infinite 2s;
+  }
+
+  &-blink b span:nth-of-type(2) {
+    animation: blink linear infinite 3s;
+  }
 }
+
 .main {
   width: 100%;
   display: flex;
@@ -576,11 +669,13 @@ $comfort: "Comfortaa", cursive;
 
   &__content {
     width: 100%;
-    height: 600px;
+    min-height: 600px;
     display: flex;
-    // background: url(../images/MainRoute.jpg);
-    // background-size: cover;
-    // background-position: center;
+
+    @include ipad {
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
   }
 
   &__info {
@@ -600,8 +695,12 @@ $comfort: "Comfortaa", cursive;
     width: 75%;
     text-align: justify;
     font-family: play;
-    color: #4c4c4c;
+    color: #fee;
     font-size: 20px;
+
+    @include ipad {
+      font-size: 15px;
+    }
   }
 
   &__button {
@@ -634,6 +733,10 @@ $comfort: "Comfortaa", cursive;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+
+    @include ipad {
+      min-height: 350px;
+    }
   }
 
   &__cube {
@@ -651,6 +754,9 @@ $comfort: "Comfortaa", cursive;
     justify-content: space-around;
     background: linear-gradient(45deg, #d0d0f2, #0f0e90);
 
+    @include ipad {
+      min-height: 400px;
+    }
     // background: url(../images/VintageColor.jpg);
     // background-position: bottom center;
     // background-size: cover;
@@ -671,10 +777,37 @@ $comfort: "Comfortaa", cursive;
     list-style: none;
     justify-content: space-between;
     position: relative;
+    overflow: hidden;
+
+    &._active {
+      li {
+        @for $v from 1 to 13 {
+          $del: $v * 0.2;
+          &:nth-child(#{$v}) {
+            @if $v==1 {
+              transition: transform 0.8s ease 0s;
+            } @else {
+              transition: transform 0.8s ease #{$del + s};
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__works li {
+    transform: translate(600%, 0px);
+    transition: all 0.8s ease 0s;
+    opacity: 0;
+  }
+
+  &__works._active li {
+    transform: translate(0px, 0px);
+    opacity: 1;
   }
 
   &__work {
-    width: 1/3 * 100%;
+    width: 1/6 * 100%;
     height: 250px;
     overflow: hidden;
 
@@ -682,6 +815,12 @@ $comfort: "Comfortaa", cursive;
       opacity: 1;
       transition: 1s;
       transform: rotateX(360deg);
+    }
+    @include ipad {
+      width: 1/4 * 100%;
+    }
+    @include mobile {
+      width: 1/2 * 100%;
     }
   }
 
@@ -720,6 +859,14 @@ $comfort: "Comfortaa", cursive;
     margin: 5px;
     display: flex;
     justify-content: space-between;
+
+    &-addres {
+      flex-direction: column;
+    }
+
+    @include mobile {
+      width: 100%;
+    }
   }
 
   &__label {
@@ -731,6 +878,9 @@ $comfort: "Comfortaa", cursive;
     font-family: play;
     font-size: 19px;
     text-align: justify;
+    @include mobile {
+      font-size: 10px;
+    }
   }
 
   &__input {
@@ -754,6 +904,12 @@ $comfort: "Comfortaa", cursive;
     }
   }
 
+  &__link {
+    text-decoration: none;
+    color: #ffc72c;
+    font-size: 25px;
+  }
+
   &__text {
     width: 100%;
     text-align: center;
@@ -761,6 +917,15 @@ $comfort: "Comfortaa", cursive;
     font-family: ogilvie;
     font-size: 20px;
     text-align: justify;
+
+    &-yellow {
+      color: #ffc72c;
+      font-size: 25px;
+    }
+
+    @include mobile {
+      font-size: 10px;
+    }
   }
 }
 
@@ -781,6 +946,12 @@ $comfort: "Comfortaa", cursive;
   display: flex;
   justify-content: space-around;
   min-height: 600px;
+
+  @include ipad {
+    margin: 50px 0 50px 0;
+    min-height: 400px;
+    max-height: 400px;
+  }
 
   &:hover .first {
     transform: translateX(-50%);
@@ -804,6 +975,10 @@ $comfort: "Comfortaa", cursive;
   background-repeat: no-repeat;
   background-size: contain;
   transition: 1s all;
+
+  @include ipad {
+    transform: translateX(-50%);
+  }
 }
 
 .second {
@@ -820,6 +995,10 @@ $comfort: "Comfortaa", cursive;
   background-repeat: no-repeat;
   background-size: contain;
   transition: 1s all;
+
+  @include ipad {
+    transform: translateX(50%);
+  }
 }
 
 .hover {
@@ -860,7 +1039,7 @@ $comfort: "Comfortaa", cursive;
 }
 
 .popup_img {
-  height: 75%;
+  max-height: 75%;
 
   @include mobile {
     width: 300px;

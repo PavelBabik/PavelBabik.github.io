@@ -25,7 +25,11 @@
   <body>
     <div class="parallax-container">
       <div class="header__toggle">
-        <div class="toggle"></div>
+        <div class="toggle toggle-blink">
+          <i
+            ><b>M<span>E</span>N<span>U</span></b></i
+          >
+        </div>
       </div>
       <ul class="header__items">
         <li class="header__item">
@@ -50,15 +54,15 @@
         </li>
       </ul>
       <div class="parallax">
-        <img id="firstIMG" src="./images/paralax/PricesStellaColor1920.jpg" class="parimg" alt="" />
+        <img
+          id="firstIMG"
+          src="./images/paralax/PricesStellaColor1920.jpg"
+          class="parimg"
+          alt=""
+        />
         <div id="main" class="parheader">
           <div class="header__header">
             <div class="header__logo"></div>
-            <nav class="header__menu"></nav>
-            <div class="header__contacts">
-              <a href="#" class="header__contlink">(033) 123-45-67</a>
-              <a href="#" class="header__contlink">mail@mail.com</a>
-            </div>
           </div>
           <div class="header__main">
             <div class="header__info">
@@ -140,7 +144,7 @@
     </div>
     <div class="parallax-container parallax-container-small">
       <div class="parallax">
-        <img id="secondIMG" alt="" />
+        <img id="secondIMG" src="./images/paralax/Vintage1920.jpg" alt="" />
         <div class="arrow">
           <!-- <img src="./images/GreenArrow.png" alt=""> -->
           <div class="arrowBg"></div>
@@ -175,7 +179,11 @@
     </div>
     <div class="parallax-container parallax-container-small">
       <div class="parallax">
-        <img id="thirdIMG" alt="" />
+        <img id="thirdIMG" src="./images/paralax/Route1920.jpg" alt="" />
+        <div class="arrow">
+          <!-- <img src="./images/GreenArrow.png" alt=""> -->
+          <div class="arrowBg arrowBg-sec"></div>
+        </div>
       </div>
     </div>
     <div class="main__slice">
@@ -187,14 +195,18 @@
     </div>
     <div class="parallax-container parallax-container-small">
       <div class="parallax">
-        <img id="fourthIMG" alt="" />
+        <img id="fourthIMG" src="./images/paralax/Ghost1920.jpg" alt="" />
+        <div class="arrow">
+          <!-- <img src="./images/GreenArrow.png" alt=""> -->
+          <div class="arrowBg arrowBg-three"></div>
+        </div>
       </div>
     </div>
     <div id="gallery" class="main-container">
       <div class="title title-menu">Наші роботи</div>
 
       <div class="main__examples">
-        <ul class="main__works">
+        <ul class="main__works _anim-items _anim-nohide">
           <li class="main__work">
             <div class="main__picture">
               <img class="main__workimg" src="./images/example1.jpeg" alt="" />
@@ -455,6 +467,49 @@
           </li>
           <li class="main__work">
             <div class="main__picture">
+              <img class="main__workimg" src="./images/example9.jpg" alt="" />
+              <div class="hover">
+                <div class="hover__zoom">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="30px"
+                    height="30px"
+                  >
+                    <defs>
+                      <filter id="Filter_0">
+                        <feFlood
+                          flood-color="rgb(255, 255, 255)"
+                          flood-opacity="1"
+                          result="floodOut"
+                        />
+                        <feComposite
+                          operator="atop"
+                          in="floodOut"
+                          in2="SourceGraphic"
+                          result="compOut"
+                        />
+                        <feBlend
+                          mode="normal"
+                          in="compOut"
+                          in2="SourceGraphic"
+                        />
+                      </filter>
+                    </defs>
+                    <g filter="url(#Filter_0)">
+                      <path
+                        fill-rule="evenodd"
+                        fill="rgb(0, 0, 0)"
+                        d="M28.592,28.573 L27.883,29.282 C27.099,30.066 25.829,30.066 25.045,29.282 L19.371,23.607 C18.713,22.950 18.641,21.964 19.087,21.196 L15.985,18.094 C14.317,19.332 12.258,20.073 10.021,20.073 C4.480,20.073 -0.011,15.582 -0.011,10.042 C-0.011,4.502 4.480,0.011 10.021,0.011 C15.561,0.011 20.052,4.502 20.052,10.042 C20.052,12.621 19.070,14.965 17.471,16.742 L20.506,19.777 C21.274,19.331 22.259,19.403 22.917,20.060 L28.592,25.735 C29.375,26.519 29.375,27.789 28.592,28.573 ZM17.523,10.000 C17.523,5.845 14.155,2.477 10.000,2.477 C8.842,2.477 7.759,2.759 6.780,3.226 C7.303,3.764 8.093,4.568 8.135,4.568 C7.320,4.568 4.651,7.236 4.651,8.114 C4.651,8.072 3.802,7.266 3.246,6.743 C2.767,7.732 2.476,8.828 2.476,10.000 C2.476,14.155 5.845,17.524 10.000,17.524 C14.155,17.524 17.523,14.155 17.523,10.000 Z"
+                      />
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="main__work">
+            <div class="main__picture">
               <img class="main__workimg" src="./images/example7.jpg" alt="" />
               <div class="hover">
                 <div class="hover__zoom">
@@ -541,7 +596,93 @@
           </li>
           <li class="main__work">
             <div class="main__picture">
+              <img class="main__workimg" src="./images/example9.jpg" alt="" />
+              <div class="hover">
+                <div class="hover__zoom">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="30px"
+                    height="30px"
+                  >
+                    <defs>
+                      <filter id="Filter_0">
+                        <feFlood
+                          flood-color="rgb(255, 255, 255)"
+                          flood-opacity="1"
+                          result="floodOut"
+                        />
+                        <feComposite
+                          operator="atop"
+                          in="floodOut"
+                          in2="SourceGraphic"
+                          result="compOut"
+                        />
+                        <feBlend
+                          mode="normal"
+                          in="compOut"
+                          in2="SourceGraphic"
+                        />
+                      </filter>
+                    </defs>
+                    <g filter="url(#Filter_0)">
+                      <path
+                        fill-rule="evenodd"
+                        fill="rgb(0, 0, 0)"
+                        d="M28.592,28.573 L27.883,29.282 C27.099,30.066 25.829,30.066 25.045,29.282 L19.371,23.607 C18.713,22.950 18.641,21.964 19.087,21.196 L15.985,18.094 C14.317,19.332 12.258,20.073 10.021,20.073 C4.480,20.073 -0.011,15.582 -0.011,10.042 C-0.011,4.502 4.480,0.011 10.021,0.011 C15.561,0.011 20.052,4.502 20.052,10.042 C20.052,12.621 19.070,14.965 17.471,16.742 L20.506,19.777 C21.274,19.331 22.259,19.403 22.917,20.060 L28.592,25.735 C29.375,26.519 29.375,27.789 28.592,28.573 ZM17.523,10.000 C17.523,5.845 14.155,2.477 10.000,2.477 C8.842,2.477 7.759,2.759 6.780,3.226 C7.303,3.764 8.093,4.568 8.135,4.568 C7.320,4.568 4.651,7.236 4.651,8.114 C4.651,8.072 3.802,7.266 3.246,6.743 C2.767,7.732 2.476,8.828 2.476,10.000 C2.476,14.155 5.845,17.524 10.000,17.524 C14.155,17.524 17.523,14.155 17.523,10.000 Z"
+                      />
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="main__work">
+            <div class="main__picture">
               <img class="main__workimg" src="./images/example1.jpeg" alt="" />
+              <div class="hover">
+                <div class="hover__zoom">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="30px"
+                    height="30px"
+                  >
+                    <defs>
+                      <filter id="Filter_0">
+                        <feFlood
+                          flood-color="rgb(255, 255, 255)"
+                          flood-opacity="1"
+                          result="floodOut"
+                        />
+                        <feComposite
+                          operator="atop"
+                          in="floodOut"
+                          in2="SourceGraphic"
+                          result="compOut"
+                        />
+                        <feBlend
+                          mode="normal"
+                          in="compOut"
+                          in2="SourceGraphic"
+                        />
+                      </filter>
+                    </defs>
+                    <g filter="url(#Filter_0)">
+                      <path
+                        fill-rule="evenodd"
+                        fill="rgb(0, 0, 0)"
+                        d="M28.592,28.573 L27.883,29.282 C27.099,30.066 25.829,30.066 25.045,29.282 L19.371,23.607 C18.713,22.950 18.641,21.964 19.087,21.196 L15.985,18.094 C14.317,19.332 12.258,20.073 10.021,20.073 C4.480,20.073 -0.011,15.582 -0.011,10.042 C-0.011,4.502 4.480,0.011 10.021,0.011 C15.561,0.011 20.052,4.502 20.052,10.042 C20.052,12.621 19.070,14.965 17.471,16.742 L20.506,19.777 C21.274,19.331 22.259,19.403 22.917,20.060 L28.592,25.735 C29.375,26.519 29.375,27.789 28.592,28.573 ZM17.523,10.000 C17.523,5.845 14.155,2.477 10.000,2.477 C8.842,2.477 7.759,2.759 6.780,3.226 C7.303,3.764 8.093,4.568 8.135,4.568 C7.320,4.568 4.651,7.236 4.651,8.114 C4.651,8.072 3.802,7.266 3.246,6.743 C2.767,7.732 2.476,8.828 2.476,10.000 C2.476,14.155 5.845,17.524 10.000,17.524 C14.155,17.524 17.523,14.155 17.523,10.000 Z"
+                      />
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="main__work">
+            <div class="main__picture">
+              <img class="main__workimg" src="./images/example9.jpg" alt="" />
               <div class="hover">
                 <div class="hover__zoom">
                   <svg
@@ -587,7 +728,16 @@
     </div>
     <div class="parallax-container parallax-container-small">
       <div class="parallax">
-        <img class="parimg" id="fifthIMG" alt="" />
+        <img
+          class="parimg"
+          src="./images/paralax/GasStation1920.jpg"
+          id="fifthIMG"
+          alt=""
+        />
+        <div class="arrow">
+          <!-- <img src="./images/GreenArrow.png" alt=""> -->
+          <div class="arrowBg arrowBg-four"></div>
+        </div>
       </div>
     </div>
     <footer id="footer" class="footer">
@@ -620,6 +770,24 @@
               <div class="footer__text">
                 Наш менеджер з Вами обов'язково зв'яжеться.
               </div>
+            </div>
+            <div class="footer__row footer__row-addres">
+              <p class="footer__text">Наш телефон</p>
+              <a href="tel:0684079540" class="footer__link">(012)123-45-67</a>
+            </div>
+            <div class="footer__row footer__row-addres">
+              <p class="footer__text">Наш email</p>
+              <a href="mailto:pasha.rv1234@gmail.com" class="footer__link"
+                >mail@mail.com</a
+              >
+            </div>
+            <div class="footer__row footer__row-addres">
+              <p class="footer__text">
+                Наша адреса:
+              </p>
+              <p class="footer__text footer__text-yellow">
+                Україна, м. Рівне, вул. Соборна, буд. 1
+              </p>
             </div>
           </form>
         </div>

@@ -36,40 +36,6 @@ if (animItems.length > 0) {
 }
 
 $(document).ready(function () {
-  let w = window.innerWidth;
-  if (w > 1920) {
-    //$("#firstIMG").attr("src", "/images/paralax/PricesStellaColor2560.jpg");
-    $("#secondIMG").attr("src", "/images/paralax/Vintage2560.jpg");
-    $("#thirdIMG").attr("src", "/images/paralax/Route2560.jpg");
-    $("#fourthIMG").attr("src", "/images/paralax/Ghost2560.jpg");
-    $("#fifthIMG").attr("src", "/images/paralax/GasStation2560.jpg");
-  } else if (w <= 1920 && w > 1440) {
-    //$("#firstIMG").attr("src", "/images/paralax/PricesStellaColor1920.jpg");
-    $("#secondIMG").attr("src", "/images/paralax/Vintage1920.jpg");
-    $("#thirdIMG").attr("src", "/images/paralax/Route1920.jpg");
-    $("#fourthIMG").attr("src", "/images/paralax/Ghost1920.jpg");
-    $("#fifthIMG").attr("src", "/images/paralax/GasStation1920.jpg");
-  } else if (w <= 1440 && w > 1024) {
-    //$("#firstIMG").attr("src", "/images/paralax/PricesStellaColor1440.jpg");
-    $("#secondIMG").attr("src", "/images/paralax/Vintage1440.jpg");
-    $("#thirdIMG").attr("src", "/images/paralax/Route1440.jpg");
-    $("#fourthIMG").attr("src", "/images/paralax/Ghost1440.jpg");
-    $("#fifthIMG").attr("src", "/images/paralax/GasStation1440.jpg");
-  } else if (w <= 1024 && w > 768) {
-     //$("#firstIMG").attr("src", "/images/paralax/PricesStellaColor1920.jpg");
-    $("#secondIMG").attr("src", "/images/paralax/Vintage1024.jpg");
-    $("#thirdIMG").attr("src", "/images/paralax/Route1024.jpg");
-    $("#fourthIMG").attr("src", "/images/paralax/Ghost1024.jpg");
-    $("#fifthIMG").attr("src", "/images/paralax/GasStation1024.jpg");
-  } else if (w <= 768) {
-    $("#secondIMG").attr("src", "/images/paralax/Vintage768.jpg");
-    $("#thirdIMG").attr("src", "/images/paralax/Route768.jpg");
-    $("#fourthIMG").attr("src", "/images/paralax/Ghost768.jpg");
-    $("#fifthIMG").attr("src", "/images/paralax/GasStation768.jpg");
-  }
-});
-
-$(document).ready(function () {
   $(".hover").css("pointer-events", "none");
   $(".main__workimg").click(function () {
     var img = $(this);
