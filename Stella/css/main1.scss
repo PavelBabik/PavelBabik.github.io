@@ -90,7 +90,7 @@ $comfort: "Comfortaa", cursive;
   justify-content: center;
   align-items: center;
   background-color: #0f0e90;
-  z-index: 20;
+  z-index: 30001;
 }
 
 .prelsquare {
@@ -153,6 +153,14 @@ $comfort: "Comfortaa", cursive;
   width: 100px;
   height: 400px;
   perspective: 1500px;
+  transform: translate(120%, 0);
+  transition: all 0.8s ease 0s;
+  opacity: 0;
+
+  &._active {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
 }
 .cube {
   height: inherit;
@@ -246,6 +254,7 @@ $comfort: "Comfortaa", cursive;
 }
 
 .conttext {
+  padding-left: 15px;
   width: 100%;
 }
 
@@ -300,6 +309,10 @@ $comfort: "Comfortaa", cursive;
     transform: translate(-120%, 0);
     opacity: 0;
     transition: all 1s ease 0.5s;
+
+    @include ipad {
+      font-size: 10px;
+    }
   }
 
   &-azs._active {
@@ -338,9 +351,14 @@ $comfort: "Comfortaa", cursive;
     text-shadow: none;
     font-size: 35px;
   }
+  &.title-azs {
+    @include ipad {
+      font-size: 20px;
+    }
+  }
 
   @include ipad {
-    font-size: 50px;
+    font-size: 45px;
     margin-bottom: 20px;
   }
 }
@@ -403,7 +421,13 @@ $comfort: "Comfortaa", cursive;
 .square {
   width: 40px;
   height: 40px;
-  background-color: #ffc72c;
+  // background-color: #ffc72c;
+  // background: url(../images/SVG/Romb.svg);
+  // background: url(../images/SVG/GreenArrow_2.svg);
+  background: url(../images/SVG/ArrowYellowDots.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
   margin-right: 10px;
   @include ipad {
     width: 25px;
@@ -599,16 +623,20 @@ $comfort: "Comfortaa", cursive;
   }
 
   &__logo {
-    width: 100px;
-    height: 100px;
-    background: url(../images/Logo.png);
+    width: 200px;
+    height: 200px;
+    background: url(../images/SVG/LogoWhite.svg);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
 
     @include ipad {
-      width: 50px;
-      height: 50px;
+      background: url(../images/SVG/LogoWhite_1.svg);
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 100px;
+      height: 100px;
     }
   }
 
@@ -764,11 +792,19 @@ $comfort: "Comfortaa", cursive;
   }
 
   &__info {
+    transform: translate(120%, 0px);
+    transition: all 0.8s ease 0s;
+    opacity: 0;
     width: 100%;
     display: flex;
     padding: 10px;
     align-items: flex-start;
     // background: rgba($color: #0f0e90, $alpha: 0.3);
+
+    &._active {
+      transform: translate(0, 0px);
+      opacity: 1;
+    }
   }
 
   &__image {
@@ -800,6 +836,15 @@ $comfort: "Comfortaa", cursive;
     align-items: center;
     animation: blic 1s infinite;
 
+    transform: translate(-120%, 120%);
+    transition: all 0.8s ease 0s;
+    opacity: 0;
+
+    &._active {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+
     &:hover {
       animation: none;
       color: #000;
@@ -814,11 +859,20 @@ $comfort: "Comfortaa", cursive;
   &__stela {
     min-width: 100%;
     min-height: 100%;
-    background: url(../images/SVG/Stella_2.svg);
+    // background: url(../images/SVG/Stella_2.svg);
+    background: url(../images/SVG/BussinesStella.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
 
+    transform: translate(-120%, 0);
+    transition: all 0.8s ease 0s;
+    opacity: 0;
+
+    &._active {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
     @include ipad {
       min-height: 350px;
     }
@@ -936,6 +990,14 @@ $comfort: "Comfortaa", cursive;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transform: translate(-120%, 0);
+    transition: all 0.8s ease 0s;
+    opacity: 0;
+
+    &._active {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
   }
 
   &__row {
@@ -949,6 +1011,10 @@ $comfort: "Comfortaa", cursive;
       flex-direction: column;
     }
 
+    &-text {
+      min-height: 100px;
+    }
+
     @include mobile {
       width: 100%;
     }
@@ -959,7 +1025,7 @@ $comfort: "Comfortaa", cursive;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    color: #4c4c4c;
+    color: #fff;
     font-family: play;
     font-size: 19px;
     text-align: justify;
@@ -970,7 +1036,13 @@ $comfort: "Comfortaa", cursive;
 
   &__input {
     width: 75%;
-    border: none;
+  }
+
+  &__textar {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 20px;
+    border: 1px solid #000;
   }
 
   &__submit {
@@ -1012,6 +1084,56 @@ $comfort: "Comfortaa", cursive;
       font-size: 10px;
     }
   }
+
+  // &__backtop {
+  //   max-width: 108px;
+  //   max-height: 55px;
+  //   display: flex;
+  //   justify-content: center;
+  // }
+
+  // &__backim {
+  //   width: 108px;
+  //   height: 55px;
+  //   background: url(../images/SVG/BackTop.svg);
+  //   background-repeat: no-repeat;
+  //   background-position: center;
+  //   background-size: cover;
+  // }
+}
+.footer__backtop {
+  width: 100%;
+  min-height: 55px;
+  margin: 0 auto;
+}
+
+.footer__backim {
+  margin-top: 20px;
+  display: block;
+  min-width: 108px;
+  max-width: 110px;
+  min-height: 55px;
+  background: url(../images/SVG/BackTop.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.topbutton {
+  z-index: 30000;
+  display: none;
+  background-color: transparent;
+  border: none;
+  position: fixed;
+  border-radius: 50%;
+  width: 50px;
+  bottom: 20px;
+  right: 30px;
+  transition: 2s all;
+
+  &__img {
+    width: 100%;
+  }
 }
 
 .btnlink {
@@ -1031,6 +1153,15 @@ $comfort: "Comfortaa", cursive;
   display: flex;
   justify-content: space-around;
   min-height: 600px;
+
+  transform: scale(0);
+  transition: all 0.8s ease 0s;
+  opacity: 0;
+
+  &._active {
+    transform: scale(1);
+    opacity: 1;
+  }
 
   @include ipad {
     margin: 50px 0 50px 0;
@@ -1128,6 +1259,45 @@ $comfort: "Comfortaa", cursive;
 
   @include mobile {
     width: 300px;
+  }
+}
+
+.thankyou {
+  width: 100%;
+  height: 100vh;
+  background: url(../images/PriceSTTHank.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  &__image {
+    width: 200px;
+    height: 200px;
+    background: url(../images/SVG/LogoWhite_1.svg);
+  }
+
+  &__title {
+    width: 100%;
+    color: #fcd833;
+    text-align: center;
+    font-size: 35px;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #fee;
+    font-size: 40px;
+    border: 3px solid transparent;
+    transition: all 0.5s;
+
+    &:hover {
+      color: #ff0089;
+      border-top: 3px solid #ff0089;
+      border-bottom: 3px solid #ff0089;
+    }
   }
 }
 

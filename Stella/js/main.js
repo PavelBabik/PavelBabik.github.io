@@ -3,6 +3,45 @@ window.onload = function () {
   preloader.style.display = "none";
 };
 
+//Get the button:
+mybutton = document.getElementById("topbutton");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  document.body.scrollTop = 0; // For Safari
+}
+
+$(document).ready(function () {
+  $(".header__link, .toplink, .btnlink").on("click", function (event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+      $("html, body").animate(
+        {
+          scrollTop: $(hash).offset().top,
+        },
+        1000,
+        function () {
+          window.location.hash = hash;
+        }
+      );
+    }
+  });
+});
+
 const animItems = document.querySelectorAll("._anim-items");
 if (animItems.length > 0) {
   window.addEventListener("scroll", animOnScroll);
@@ -73,3 +112,20 @@ $(document).ready(function () {
     $(".header__items").toggleClass("show");
   });
 });
+
+// $(document).ready(function () {
+//   $("form").submit(function () {
+//     var th = $(this);
+//     $.ajax({
+//       type: "POST",
+//       url: "mailto.php",
+//       data: th.serialize(),
+//     }).done(function () {
+//       alert("Thank you!");
+//       setTimeout(function () {
+//         th.trigger("reset");
+//       }, 1000);
+//     });
+//     return false;
+//   });
+// });
