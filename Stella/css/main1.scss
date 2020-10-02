@@ -370,7 +370,8 @@ $comfort: "Comfortaa", cursive;
   align-items: center;
   justify-content: center;
   padding: 50px 0 50px 0;
-  background: linear-gradient(45deg, #d0d0f2, #0f0e90);
+  // background: linear-gradient(45deg, #d0d0f2, #0f0e90);
+  background-color: #2f4e7f;
 }
 
 .strongitems {
@@ -882,7 +883,8 @@ $comfort: "Comfortaa", cursive;
     width: 100%;
     min-height: 500px;
     // background-color: #7070e2;
-    background: linear-gradient(45deg, #d0d0f2, #0f0e90);
+    // background: linear-gradient(45deg, #d0d0f2, #0f0e90);
+    background-color: #a2242f;
     display: flex;
     justify-content: space-around;
   }
@@ -891,7 +893,8 @@ $comfort: "Comfortaa", cursive;
     width: 100%;
     display: flex;
     justify-content: space-around;
-    background: linear-gradient(45deg, #d0d0f2, #0f0e90);
+    // background: linear-gradient(45deg, #d0d0f2, #0f0e90);
+    background-color: #a2242f;
 
     @include ipad {
       min-height: 400px;

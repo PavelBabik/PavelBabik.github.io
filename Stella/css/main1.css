@@ -444,7 +444,7 @@
       -ms-flex-pack: center;
           justify-content: center;
   padding: 50px 0 50px 0;
-  background: linear-gradient(45deg, #d0d0f2, #0f0e90);
+  background-color: #2f4e7f;
 }
 
 .strongitems {
@@ -1179,7 +1179,7 @@
 .main__cube {
   width: 100%;
   min-height: 500px;
-  background: linear-gradient(45deg, #d0d0f2, #0f0e90);
+  background-color: #a2242f;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1194,7 +1194,7 @@
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  background: linear-gradient(45deg, #d0d0f2, #0f0e90);
+  background-color: #a2242f;
 }
 
 @media (max-width: 1024px) {
