@@ -142,6 +142,114 @@ body {
   height: 100%;
 }
 
+.preload {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+}
+
+.preload__image {
+  width: 450px;
+  height: 450px;
+  background: url(../images/SVG/PreloadLogo.svg);
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .preload__image {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.preload__spinner {
+  width: 600px;
+  height: 600px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: absolute;
+  border-top: 0.3em solid #0f4c81;
+  border-right: 0.3em solid #0f4c81;
+  border-radius: 50%;
+  -webkit-animation: 1s preloadanim linear infinite;
+          animation: 1s preloadanim linear infinite;
+}
+
+@media (max-width: 768px) {
+  .preload__spinner {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@-webkit-keyframes preloadanim {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes preloadanim {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.toplink {
+  display: inline-block;
+  width: inherit;
+  height: inherit;
+}
+
+.topbutton {
+  z-index: 30000;
+  display: none;
+  background-color: transparent;
+  border: none;
+  position: fixed;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  bottom: 20px;
+  right: 30px;
+  opacity: 0.5;
+  -webkit-transition: 2s all;
+  transition: 2s all;
+}
+
+.topbutton:hover {
+  opacity: 1;
+}
+
+.topbutton__img {
+  width: inherit;
+  height: inherit;
+  background: url(../images/SVG/TopButton.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 .header {
   width: 100%;
   height: 100vh;
@@ -264,6 +372,7 @@ body {
 
 .header__text {
   width: 50%;
+  background-color: transparent;
 }
 
 .header__title {
@@ -489,6 +598,14 @@ body {
       flex-wrap: wrap;
 }
 
+@media (max-width: 1024px) {
+  .wrap {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .example {
   width: 100%;
   display: -webkit-box;
@@ -585,11 +702,17 @@ body {
     width: 50%;
     max-width: 310px;
     margin: 10px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
 @media (max-width: 700px) {
   .benefits__item {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 100%;
     max-width: 310px;
     margin: 10px;
@@ -628,13 +751,6 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-}
-
-@media (max-width: 700px) {
-  .benefits__img {
-    width: 100px;
-    height: 100px;
-  }
 }
 
 .benefits__title {
@@ -706,8 +822,16 @@ body {
           justify-content: space-between;
 }
 
+@media (max-width: 480px) {
+  .jobs__items {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .jobs__item {
-  width: 33.33333%;
+  width: 16.66667%;
 }
 
 .jobs__item:hover .hover {
@@ -716,6 +840,12 @@ body {
   transition: 1s;
   -webkit-transform: rotateX(360deg);
           transform: rotateX(360deg);
+}
+
+@media (max-width: 480px) {
+  .jobs__item {
+    width: 300px;
+  }
 }
 
 .jobs__picture {
@@ -728,13 +858,6 @@ body {
 
 .jobs__workimg {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .footer__form {

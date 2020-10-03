@@ -23,23 +23,34 @@
     <title>Art Brend - Stela</title>
   </head>
   <body>
+    <div id="preload" class="preload">
+      <div class="preload__image">
+        
+      </div>
+      <div class="preload__spinner"></div>
+    </div>
+    <button id="topbutton" class="topbutton">
+      <a href="#top" class="toplink">
+        <div class="topbutton__img"></div>
+      </a>
+    </button>
     <div class="picture none"></div>
-    <header class="header">
+    <header id="top" class="header">
       <div class="wrapper">
         <div class="header__navigation">
           <div class="header__menu"></div>
           <ul class="header__items">
             <li class="header__item">
-              <a class="header__link" href="#"> Головна </a>
+              <a class="header__link" href="#top"> Головна </a>
             </li>
             <li class="header__item">
-              <a class="header__link" href="#"> Про нас </a>
+              <a class="header__link" href="#about"> Про нас </a>
             </li>
             <li class="header__item">
-              <a class="header__link" href="#"> Галерея </a>
+              <a class="header__link" href="#galery"> Галерея </a>
             </li>
             <li class="header__item">
-              <a class="header__link" href="#"> Контакти </a>
+              <a class="header__link" href="#contacts"> Контакти </a>
             </li>
           </ul>
         </div>
@@ -59,7 +70,7 @@
       </div>
     </header>
     <main class="main">
-      <section class="about">
+      <section id="about" class="about">
         <div class="cont">
           <h3 class="description">Про нас</h3>
           <div class="about__info">
@@ -147,7 +158,7 @@
             </div>
           </div>
           <div class="about__btn">
-            <a href="#" class="about__link">
+            <a href="#contacts" class="about__link">
               <div class="about__button">Замовити</div>
             </a>
           </div>
@@ -218,7 +229,7 @@
       </section>
       
       <div class="top"></div>
-      <section class="jobs">
+      <section id="galery" class="jobs">
         <h3 class="description description-white">Наші роботи</h3>
         <ul class="jobs__items">
           <li class="jobs__item">
@@ -483,7 +494,7 @@
       </section>
       <div class="bottom bottom-blue"></div>
     </main>
-    <footer class="footer">
+    <footer id="contacts" class="footer">
       <h3 class="description">Контакти</h3>
       <form
         id="form"
