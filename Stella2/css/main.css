@@ -385,7 +385,7 @@ body {
 
 .header__title-blink b {
   color: #fee;
-  text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #fff, 0 0 0.5em #fff, 0 0 0.1em #fff, 0 5px 1px #000;
+  text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #fff, 0 0 0.5em #fff, 0 0 0.1em #fff, 0 5px 1px #0f0e90;
 }
 
 .header__title-blink b span {

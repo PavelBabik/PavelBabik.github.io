@@ -179,9 +179,9 @@ body {
 
 @keyframes preloadanim {
   0% {
-   transform: rotate(0deg);
+    transform: rotate(0deg);
   }
-  
+
   100% {
     transform: rotate(360deg);
   }
@@ -318,7 +318,7 @@ body {
     &-blink b {
       color: #fee;
       text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #fff, 0 0 0.5em #fff,
-        0 0 0.1em #fff, 0 5px 1px #000;
+        0 0 0.1em #fff, 0 5px 1px #0f0e90;
     }
 
     &-blink b span {
@@ -481,7 +481,7 @@ body {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  
+
   @include ipad {
     justify-content: center;
   }
@@ -674,7 +674,6 @@ body {
 }
 
 .footer {
-
   &__form {
     width: 100%;
     display: flex;
