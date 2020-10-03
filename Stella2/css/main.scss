@@ -658,6 +658,7 @@ body {
     }
     @include mobile {
       width: 300px;
+      height: 300px;
     }
   }
 
@@ -669,18 +670,10 @@ body {
 
   &__workimg {
     width: 100%;
-    // object-fit: cover;
-    // object-position: center;
-    // display: flex;
   }
 }
 
 .footer {
-  // background: url(../images/GasStationRoy.jpg);
-  // background-position: center;
-  // background-repeat: no-repeat;
-  // background-size: cover;
-  // height: 800px;
 
   &__form {
     width: 100%;
