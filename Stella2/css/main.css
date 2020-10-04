@@ -816,6 +816,15 @@ body {
   display: none;
 }
 
+.hid {
+  overflow: hidden;
+}
+
+.nonebtn {
+  width: 0px;
+  height: 0px;
+}
+
 .jobs {
   width: 100%;
   background-color: #0f4c81;
@@ -1112,28 +1121,49 @@ body {
   height: 100%;
   width: 100vw;
   display: none;
+  z-index: 50000;
+}
+
+.popup_title {
+  position: fixed;
+  top: 100px;
+  width: 100%;
+  text-align: center;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 15px;
+  color: #000;
+  z-index: 2;
 }
 
 .title {
   color: #fff;
   font-family: "Josefin Sans", sans-serif;
+  font-size: 50px;
+  -webkit-animation: animtext 2s infinite;
+          animation: animtext 2s infinite;
 }
 
 @-webkit-keyframes animtext {
   0% {
-    background-position: 0 0;
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
   }
   100% {
-    background-position: 100% 0;
+    opacity: 1;
   }
 }
 
 @keyframes animtext {
   0% {
-    background-position: 0 0;
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
   }
   100% {
-    background-position: 100% 0;
+    opacity: 1;
   }
 }
 
@@ -1144,6 +1174,10 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1155,6 +1189,7 @@ body {
 }
 
 .popup_img {
+  position: relative;
   width: 50%;
 }
 

@@ -1,8 +1,8 @@
 $font: "Montserrat Alternates", sans-serif;
 $roboto: "Roboto Slab", serif;
 $comfort: "Comfortaa", cursive;
-$dancing:'Dancing Script', cursive;
-$josefine: 'Josefin Sans', sans-serif;
+$dancing: "Dancing Script", cursive;
+$josefine: "Josefin Sans", sans-serif;
 
 @font-face {
   font-family: caligr;
@@ -678,6 +678,15 @@ body {
   }
 }
 
+.hid {
+  overflow: hidden;
+}
+
+.nonebtn {
+  width: 0px;
+  height: 0px;
+}
+
 .jobs {
   width: 100%;
   background-color: #0f4c81;
@@ -911,25 +920,39 @@ body {
   height: 100%;
   width: 100vw;
   display: none;
+  z-index: 50000;
+}
+
+.popup_title {
+  position: fixed;
+  top:100px;
+  width: 100%;
+  text-align: center;
+  font-family: $font;
+  font-size: 15px;
+  color: #000;
+  z-index: 2;
 }
 
 .title {
   color: #fff;
   font-family: $josefine;
-  // text-transform: uppercase;
-  // background: url(../images/SVG/TextBG.svg);
-  // -webkit-background-clip: text;
-  // -webkit-text-fill-color: transparent;
-  // animation: animtext 20s linear infinite;
+  font-size: 50px;
+  animation: animtext 2s infinite;
 }
 
 @keyframes animtext {
   0% {
-    background-position: 0 0;
+    // color: #fff;
+    opacity: 1;
   }
-
+  50% {
+    // color: transparent;
+    opacity: 0.2;
+  }
   100% {
-    background-position: 100% 0;
+    // color: #fff;
+    opacity: 1;
   }
 }
 
@@ -938,12 +961,14 @@ body {
   width: 100%;
   min-height: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   align-content: center;
 }
 
 .popup_img {
+  position: relative;
   width: 50%;
 
   @include ipad {

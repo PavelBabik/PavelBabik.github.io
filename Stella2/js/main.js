@@ -85,14 +85,23 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
+  $(".header__item").click(function (event) {
+    $(".header__items").removeClass("show");
+  });
+});
+
+$(document).ready(function () {
   $(".hover").css("pointer-events", "none");
   $(".jobs__workimg").click(function () {
     var img = $(this);
     var src = img.attr("src");
     $(".picture").removeClass("none");
+    $(".body").addClass("hid");
+    $(".topbutton").addClass("nonebtn");
     $(".picture").append(
       "<div class='popup'>" +
         "<div class='popup_bg'>" +
+        "<h2 class='popup_title'>X</h2>" +
         "<img src='" +
         src +
         "' class='popup_img' />" +
@@ -104,6 +113,8 @@ $(document).ready(function () {
       $(".popup").fadeOut(700);
       setTimeout(function () {
         $(".picture").addClass("none");
+        $(".body").removeClass("hid");
+        $(".topbutton").removeClass("nonebtn");
         $(".popup").remove();
       }, 700);
     });
