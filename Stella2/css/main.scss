@@ -1,6 +1,8 @@
 $font: "Montserrat Alternates", sans-serif;
 $roboto: "Roboto Slab", serif;
 $comfort: "Comfortaa", cursive;
+$dancing:'Dancing Script', cursive;
+$josefine: 'Josefin Sans', sans-serif;
 
 @font-face {
   font-family: caligr;
@@ -92,36 +94,69 @@ body {
   background-color: #fff;
 }
 
+// @keyframes blink {
+//   78% {
+//     color: inherit;
+//     text-shadow: inherit;
+//   }
+//   79% {
+//     color: #333;
+//   }
+//   80% {
+//     text-shadow: none;
+//   }
+//   81% {
+//     color: inherit;
+//     text-shadow: inherit;
+//   }
+//   82% {
+//     color: #333;
+//     text-shadow: none;
+//   }
+//   83% {
+//     color: inherit;
+//     text-shadow: inherit;
+//   }
+//   92% {
+//     color: #333;
+//     text-shadow: none;
+//   }
+//   92.5% {
+//     color: inherit;
+//     text-shadow: inherit;
+//   }
+// }
+
 @keyframes blink {
   78% {
-    color: inherit;
-    text-shadow: inherit;
+    color: transparent;
+    text-shadow: none;
   }
   79% {
-    color: #333;
+    color: transparent;
   }
   80% {
     text-shadow: none;
   }
   81% {
-    color: inherit;
-    text-shadow: inherit;
+    color: transparent;
+    text-shadow: none;
   }
   82% {
-    color: #333;
+    color: transparent;
     text-shadow: none;
   }
   83% {
-    color: inherit;
-    text-shadow: inherit;
+    color: transparent;
+    text-shadow: none;
   }
   92% {
-    color: #333;
+    color: transparent;
     text-shadow: none;
   }
   92.5% {
-    color: inherit;
-    text-shadow: inherit;
+    color: transparent;
+    text-shadow: none;
   }
 }
 
@@ -249,7 +284,6 @@ body {
   }
 
   &__items.show {
-    // margin-top: 230px;
     transform: translate(0, 0);
     position: fixed;
     z-index: 1;
@@ -306,11 +340,16 @@ body {
   &__text {
     width: 50%;
     background-color: transparent;
+    transition: all 0.5s;
+    transform: scale(0);
+    &._active {
+      transform: scale(1);
+    }
   }
 
   &__title {
     width: 100%;
-    font-family: $comfort;
+    font-family: $dancing;
     font-size: 40px;
     color: #0f0e90;
     text-shadow: 0 0 15px rgba($color: #0f0e90, $alpha: 1);
@@ -325,8 +364,16 @@ body {
       animation: blink linear infinite 4s;
     }
 
-    &-blink b span:nth-of-type(2) {
+    &-blink b span:nth-of-type(1) {
       animation: blink linear infinite 6s;
+    }
+
+    &-blink b span:nth-of-type(2) {
+      animation: blink linear infinite 8s;
+    }
+
+    &-blink b span:nth-of-type(3) {
+      animation: blink linear infinite 10s;
     }
   }
 
@@ -650,13 +697,15 @@ body {
 
   &__item {
     width: 1/6 * 100%;
+    max-width: 300px;
+    max-height: 300px;
 
     &:hover .hover {
       opacity: 1;
       transition: 1s;
       transform: rotateX(360deg);
     }
-    @include mobile {
+    @include ipad {
       width: 300px;
       height: 300px;
     }
@@ -794,6 +843,49 @@ body {
   // }
 }
 
+.thankyou {
+  width: 100%;
+  font-family: $font;
+  height: 100vh;
+  background: url(../images/SVG/BGHeader.svg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  &__image {
+    width: 200px;
+    height: 200px;
+    background: url(../images/SVG/PreloadLogo.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &__title {
+    width: 100%;
+    color: #fcd833;
+    text-align: center;
+    font-size: 35px;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #0f4c81;
+    font-size: 40px;
+    border: 3px solid transparent;
+    transition: all 0.5s;
+
+    &:hover {
+      color: #810f2e;
+      border-top: 3px solid #810f2e;
+      border-bottom: 3px solid #810f2e;
+    }
+  }
+}
+
 .hover {
   background: rgba(15, 76, 129, 0.5);
   position: absolute;
@@ -821,6 +913,26 @@ body {
   display: none;
 }
 
+.title {
+  color: #fff;
+  font-family: $josefine;
+  // text-transform: uppercase;
+  // background: url(../images/SVG/TextBG.svg);
+  // -webkit-background-clip: text;
+  // -webkit-text-fill-color: transparent;
+  // animation: animtext 20s linear infinite;
+}
+
+@keyframes animtext {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 100% 0;
+  }
+}
+
 .popup_bg {
   background: rgba(0, 0, 0, 0.9);
   width: 100%;
@@ -833,6 +945,11 @@ body {
 
 .popup_img {
   width: 50%;
+
+  @include ipad {
+    width: 75%;
+  }
+
   @include mobile {
     width: 300px;
   }

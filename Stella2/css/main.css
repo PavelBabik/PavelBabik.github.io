@@ -54,67 +54,67 @@ body {
 
 @-webkit-keyframes blink {
   78% {
-    color: inherit;
-    text-shadow: inherit;
+    color: transparent;
+    text-shadow: none;
   }
   79% {
-    color: #333;
+    color: transparent;
   }
   80% {
     text-shadow: none;
   }
   81% {
-    color: inherit;
-    text-shadow: inherit;
+    color: transparent;
+    text-shadow: none;
   }
   82% {
-    color: #333;
+    color: transparent;
     text-shadow: none;
   }
   83% {
-    color: inherit;
-    text-shadow: inherit;
+    color: transparent;
+    text-shadow: none;
   }
   92% {
-    color: #333;
+    color: transparent;
     text-shadow: none;
   }
   92.5% {
-    color: inherit;
-    text-shadow: inherit;
+    color: transparent;
+    text-shadow: none;
   }
 }
 
 @keyframes blink {
   78% {
-    color: inherit;
-    text-shadow: inherit;
+    color: transparent;
+    text-shadow: none;
   }
   79% {
-    color: #333;
+    color: transparent;
   }
   80% {
     text-shadow: none;
   }
   81% {
-    color: inherit;
-    text-shadow: inherit;
+    color: transparent;
+    text-shadow: none;
   }
   82% {
-    color: #333;
+    color: transparent;
     text-shadow: none;
   }
   83% {
-    color: inherit;
-    text-shadow: inherit;
+    color: transparent;
+    text-shadow: none;
   }
   92% {
-    color: #333;
+    color: transparent;
     text-shadow: none;
   }
   92.5% {
-    color: inherit;
-    text-shadow: inherit;
+    color: transparent;
+    text-shadow: none;
   }
 }
 
@@ -373,11 +373,20 @@ body {
 .header__text {
   width: 50%;
   background-color: transparent;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.header__text._active {
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .header__title {
   width: 100%;
-  font-family: "Comfortaa", cursive;
+  font-family: "Dancing Script", cursive;
   font-size: 40px;
   color: #0f0e90;
   text-shadow: 0 0 15px #0f0e90;
@@ -393,9 +402,19 @@ body {
           animation: blink linear infinite 4s;
 }
 
-.header__title-blink b span:nth-of-type(2) {
+.header__title-blink b span:nth-of-type(1) {
   -webkit-animation: blink linear infinite 6s;
           animation: blink linear infinite 6s;
+}
+
+.header__title-blink b span:nth-of-type(2) {
+  -webkit-animation: blink linear infinite 8s;
+          animation: blink linear infinite 8s;
+}
+
+.header__title-blink b span:nth-of-type(3) {
+  -webkit-animation: blink linear infinite 10s;
+          animation: blink linear infinite 10s;
 }
 
 .header__image {
@@ -832,6 +851,8 @@ body {
 
 .jobs__item {
   width: 16.66667%;
+  max-width: 300px;
+  max-height: 300px;
 }
 
 .jobs__item:hover .hover {
@@ -842,7 +863,7 @@ body {
           transform: rotateX(360deg);
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1024px) {
   .jobs__item {
     width: 300px;
     height: 300px;
@@ -999,6 +1020,58 @@ body {
   }
 }
 
+.thankyou {
+  width: 100%;
+  font-family: "Montserrat Alternates", sans-serif;
+  height: 100vh;
+  background: url(../images/SVG/BGHeader.svg);
+  background-size: cover;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.thankyou__image {
+  width: 200px;
+  height: 200px;
+  background: url(../images/SVG/PreloadLogo.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.thankyou__title {
+  width: 100%;
+  color: #fcd833;
+  text-align: center;
+  font-size: 35px;
+}
+
+.thankyou__link {
+  text-decoration: none;
+  color: #0f4c81;
+  font-size: 40px;
+  border: 3px solid transparent;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.thankyou__link:hover {
+  color: #810f2e;
+  border-top: 3px solid #810f2e;
+  border-bottom: 3px solid #810f2e;
+}
+
 .hover {
   background: rgba(15, 76, 129, 0.5);
   position: absolute;
@@ -1041,6 +1114,29 @@ body {
   display: none;
 }
 
+.title {
+  color: #fff;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+@-webkit-keyframes animtext {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+@keyframes animtext {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
 .popup_bg {
   background: rgba(0, 0, 0, 0.9);
   width: 100%;
@@ -1060,6 +1156,12 @@ body {
 
 .popup_img {
   width: 50%;
+}
+
+@media (max-width: 1024px) {
+  .popup_img {
+    width: 75%;
+  }
 }
 
 @media (max-width: 480px) {
