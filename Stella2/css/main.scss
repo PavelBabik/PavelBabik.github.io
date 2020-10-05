@@ -340,11 +340,6 @@ body {
   &__text {
     width: 50%;
     background-color: transparent;
-    transition: all 0.5s;
-    transform: scale(0);
-    &._active {
-      transform: scale(1);
-    }
   }
 
   &__title {
@@ -619,6 +614,14 @@ body {
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
+      transition: 1s all;
+      transform: rotate(-180deg);
+      opacity: 0;
+
+      &._active {
+        transform: rotate(0deg);
+        opacity: 1;
+      }
     }
 
     &-two {
@@ -626,6 +629,14 @@ body {
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
+      transition: 1s all;
+      transform: rotate(180deg);
+      opacity: 0;
+
+      &._active {
+        transform: rotate(0deg);
+        opacity: 1;
+      }
     }
 
     &-three {
@@ -633,6 +644,14 @@ body {
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
+      transition: 1s all;
+      transform: translateX(-100%);
+      opacity: 0;
+
+      &._active {
+        transform: translateX(0);
+        opacity: 1;
+      }
     }
 
     &-four {
@@ -640,6 +659,15 @@ body {
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
+
+      transition: 1s all;
+      transform: rotateY(720deg);
+      opacity: 0;
+
+      &._active {
+        transform: rotateY(0deg);
+        opacity: 1;
+      }
     }
   }
 
@@ -728,6 +756,7 @@ body {
 
   &__workimg {
     width: 100%;
+    max-height: 240px;
   }
 }
 
@@ -925,7 +954,7 @@ body {
 
 .popup_title {
   position: fixed;
-  top:100px;
+  top: 100px;
   width: 100%;
   text-align: center;
   font-family: $font;
@@ -957,7 +986,11 @@ body {
 }
 
 .popup_bg {
-  background: rgba(0, 0, 0, 0.9);
+  // background: rgba(0, 0, 0, 0.9);
+  background: url(../images/SVG/PopUpBG.svg);
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
   min-height: 100%;
   display: flex;
@@ -972,11 +1005,8 @@ body {
   width: 50%;
 
   @include ipad {
-    width: 75%;
-  }
-
-  @include mobile {
-    width: 300px;
+    width: 250px;
+    height: 250px;
   }
 }
 

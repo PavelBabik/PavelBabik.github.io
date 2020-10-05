@@ -373,15 +373,6 @@ body {
 .header__text {
   width: 50%;
   background-color: transparent;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-}
-
-.header__text._active {
-  -webkit-transform: scale(1);
-          transform: scale(1);
 }
 
 .header__title {
@@ -749,6 +740,17 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+  -webkit-transition: 1s all;
+  transition: 1s all;
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+  opacity: 0;
+}
+
+.benefits__img-one._active {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  opacity: 1;
 }
 
 .benefits__img-two {
@@ -756,6 +758,17 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+  -webkit-transition: 1s all;
+  transition: 1s all;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  opacity: 0;
+}
+
+.benefits__img-two._active {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  opacity: 1;
 }
 
 .benefits__img-three {
@@ -763,6 +776,17 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+  -webkit-transition: 1s all;
+  transition: 1s all;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  opacity: 0;
+}
+
+.benefits__img-three._active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
 }
 
 .benefits__img-four {
@@ -770,6 +794,17 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+  -webkit-transition: 1s all;
+  transition: 1s all;
+  -webkit-transform: rotateY(720deg);
+          transform: rotateY(720deg);
+  opacity: 0;
+}
+
+.benefits__img-four._active {
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+  opacity: 1;
 }
 
 .benefits__title {
@@ -889,6 +924,7 @@ body {
 
 .jobs__workimg {
   width: 100%;
+  max-height: 240px;
 }
 
 .footer__form {
@@ -1168,7 +1204,10 @@ body {
 }
 
 .popup_bg {
-  background: rgba(0, 0, 0, 0.9);
+  background: url(../images/SVG/PopUpBG.svg);
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
   min-height: 100%;
   display: -webkit-box;
@@ -1195,13 +1234,8 @@ body {
 
 @media (max-width: 1024px) {
   .popup_img {
-    width: 75%;
-  }
-}
-
-@media (max-width: 480px) {
-  .popup_img {
-    width: 300px;
+    width: 250px;
+    height: 250px;
   }
 }
 

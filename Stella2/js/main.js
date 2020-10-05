@@ -101,7 +101,6 @@ $(document).ready(function () {
     $(".picture").append(
       "<div class='popup'>" +
         "<div class='popup_bg'>" +
-        "<h2 class='popup_title'>X</h2>" +
         "<img src='" +
         src +
         "' class='popup_img' />" +
