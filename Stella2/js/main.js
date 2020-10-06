@@ -24,7 +24,7 @@ function topFunction() {
 }
 
 $(document).ready(function () {
-  $(".header__link, .about__link, .toplink, .btnlink").on("click", function (
+  $(".header__link, .about__link, .phonelink, .toplink, .btnlink").on("click", function (
     event
   ) {
     if (this.hash !== "") {
