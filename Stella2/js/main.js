@@ -24,7 +24,9 @@ function topFunction() {
 }
 
 $(document).ready(function () {
-  $(".header__link, .toplink, .btnlink").on("click", function (event) {
+  $(".header__link, .about__link, .toplink, .btnlink").on("click", function (
+    event
+  ) {
     if (this.hash !== "") {
       event.preventDefault();
       var hash = this.hash;
@@ -78,6 +80,15 @@ if (animItems.length > 0) {
   animOnScroll();
 }
 
+$(".jobs__items").slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+  speed: 1000,
+  fade: true,
+  arrows:false
+});
+
 $(document).ready(function () {
   $(".header__menu").click(function (event) {
     $(".header__items").toggleClass("show");
@@ -87,35 +98,5 @@ $(document).ready(function () {
 $(document).ready(function () {
   $(".header__item").click(function (event) {
     $(".header__items").removeClass("show");
-  });
-});
-
-$(document).ready(function () {
-  $(".hover").css("pointer-events", "none");
-  $(".jobs__workimg").click(function () {
-    var img = $(this);
-    var src = img.attr("src");
-    $(".picture").removeClass("none");
-    $(".body").addClass("hid");
-    $(".topbutton").addClass("nonebtn");
-    $(".picture").append(
-      "<div class='popup'>" +
-        "<div class='popup_bg'>" +
-        "<img src='" +
-        src +
-        "' class='popup_img' />" +
-        "</div>" +
-        "</div>"
-    );
-    $(".popup").fadeIn(700);
-    $(".popup_bg").click(function () {
-      $(".popup").fadeOut(700);
-      setTimeout(function () {
-        $(".picture").addClass("none");
-        $(".body").removeClass("hid");
-        $(".topbutton").removeClass("nonebtn");
-        $(".popup").remove();
-      }, 700);
-    });
   });
 });
