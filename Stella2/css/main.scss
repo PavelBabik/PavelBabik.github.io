@@ -295,6 +295,7 @@ body {
   }
   100% {
     transform: scale(1);
+    
   }
 }
 
@@ -456,7 +457,7 @@ body {
 
 .about {
   width: 100%;
-  background-color: rgba(15, 76, 129, 0.1);
+  // background-color: rgba(15, 76, 129, 0.1);
   display: flex;
   justify-content: center;
   align-items: center;
