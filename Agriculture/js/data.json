@@ -1,0 +1,17 @@
+{
+    "1234":{
+        "productname" : "Meat",
+        "price" : 200.00,
+        "photo" : "first.jpg"
+    },
+    "1236":{
+        "productname" : "Milk",
+        "price" : 20.00,
+        "photo" : "second.jpg"
+    },
+    "1235":{
+        "productname" : "Water",
+        "price" : 10.00,
+        "photo" : "third.jpg"
+    }
+}
