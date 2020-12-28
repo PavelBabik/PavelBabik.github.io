@@ -13,5 +13,10 @@
         "productname" : "Water",
         "price" : 10.00,
         "photo" : "third.jpg"
+    },
+    "1239":{
+        "productname" : "Water",
+        "price" : 10.00,
+        "photo" : "third.jpg"
     }
 }
