@@ -12,7 +12,7 @@ $post = (!empty($_POST)) ? true : false;
 
 if($post)
 {
-include 'functions.php';
+// include 'functions.php';
 
 $name = stripslashes($_POST['name']);
 $email = trim($_POST['email']);
@@ -58,16 +58,16 @@ if(!$email)
 $error .= 'Please enter an e-mail address.<br />';
 }
 
-if($email && !ValidateEmail($email))
-{
-$error .= 'Please enter a valid e-mail address.<br />';
-}
+// if($email && !ValidateEmail($email))
+// {
+// $error .= 'Please enter a valid e-mail address.<br />';
+// }
 
 
-if(isset($_SESSION['captcha_keystring']) && strtolower($_SESSION['captcha_keystring']) != strtolower($_POST['capthca']))
-{
-$error .= "Incorect captcha.<br />";
-}
+// if(isset($_SESSION['captcha_keystring']) && strtolower($_SESSION['captcha_keystring']) != strtolower($_POST['capthca']))
+// {
+// $error .= "Incorect captcha.<br />";
+// }
 
 
 if(!$error)

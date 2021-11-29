@@ -113,7 +113,7 @@ body {
 }
 
 .not-front #top {
-    background-image: url(http://placehold.it/1920x1050);
+    background-image: url('../images/NewImages/LapTop.jpg');
     background-size: cover;
     background-attachment: scroll;
     background-repeat: repeat-y;
@@ -2049,7 +2049,7 @@ header {
 
 
 .bg1 {
-    background-image: url('../images/NewImages/codeBlackBG.jpg');
+    background-image: url('../images/NewImages/parallaxImage.jpg');
 }
 
 

@@ -163,7 +163,7 @@ $(document).on('ready', function() {
   /*----------------------------------------------------*/
   // MENU SMOOTH SCROLLING
   /*----------------------------------------------------*/
-  $(document).on('click', ".navbar_ .nav a, .menu_bot a, .scroll-to", function(event){
+  $(document).on('click', ".navbar_ .nav a, .menu_bot a, .bot_menu li a, .scroll-to", function(event){
 
       //$(".navbar_ .nav a a").removeClass('active');
       //$(this).addClass('active');
