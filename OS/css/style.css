@@ -158,10 +158,19 @@ header {
     z-index: 31;
 }
 
-.logo img{
+.logo img {
     height: 40px;
 }
-.logo2 img{
+
+.logo svg {
+    height: 40px;
+}
+
+.logo2 img {
+    height: 40px;
+}
+
+.logo2 svg {
     height: 40px;
 }
 
@@ -1182,6 +1191,10 @@ header {
     width: 40px;
 }
 
+.services2 .ic1 svg {
+    width: 40px;
+}
+
 .services2 .txt1 {
     font-family: 'Montserrat';
     font-weight: 700;
@@ -1408,6 +1421,11 @@ header {
 
 .features1 .ic1 img {
     height: 30px;
+    /*line-height: 1;*/
+}
+
+.features1 .ic1 svg {
+    height: 25px;
     /*line-height: 1;*/
 }
 
